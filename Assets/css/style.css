@@ -1,0 +1,271 @@
+/* Main Style */
+@font-face {
+	font-family: 'din_next_lt_arabiclight';
+	src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot');
+	src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('/Assets/fonts/dinnextltarabic-light-webfont.woff') format('woff'),
+		url('/Assets/fonts/dinnextltarabic-light-webfont.ttf')
+		format('truetype'),
+		url('/Assets/fonts/dinnextltarabic-light-webfont.svg#din_next_lt_arabiclight')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'din_next_lt_arabiclight' !important;
+	font-weight: normal !important;
+}
+
+body {
+	background-color: #16a085;
+	direction: rtl;
+}
+
+footer {
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.logo img {
+	margin: 0px auto;
+	padding-top: 5px;
+}
+
+* {
+	outline: 0px !important;
+}
+
+h3 {
+	color: #fff;
+	text-align: center;
+	background-color: #5c5c5c;
+	margin-bottom: 5px;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.rightdiv {
+	float: right;
+}
+
+.leftdiv {
+	float: left;
+	margin-left: 0px!importatm;
+}
+/* Form Work */
+.com-info,.gen-info,.con-info {
+	background: #fff;
+	padding: 14px;
+}
+
+.full-name input,.bir-da select,.jobtype input,.cnty select,.nation select,.mobno input,.mail input,.fb input,.frecode input,textarea,.weight input
+	{
+	background-color: #eaedf1 !important;
+	border: 1px solid #eaedf1 !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-webkit-appearance: none !important;
+}
+
+textarea {
+	width: 100%;
+	height: 60px;
+	resize: none;
+}
+
+.form-group {
+	height: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.form-control{
+	height: 40px !important;
+	line-height:40px !important;
+}
+
+.form-control input{
+	height: 40px !important;
+	line-height:40px !important;
+}
+
+.form-group select{
+	line-height:30px !important;
+}
+
+input:focus,.bir-da select:focus,.mobno input:focus,.mobno input:focus,.mail input:focus,.fb input:focus,.frecode input:focus,.reas textarea:focus,.provo textarea:focus
+	{
+	background-color: #eaedf1 !important;
+	border: 1px solid #16a085 !important;
+	outline: none;
+}
+
+.full-name input,.jobtype input,.cnty select,.nation select,.mail input,.fb input,.mob,.frecode input
+	{
+	padding-right: 40px;
+}
+
+.bir-da select.col-md-4 {
+	width: 30.33333333333333% !important;
+	margin-left: 4.5%;
+	cursor: pointer;
+}
+
+.bir-da select.col-md-4:last-child {
+	margin-left: 0%;
+}
+
+.mobCode {
+	float: left;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	outline: 0px;
+	padding: 7px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+}
+
+input[type="radio"]:checked:after {
+	content: ' ';
+	width: 8px;
+	height: 8px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #16a085;
+	outline: 0px !important;
+	text-shadow: 0px;
+	left: 3px;
+}
+
+.gobtn {
+	background: #16a085 !important;
+	border: 0px;
+	border-bottom: 2px solid #5c5c5c;
+	position: relative;
+	margin: 0px auto;
+	display: block;
+	margin-top: 40px;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+#profile_picture_upload {
+	text-align: center;
+	border: solid 1px;
+	border-color: #5c5c5c;
+	width: 126px;
+	height: 126px;
+	border-radius: 63px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	background: url('/Assets/Images/profile_pic_cyan.png');
+}
+
+.uplpho span {
+	text-align: center;
+	width: 100%;
+	display: block;
+	padding-top: 5px;
+}
+
+.required {
+	text-align: right;
+}
+
+.copyrights {
+	text-align: left;
+}
+
+.weight .col-md-6 {
+	width: 49%;
+}
+
+.photoboth  .col-md-6 {
+	width: 49%;
+	height: 25px;
+	line-height: 25px;
+	background-color: #5c5c5c;
+	text-align: center;
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+.input_form_error{
+	/*border: 1px solid #D45044 !important;*/
+}
+
+
+
+/* icons */
+.bir-da select {
+	height: 34px;
+	background: url('/Assets/Icons/play.png') no-repeat 10px 8px;
+}
+
+.full-name input {
+	background: url('/Assets/Icons/user.png') no-repeat 97% 8px;
+}
+
+.jobtype input {
+	background: url('/Assets/Icons/wrench.png') no-repeat 97% 8px;
+}
+
+.cnty select {
+	background: url('/Assets/Icons/location.png') no-repeat 97% 8px;
+}
+
+.nation select {
+	background: url('/Assets/Icons/flag2.png') no-repeat 97% 8px;
+}
+
+.mail input {
+	background: url('/Assets/Icons/envelope.png') no-repeat 97% 8px;
+}
+
+.fb input {
+	background: url('/Assets/Icons/facebook_1.png') no-repeat 97% 8px;
+}
+
+.mob {
+	background: url('/Assets/Icons/mobile.png') no-repeat 97% 8px;
+}
+
+.frecode input {
+	background: url('/Assets/Icons/users.png') no-repeat 97% 8px;
+}
+
+/* Media  */
+@media only screen and (min-width: 990px) {
+	.com-info,.gen-info,.con-info {
+		/*min-height: 467px;*/
+		min-height: 487px;
+	}
+	.con-info .form-group {
+		margin-bottom: 35px;
+	}
+}
+
+@media only screen and (max-width: 990px) {
+	.bir-da select.col-md-4 {
+		width: 100% !important;
+	}
+}

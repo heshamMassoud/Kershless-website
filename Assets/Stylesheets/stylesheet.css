@@ -1,0 +1,47 @@
+
+html, body{
+	height: 100%; 
+	font-size:14px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color:#16a085;
+}
+ 
+
+div#floater{
+	float:left;
+	height:50%;
+	/*margin-bottom:-250px;/*-160*/
+	margin-bottom:-350px;
+}
+
+div#container{
+	text-align:center;
+	clear:both;
+	/*height:500px;/*320*/
+	height:700px;
+	position:relative;
+}
+
+div#social_media > a {
+	opacity:0.5;
+	-webkit-transition:opacity 0.4s ease-in-out;
+}
+
+div#social_media > a:hover  {
+	opacity:1;
+}
+
+
+
+div#footer{
+	text-align:center;
+	color:white;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 3em;
+	margin-top: -64;
+}
