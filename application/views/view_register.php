@@ -359,7 +359,7 @@ function buildDayDropdown($name = '', $value = '')
 
 function buildYearDropdown($name = '', $value = '')
 {
-    $current_year = 1960;
+    $current_year = 1900;
     while ($current_year <= 1995) {
         $year[$current_year] = $current_year;
         $current_year++;
@@ -392,7 +392,7 @@ $full_name = array(
     'id' => 'fullname',
     'value' => set_value('fullname'),
     'class' => $fullname_class,
-    'placeholder' => 'الإسم (ﺛﻼﺛﻲ ﻋﻠﻰ ﺍﻷﻗﻝ) *',
+    'placeholder' => 'الاسم  (ﺛﻼﺛﻲ ﻋﻠﻰ ﺍﻷﻗﻝ) *',
     'onBlur' => 'full_name_client_validation_blur();',
     'onFocus' => 'full_name_client_validation_focus();'
 );
@@ -1311,19 +1311,19 @@ $overall_agreement = array(
                 </div>
                 <div>
                     <?php echo form_checkbox($operations_check); ?>
-                    هل تعرضت لعمليات جراحية
+                    هل تعرضت لعمليات جراحية ؟
                 </div>
                 <div>
                     <?php echo form_checkbox($terminalDiseases_check); ?>
-                    هل تعاني من اي امراض مزمنة ( سكري - غده - كبد)
+                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد -  قولون عصبي ) ؟
                 </div>
                 <div>
                     <?php echo form_checkbox($boneFractures_check); ?>
-                    هل تعاني من اي مشاكل في العمود الفقري او المفاصل
+                    هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
                 </div>
                 <div>
                     <?php echo form_checkbox($drugs_check); ?>
-                    هل تأخذ ادوية
+                     هل تتناول أدوية ؟
                 </div>
 
                 <div>
@@ -1348,7 +1348,7 @@ $overall_agreement = array(
     <footer>
         <p class="col-md-6 required">(*) بيانات لا يكتمل التسجيل بدونها</p>
 
-        <p class="col-md-6 copyrights">&copy; Kershless 2014</p>
+        <p class="col-md-6 copyrights">&copy; Kershless 2015</p>
     </footer>
 </div>
 
