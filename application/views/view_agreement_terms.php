@@ -1,102 +1,70 @@
-
+<!-- //**local_to_global FOR all  paths remove '/Kershless'-->
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ar">
+<!--<![endif]-->
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 <title>الشروط و الأحكام</title>
+<link rel="shortcut icon" href="/Assets/Images/application_logo_new.png">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
 
+<link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/Assets/css/bootstrap-theme.min.css">
+<!-- Bootstrap RTL -->
+<link href="/Assets/css/bootstrap-rtl.css" rel="stylesheet">
+<link rel="stylesheet" href="/Assets/css/style.css">
+
+<script src="/Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 <style type="text/css">
-::selection {
-	background-color: #E13300;
-	color: white;
-}
-
-::moz-selection {
-	background-color: #E13300;
-	color: white;
-}
-
-::webkit-selection {
-	background-color: #E13300;
-	color: white;
-}
-
-body {
-	background-color: #16a085;
-	margin: 40px;
-	color: white;
-	font-family: DINNextLTArabic-Light;
-	font-size: 16px;
-}
-
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
-
-h1 {
-	color: #white;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-	text-align: center;
-}
-
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
-
-#body {
-	margin: 0 15px 0 15px;
-}
-
-p.footer {
-	text-align: right;
-	font-size: 11px;
-	border-top: 1px solid #D0D0D0;
-	line-height: 32px;
-	padding: 0 10px 0 10px;
-	margin: 20px 0 0 0;
-}
-
-#containser {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	-webkit-box-shadow: 0 0 8px #D0D0D0;
+li {
+	font-family: DINNextLTArabic-Light !important;
 }
 </style>
 </head>
-<body dir="rtl">
-	<div id="container">
-		<h1>الشروط و الأحكام</h1>
-
-		<div id="body">
-
-
+<body>
+	<div class="container">
+		<div class="row logo">
+			<img src="/Assets/Images/application_logo_new.png"
+				class="img-responsive" alt="Kershless">
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4" style="text-align: center;">
+				<h2
+					style="font-family: DINNextLTArabic-Light !important; color: white;">الشروط
+					و الأحكام</h2>
+				<br>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row" style="color: white; font-size: 16px;">
 			<p>
-				<b>من أجل الاشتراك في المسابقة يتعين عليك الموافقة على "الشروط
-					والأحكام" المتعلقة بإدارة المسابقة. لذلك، يجب عليك قراءتها كاملة
-					قبل الاشتراك لضمان فهمك لها وموافقتك على الالتزام بها. ثم إذا رغبت
-					في الاشتراك بالمسابقة، فعليك أن تضغط على مربع " أقر و أوافق" على
-					الصفحة الالكترونية على الانترنت للدخول في المسابقة.</b>
+				<b style="font-family: DINNextLTArabic-Light !important;">من أجل
+					الاشتراك في المسابقة يتعين عليك الموافقة على "الشروط والأحكام"
+					المتعلقة بإدارة المسابقة. لذلك، يجب عليك قراءتها كاملة قبل الاشتراك
+					لضمان فهمك لها وموافقتك على الالتزام بها. ثم إذا رغبت في الاشتراك
+					بالمسابقة، فعليك أن تضغط على مربع " أقر و أوافق" على الصفحة
+					الالكترونية على الانترنت للدخول في المسابقة.</b>
 			</p>
 			<p>
-				<b>عندما يضغط المتسابق على مربع "أقر وأوافق" فإنه قد وافق على
-					الالتزام بهذه "الشروط و الأحكام" و التي تشكل اتفاقية قانونية ملزمة
-					بين المتسابق و &reg;Kershless بخصوص المسابقة فيما يتعلق بالتعامل
-					بين المتسابق و إدارة المسابقة ولا يجوز لأي متسابق أن يشترك في
-					المسابقة إلا بعد موافقته عليها و هي كالتالي:</b>
+				<b style="font-family: DINNextLTArabic-Light !important;">عندما يضغط
+					المتسابق على مربع "أقر وأوافق" فإنه قد وافق على الالتزام بهذه
+					"الشروط و الأحكام" و التي تشكل اتفاقية قانونية ملزمة بين المتسابق و
+					&reg;Kershless بخصوص المسابقة فيما يتعلق بالتعامل بين المتسابق و
+					إدارة المسابقة ولا يجوز لأي متسابق أن يشترك في المسابقة إلا بعد
+					موافقته عليها و هي كالتالي:</b>
 			</p>
 			<ol>
 				<li>إدارة المسابقة غير مسئولة عن أي إصابات أو أضرار تلحق بالمتسابقين
@@ -140,9 +108,9 @@ p.footer {
 					والمعلومات المتعلقة بالمتسابقين لهذه المسابقة في أي وسيلة إعلام
 					ولأي غرض آخر وللمدة التي تراها مناسبة. <br> <br>
 				</li>
-				<li>تحتفظ &reg;Kershless بحقها في وقف هذه المسابقة أو عدم إتمامها
-					في أي وقت و خلال أي مرحلة دون أن تتحمل أية مسؤولية مهما كانت في
-					مواجهة المتسابقين و/أو أي شخص آخر. <br> <br>
+				<li>تحتفظ &reg;Kershless بحقها في وقف هذه المسابقة أو عدم إتمامها في
+					أي وقت و خلال أي مرحلة دون أن تتحمل أية مسؤولية مهما كانت في مواجهة
+					المتسابقين و/أو أي شخص آخر. <br> <br>
 				</li>
 				<li>تحتفظ &reg;Kershless بحقوق الملكية الفكرية للمسابقة من حيث
 					الأفكار و التطبيق و الإدارة و خلافه، وكشرط للاشتراك في المسابقة فإن
@@ -163,8 +131,18 @@ p.footer {
 					على الإنترنت على أنه لن يلقى على &reg;Kershless أي التزام بإعلام كل
 					متسابق على حدة بهذه الشروط والأحكام الإضافية.</li>
 			</ol>
+
 		</div>
+
+		<footer>
+			<p class="col-md-4"></p>
+			<p class="col-md-4" style="text-align: center;">&copy; Kershless 2014</p>
+			<p class="col-md-4"></p>
+		</footer>
 	</div>
 
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

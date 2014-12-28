@@ -40,21 +40,13 @@ class Register extends CI_Controller
         //echo count($results);
         //return;
 
-        $this->load->view("view_register_v2");
-        //$this->load->view("view_test");
+        $this->load->view("view_register");
     }
 
-    public function reg_depricated()
-    {
-        //$this->load->view("view_email");
-        //$this->load->view("view_register");
-        $this->load->view("view_register");
-        //$this->load->view("view_test");
-    }
 
     public function rules()
     {
-        $this->load->view("view_agreement_terms_v2");
+        $this->load->view("view_agreement_terms");
     }
 
     function _create_rich_excel_sheet_male()

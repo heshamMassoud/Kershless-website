@@ -7,25 +7,12 @@ class Main extends CI_Controller {
 	{
 		$this->load->helper('url');
 		$this->load->view("view_main");
-		//$this->load->view("view_agreement_terms");
 	}
-	
-	public function mainv2()
-	{
-		$this->load->view("view_main_v2");
-		//$this->load->view("view_agreement_terms");
-	}
+
 
 	public function view_my_custom_index_email()
 	{
 		$this->load->view("view_email_v2");
-	}
-	
-	
-	
-	public function view_register_v2()
-	{
-		$this->load->view("view_register_v2");
 	}
 	
 
