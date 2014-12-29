@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Welcome to Kershless</title>
-<link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/application_logo_new.png">
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
 <style>
 div#social_media>a {
 	-webkit-transition: opacity 0.4s ease-in-out;

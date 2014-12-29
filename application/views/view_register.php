@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>Kershless</title>
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/application_logo_new.png">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -1366,9 +1366,9 @@ $overall_agreement = array(
     </div>
 
     <footer>
-        <p class="col-md-6 required">(*) بيانات لا يكتمل التسجيل بدونها</p>
+        <p class="col-md-12 required">(*) بيانات لا يكتمل التسجيل بدونها</p>
 
-        <p class="col-md-6 copyrights">&copy; Kershless 2015</p>
+        <p class="col-md-12 copyrights">&copy; Kershless 2015</p>
     </footer>
 </div>
 

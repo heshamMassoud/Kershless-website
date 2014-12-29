@@ -186,11 +186,11 @@ input[type="radio"]:checked:after {
 }
 
 .required {
-	text-align: right;
+	text-align: center;
 }
 
 .copyrights {
-	text-align: left;
+	text-align: center;
 }
 
 .weight .col-md-6 {
