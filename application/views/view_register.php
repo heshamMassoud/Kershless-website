@@ -1309,13 +1309,29 @@ $overall_agreement = array(
                     <?php echo form_checkbox($picture_agreement); ?>
                     موافق علي عرض صورتي في النتائج علي الفيس بوك
                 </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h3>بيانات الحالة الصحية</h3>
+
+            <div class="col-md-12 con-info">
+
+
                 <div>
                     <?php echo form_checkbox($operations_check); ?>
                     هل تعرضت لعمليات جراحية ؟
                 </div>
                 <div>
                     <?php echo form_checkbox($terminalDiseases_check); ?>
-                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد -  قولون عصبي ) ؟
+                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
                 </div>
                 <div>
                     <?php echo form_checkbox($boneFractures_check); ?>
@@ -1323,7 +1339,7 @@ $overall_agreement = array(
                 </div>
                 <div>
                     <?php echo form_checkbox($drugs_check); ?>
-                     هل تتناول أدوية ؟
+                    هل تتناول أدوية ؟
                 </div>
 
                 <div>
@@ -1334,6 +1350,10 @@ $overall_agreement = array(
                        style="text-decoration: none; color: #16a085;">للشروط و الأحكام.</a>
                     *
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
                 <?php
                 echo form_submit($form_submitter);
                 echo form_close();
