@@ -13,6 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
 
     <title>Kershless</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
