@@ -750,8 +750,8 @@ class Register extends CI_Controller
             $this->form_validation->set_rules('overall_agreement', 'الإقرار', 'required');
             set_checkbox('overall_agreement', '1');
         }
-        $this->form_validation->set_rules('fullname', 'الإسم الثلاثي', 'required|xss_clean|is_unique[User.full_name]|valid_arabic_fullname');
-        $this->form_validation->set_rules('fullname_english', 'الإسم الثلاثي', 'required|xss_clean|is_unique[User.full_name_english]|valid_english_fullname');
+        $this->form_validation->set_rules('fullname', 'الإسم الثلاثي', 'required|xss_clean|valid_arabic_fullname');
+        $this->form_validation->set_rules('fullname_english', 'الإسم الثلاثي', 'required|xss_clean|valid_english_fullname');
         $this->form_validation->set_rules('job', 'المهنة', 'xss_clean');
         //$this->form_validation->set_rules('age', 'Age', 'numeric|required|xss_clean');
         //$this->form_validation->set_rules('country', 'Country of Residence', 'required|xss_clean');
@@ -759,9 +759,9 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('country', 'Country of Residence', 'required_country|xss_clean');
         $this->form_validation->set_rules('nationality', 'Nationality', 'required_country|xss_clean');
         $this->form_validation->set_rules('dial_code', 'Country dial code', 'numeric|required|xss_clean');
-        $this->form_validation->set_rules('mobile_number', 'رقم الهاتف', 'numeric|required|xss_clean|is_unique[User.mobile_number]');
-        $this->form_validation->set_rules('email', 'الايميل', 'required|trim|xss_clean|valid_email|is_unique[User.email]');
-        $this->form_validation->set_rules('facebook', 'فيسبوك', 'xss_clean|is_unique[User.facebook]|valid_facebook');
+        $this->form_validation->set_rules('mobile_number', 'رقم الهاتف', 'numeric|required|xss_clean');
+        $this->form_validation->set_rules('email', 'الايميل', 'required|trim|xss_clean|valid_email');
+        $this->form_validation->set_rules('facebook', 'فيسبوك', 'xss_clean|valid_facebook');
         $this->form_validation->set_rules('weight', 'الوزن', 'xss_clean|numeric|greater_than[0]|required');
         $this->form_validation->set_rules('height', 'الطول', 'xss_clean|valid_height|required|numeric|greater_than[0]');
         $this->form_validation->set_rules('reason', 'الهدف', 'required|xss_clean');
