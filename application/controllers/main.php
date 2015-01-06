@@ -9,10 +9,16 @@ class Main extends CI_Controller {
 		$this->load->view("view_main");
 	}
 
+	public function index2()
+	{
+		$this->load->helper('url');
+		$this->load->view("view_main_new");
+	}
+
 
 	public function view_my_custom_index_email()
 	{
-		$this->load->view("view_email_v2");
+		$this->load->view("view_email");
 	}
 	
 

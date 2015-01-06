@@ -41,6 +41,10 @@
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 
+$route['new'] = "main/index2";
+$route['register'] = "register";
+$route['(:any)'] = "errors/error_404";
+
 //$route['default_controller'] = "main";
 
 
