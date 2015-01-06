@@ -9,7 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <title>Welcome to Kershless</title>
+
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css" rel="stylesheet">
