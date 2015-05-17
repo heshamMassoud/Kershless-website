@@ -69,13 +69,9 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <!-- Header -->
-  <header>
-
-  </header>
 
   <!-- What is Kershless? Section -->
-  <section class="main" id="slider">
+  <section class="main" id="slider" style="padding:0px !important">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -86,15 +82,20 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img style="max-width:100%;height:auto;margin-bottom:100px" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="max-width:100%;height:auto" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
           <div class="carousel-caption">
             First Picture
           </div>
         </div>
         <div class="item">
-          <img style="max-width:100%;height:auto;margin-bottom:100px" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="max-width:100%;height:auto;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
           <div class="carousel-caption">
-            Second Picture
+            <h1>
+              Meet the team
+            </h1>
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+              Register Now
+            </button>
           </div>
         </div>
       </div>
@@ -112,7 +113,7 @@
   </section>
 
   <!-- What is Kershless? Section -->
-  <section class="alternative" id="what">
+  <section class="main" id="what">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -132,7 +133,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="main" id="about">
+  <section class="alternative" id="about">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
