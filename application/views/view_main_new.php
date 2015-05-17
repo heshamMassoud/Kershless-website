@@ -75,7 +75,7 @@
 
 
   <!-- What is Kershless? Section -->
-  <section class="main" id="slider" style="padding:0px !important">
+  <section class="main first" id="slider">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -86,21 +86,21 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img style="max-width:100%;height:auto" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="max-width:100%;height:auto;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
           <div class="carousel-caption">
-            First Picture
+            <h1>
+              Kershless is a game
+              <br> you win when
+              <br> you lose
+              <br>
+            </h1>
+            <a class="btn btn-primary" role="button" href="http://www.kershless.com/register">
+              Register Now
+            </a>
           </div>
         </div>
         <div class="item">
           <img style="max-width:100%;height:auto;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
-          <div class="carousel-caption">
-            <h1>
-              Meet the team
-            </h1>
-            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-              Register Now
-            </button>
-          </div>
         </div>
       </div>
 
