@@ -66,6 +66,19 @@
           <li class="page-scroll">
             <a href="#about">About</a>
           </li>
+          <li class="page-scroll">
+            <a href="#arabic">Arabic</a>
+          </li>
+          <li>
+            <a href="#search"><i class="fa fa-search"></i></a>
+          </li>
+          <li>
+            <img id="profile-img" style="margin-left:100px;" class="profile-img-card" src="https://scontent-fra.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10394068_10155198980345634_7312502108895889947_n.jpg?oh=2ff3ce48dbe828095c9d97d82db3c73d&oe=55D18736" />
+          </li>
+          <li>
+            <a href="#login">Tarek Massoud</a>
+          </li>
+
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -75,7 +88,7 @@
 
 
   <!-- What is Kershless? Section -->
-  <section class="main first" id="slider">
+  <section class="main first" id="home">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -153,6 +166,7 @@
           <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
         </div>
       </div>
+      <!-- /.row -->
     </div>
   </section>
 
