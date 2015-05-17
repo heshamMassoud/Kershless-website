@@ -16,6 +16,7 @@
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>Assets/css/custom-bootstrap.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
@@ -47,7 +48,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand" href="#page-top">
+          <img class="img-responsive" src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png" alt="">
+        </a>
+
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

@@ -1,0 +1,14 @@
+/*
+This custom css file is written to override or add to any bootstrap.min.css styles
+*/
+
+@media(max-width:768px) {
+  .navbar-fixed-top .navbar-brand img {
+    max-width: 40%;
+    height: auto;
+    margin-top: -5%;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+}
