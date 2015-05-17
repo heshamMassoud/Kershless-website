@@ -99,8 +99,8 @@ header .intro-text .skills {
     -moz-transition: padding .3s;
     transition: padding .3s;
   }
-  .navbar-fixed-top .navbar-brand {
-    font-size: 2em;
+  .navbar-fixed-top .navbar-brand img{
+    margin-top: -20%;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -108,8 +108,10 @@ header .intro-text .skills {
   .navbar-fixed-top.navbar-shrink {
     padding: 10px 0;
   }
-  .navbar-fixed-top.navbar-shrink .navbar-brand {
-    font-size: 1.5em;
+  .navbar-fixed-top.navbar-shrink .navbar-brand img {
+    max-width:70%;
+    margin-top:-13%;
+    height:auto;
   }
 }
 .navbar {
