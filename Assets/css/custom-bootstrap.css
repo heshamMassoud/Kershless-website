@@ -11,4 +11,24 @@ This custom css file is written to override or add to any bootstrap.min.css styl
     -moz-transition: all .3s;
     transition: all .3s;
   }
+  .carousel-caption h1 {
+    font-size: 22px;
+  }
+}
+.carousel-caption {
+  bottom: 40%;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {}
+.carousel-caption {
+  right: 30%;
+  padding-bottom: 30px;
+}
+.carousel-caption .btn {
+  float: right;
+}
+.carousel-caption h1 {
+  float: left;
+  margin-top: 0px;
+}
 }

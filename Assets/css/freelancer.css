@@ -99,7 +99,7 @@ header .intro-text .skills {
     -moz-transition: padding .3s;
     transition: padding .3s;
   }
-  .navbar-fixed-top .navbar-brand img{
+  .navbar-fixed-top .navbar-brand img {
     margin-top: -20%;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -109,9 +109,9 @@ header .intro-text .skills {
     padding: 10px 0;
   }
   .navbar-fixed-top.navbar-shrink .navbar-brand img {
-    max-width:70%;
-    margin-top:-13%;
-    height:auto;
+    max-width: 70%;
+    margin-top: -13%;
+    height: auto;
   }
 }
 .navbar {
@@ -150,13 +150,13 @@ section.alternative {
   color: #000000;
   background: #E2E6EC;
 }
-
+section.first {
+  margin-top: 75px !important;
+  padding: 0 !important;
+}
 @media(max-width:767px) {
   section {
     padding: 75px 0;
-  }
-  section.first {
-    padding-top: 75px;
   }
 }
 #portfolio .portfolio-item {
