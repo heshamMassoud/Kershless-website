@@ -2,7 +2,7 @@
 This custom css file is written to override or add to any bootstrap.min.css styles
 */
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .navbar-fixed-top .navbar-brand img {
     max-width: 40%;
     height: auto;
@@ -11,24 +11,28 @@ This custom css file is written to override or add to any bootstrap.min.css styl
     -moz-transition: all .3s;
     transition: all .3s;
   }
+}
+@media all and (max-width: 1200px) {
+  /* screen size until 1200px */
+
   .carousel-caption h1 {
-    font-size: 22px;
+    font-size: 3em;
+    /* 1.5x default size */
   }
 }
-.carousel-caption {
-  bottom: 40%;
-  text-align: left;
+@media all and (max-width: 1000px) {
+  /* screen size until 1000px */
+
+  .carousel-caption h1 {
+    font-size: 2em;
+    /* 1.2x default size */
+  }
 }
-@media screen and (min-width: 768px) {}
-.carousel-caption {
-  right: 30%;
-  padding-bottom: 30px;
-}
-.carousel-caption .btn {
-  float: right;
-}
-.carousel-caption h1 {
-  float: left;
-  margin-top: 0px;
-}
+@media all and (max-width: 500px) {
+  /* screen size until 500px */
+
+  .carousel-caption h1 {
+    font-size: 1em;
+    /* 0.8x default size */
+  }
 }
