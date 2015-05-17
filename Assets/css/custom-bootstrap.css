@@ -37,3 +37,12 @@ This custom css file is written to override or add to any bootstrap.min.css styl
     /* 0.8x default size */
   }
 }
+.profile-img-card {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
