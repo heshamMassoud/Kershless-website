@@ -201,17 +201,22 @@ input[type="radio"]:checked:after {
 
 .weight .col-md-6 {
 	width: 49%;
+	height: 40px;
 }
 
 .photoboth  .col-md-6 {
 	width: 49%;
-	height: 25px;
-	line-height: 25px;
+	height: 40px;
+	line-height: 2.5;
 	background-color: #5c5c5c;
 	text-align: center;
 	display: inline-block;
 	color: #fff;
 	cursor: pointer;
+	border: 1px solid #5c5c5c !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
 }
 
 
