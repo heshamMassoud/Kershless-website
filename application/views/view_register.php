@@ -580,9 +580,8 @@ $overall_agreement = array(
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h3>بيانات عامة</h3>
-
             <div class="col-md-12 gen-info">
+              <h3>بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>
@@ -1241,9 +1240,8 @@ $overall_agreement = array(
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h3>بيانات المسابقة</h3>
-
             <div class="col-md-12 com-info">
+              <h3>بيانات المسابقة</h3>
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
@@ -1283,10 +1281,8 @@ $overall_agreement = array(
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h3>بيانات التواصل</h3>
-
             <div class="col-md-12 con-info">
-
+              <h3>بيانات التواصل</h3>
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
@@ -1321,11 +1317,8 @@ $overall_agreement = array(
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h3>بيانات الحالة الصحية</h3>
-
             <div class="col-md-12 con-info">
-
-
+              <h3>بيانات الحالة الصحية</h3>
                 <div>
                     <?php echo form_checkbox($operations_check); ?>
                     هل تعرضت لعمليات جراحية ؟
