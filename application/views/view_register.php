@@ -578,8 +578,8 @@ $overall_agreement = array(
              class="img-responsive" alt="Kershless">
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <h3>بيانات عامة</h3>
 
             <div class="col-md-12 gen-info">
@@ -1234,13 +1234,13 @@ $overall_agreement = array(
                 </form>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <h3>بيانات المسابقة</h3>
 
             <div class="col-md-12 com-info">
@@ -1277,12 +1277,12 @@ $overall_agreement = array(
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <h3>بيانات التواصل</h3>
 
             <div class="col-md-12 con-info">
@@ -1315,12 +1315,12 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <h3>بيانات الحالة الصحية</h3>
 
             <div class="col-md-12 con-info">
@@ -1363,7 +1363,7 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <footer>
