@@ -99,7 +99,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img style="max-width:100%;height:auto;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
           <div class="carousel-caption">
             <h1>
               Kershless is a game
@@ -113,7 +113,7 @@
           </div>
         </div>
         <div class="item">
-          <img style="max-width:100%;height:auto;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
         </div>
       </div>
 
