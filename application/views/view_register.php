@@ -574,8 +574,13 @@ $overall_agreement = array(
     echo form_upload($height_image_file_upload); ?></div>
 <div class="container">
     <div class="row logo">
-        <img src="<?php echo base_url(); ?>Assets/Images/application_logo_new.png"
-             class="img-responsive" alt="Kershless">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">  <a href="<?php echo base_url(); ?>new">
+          <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
+              class="img-responsive" alt="Kershless">
+        </a></div>
+
+        <div class="col-md-5"></div>
     </div>
     <div class="row">
         <div class="col-md-3"></div>
