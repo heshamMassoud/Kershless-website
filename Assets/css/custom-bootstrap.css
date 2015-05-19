@@ -46,3 +46,7 @@ This custom css file is written to override or add to any bootstrap.min.css styl
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+.carousel-caption {
+  left: 0%;
+  right: 0%;
+}
