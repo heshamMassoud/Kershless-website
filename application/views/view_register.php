@@ -574,15 +574,19 @@ $overall_agreement = array(
     echo form_upload($height_image_file_upload); ?></div>
 <div class="container">
     <div class="row logo">
-        <img src="<?php echo base_url(); ?>Assets/Images/application_logo_new.png"
-             class="img-responsive" alt="Kershless">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">  <a href="<?php echo base_url(); ?>new">
+          <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
+              class="img-responsive" alt="Kershless">
+        </a></div>
+
+        <div class="col-md-5"></div>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات عامة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 gen-info">
+              <h3>بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>
@@ -1234,16 +1238,15 @@ $overall_agreement = array(
                 </form>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات المسابقة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 com-info">
+              <h3>بيانات المسابقة</h3>
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
@@ -1277,16 +1280,14 @@ $overall_agreement = array(
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات التواصل</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
+              <h3>بيانات التواصل</h3>
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
@@ -1315,17 +1316,14 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات الحالة الصحية</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
-
+              <h3>بيانات الحالة الصحية</h3>
                 <div>
                     <?php echo form_checkbox($operations_check); ?>
                     هل تعرضت لعمليات جراحية ؟
@@ -1363,7 +1361,7 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <footer>

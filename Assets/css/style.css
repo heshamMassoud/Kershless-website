@@ -19,7 +19,7 @@
 }
 
 body {
-	background-color: #16a085;
+	background-color: #ffffff;
 	direction: rtl;
 }
 
@@ -41,10 +41,16 @@ footer {
 h3 {
 	color: #fff;
 	text-align: center;
-	background-color: #5c5c5c;
+	background-color: #28b997;
 	margin-bottom: 5px;
 	padding: 5px;
 	font-size: 16px;
+	height: 40px;
+	line-height: 2.1;
+	border: 1px solid #28b997 !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
 }
 
 .rightdiv {
@@ -65,9 +71,9 @@ h3 {
 	{
 	background-color: #eaedf1 !important;
 	border: 1px solid #eaedf1 !important;
-	-webkit-border-radius: 0px !important;
-	-moz-border-radius: 0px !important;
-	border-radius: 0px !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
 	box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
@@ -195,17 +201,22 @@ input[type="radio"]:checked:after {
 
 .weight .col-md-6 {
 	width: 49%;
+	height: 40px;
 }
 
 .photoboth  .col-md-6 {
 	width: 49%;
-	height: 25px;
-	line-height: 25px;
+	height: 40px;
+	line-height: 2.5;
 	background-color: #5c5c5c;
 	text-align: center;
 	display: inline-block;
 	color: #fff;
 	cursor: pointer;
+	border: 1px solid #5c5c5c !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
 }
 
 
