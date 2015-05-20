@@ -291,7 +291,7 @@ if (form_error('friend_code') != '') {
 //########## Left Column php Form Helper Input SERVER SIDE ERROR HANDELING ####################
 
 if (form_error('mobile_number') != '') {
-    $mobile_number_class = "col-md-8 form-control mob input_form_error";
+    $mobile_number_class = "col-md-9 form-control mob input_form_error";
     $mobile_number_hidden_error = array(
         'id' => 'mobile_number_hidden_error',
         'name' => 'mobile_number_hidden_error',
@@ -300,7 +300,7 @@ if (form_error('mobile_number') != '') {
     );
     echo form_input($mobile_number_hidden_error);
 } else {
-    $mobile_number_class = "col-md-8 form-control mob input_form";
+    $mobile_number_class = "col-md-9 form-control mob input_form";
 }
 
 if (form_error('dial_code') != '') {
