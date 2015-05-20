@@ -278,5 +278,6 @@ input[type="radio"]:checked:after {
 @media only screen and (max-width: 990px) {
 	.bir-da select.col-md-4 {
 		width: 100% !important;
+		margin-bottom: 10px;
 	}
 }
