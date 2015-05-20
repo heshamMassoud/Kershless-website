@@ -71,6 +71,7 @@ textarea {
   resize: none;
   padding-right: 15px;
   padding-left: 15px;
+  vertical-align: top;
 }
 .form-group {
   height: 100%;
@@ -224,7 +225,6 @@ input[type="radio"]:checked:after {
 @media only screen and (min-width: 990px) {
   .com-info, .gen-info, .con-info {
     /*min-height: 467px;*/
-
     /*min-height: 487px;*/
   }
   .con-info .form-group {
@@ -236,8 +236,8 @@ input[type="radio"]:checked:after {
     width: 100% !important;
     margin-bottom: 10px;
   }
-	.mob {
-		width: 100%;
-		margin-bottom: 10px;
-	}
+  .mob {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
