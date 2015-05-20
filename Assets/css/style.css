@@ -227,7 +227,7 @@ input[type="radio"]:checked:after {
     min-height: 487px;
   }
   .con-info .form-group {
-    margin-bottom: 35px;
+    /*margin-bottom: 35px;*/
   }
 }
 @media only screen and (max-width: 990px) {
