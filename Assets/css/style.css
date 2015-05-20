@@ -224,7 +224,7 @@ input[type="radio"]:checked:after {
   .com-info, .gen-info, .con-info {
     /*min-height: 467px;*/
 
-    min-height: 487px;
+    /*min-height: 487px;*/
   }
   .con-info .form-group {
     /*margin-bottom: 35px;*/
