@@ -236,9 +236,13 @@ class Model_user extends CI_MODEL
         $picture_agreement = $this->input->post("picture_agreement");
         $overall_agreement = $this->input->post("overall_agreement");
         $operations_check = $this->input->post("operations_check");
+        $operations_desc = $this->input->post("operations_desc");
         $terminalDiseases_check = $this->input->post("terminalDiseases_check");
+        $terminalDiseases_desc = $this->input->post("terminalDiseases_desc");
         $boneFractures_check = $this->input->post("boneFractures_check");
+        $boneFractures_desc = $this->input->post("boneFractures_desc");
         $drugs_check = $this->input->post("drugs_check");
+        $drugs_desc = $this->input->post("drugs_desc");
 
 
         $fullname = $this->security->xss_clean($fullname);
@@ -261,6 +265,10 @@ class Model_user extends CI_MODEL
         $reasonToBeKershless = $this->security->xss_clean($reasonToBeKershless);
         $provocation = $this->security->xss_clean($provocation);
         $friendCode = $this->security->xss_clean($friendCode);
+        $operations_desc = $this->security->xss_clean($operations_desc);
+        $terminalDiseases_desc = $this->security->xss_clean($terminalDiseases_desc);
+        $boneFractures_desc = $this->security->xss_clean($boneFractures_desc);
+        $drugs_desc = $this->security->xss_clean($drugs_desc);
 
 
         if ($gender == 1) {
@@ -395,9 +403,13 @@ class Model_user extends CI_MODEL
             'picture_agreement' => $picture_agreement,
             'overall_agreement' => $overall_agreement,
             'operations_check' => $operations_check,
+            'operations_desc' => $operations_desc,
             'terminalDiseases_check' => $terminalDiseases_check,
+            'terminalDiseases_desc' => $terminalDiseases_desc,
             'boneFractures_check' => $boneFractures_check,
+            'boneFractures_desc' => $boneFractures_desc,
             'drugs_check' => $drugs_check,
+            'drugs_desc' => $drugs_desc,
             'date' => $current_date
         );
 
