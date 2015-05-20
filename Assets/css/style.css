@@ -214,6 +214,7 @@ input[type="radio"]:checked:after {
 }
 .mob {
   background: url('/Assets/Icons/mobile.png') no-repeat 97% 8px;
+  width: 73%;
 }
 .frecode input {
   background: url('/Assets/Icons/users.png') no-repeat 97% 8px;
@@ -235,4 +236,8 @@ input[type="radio"]:checked:after {
     width: 100% !important;
     margin-bottom: 10px;
   }
+	.mob {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
