@@ -525,13 +525,6 @@ $picture_agreement = array(
 );
 
 
-$operations_check = $this->input->post('operations_check', TRUE) == null ? FALSE : TRUE;
-$operations_check = array(
-    'name' => 'operations_check',
-    'id' => 'operations_check',
-    'value' => 'accept',
-    'checked' => $operations_check
-);
 $operations_desc = array(
     'name' => 'operations_desc',
     'id' => 'operations_desc',
@@ -540,13 +533,7 @@ $operations_desc = array(
     'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-$terminalDiseases_check = $this->input->post('terminalDiseases_check', TRUE) == null ? FALSE : TRUE;
-$terminalDiseases_check = array(
-    'name' => 'terminalDiseases_check',
-    'id' => 'terminalDiseases_check',
-    'value' => 'accept',
-    'checked' => $terminalDiseases_check
-);
+
 $terminalDiseases_desc = array(
     'name' => 'terminalDiseases_desc',
     'id' => 'terminalDiseases_desc',
@@ -555,13 +542,6 @@ $terminalDiseases_desc = array(
     'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-$boneFractures_check = $this->input->post('boneFractures_check', TRUE) == null ? FALSE : TRUE;
-$boneFractures_check = array(
-    'name' => 'boneFractures_check',
-    'id' => 'boneFractures_check',
-    'value' => 'accept',
-    'checked' => $boneFractures_check
-);
 $boneFractures_desc = array(
     'name' => 'boneFractures_desc',
     'id' => 'boneFractures_desc',
@@ -570,14 +550,6 @@ $boneFractures_desc = array(
     'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-
-$drugs_check = $this->input->post('drugs_check', TRUE) == null ? FALSE : TRUE;
-$drugs_check = array(
-    'name' => 'drugs_check',
-    'id' => 'drugs_check',
-    'value' => 'accept',
-    'checked' => $drugs_check
-);
 $drugs_desc = array(
     'name' => 'drugs_desc',
     'id' => 'drugs_desc',
@@ -1354,34 +1326,30 @@ $overall_agreement = array(
             <div class="col-md-12 con-info">
               <h3>بيانات الحالة الصحية</h3>
                 <div>
-                    <?php echo form_checkbox($operations_check); ?>
                     هل تعرضت لعمليات جراحية ؟
                 </div>
                 <div class="form-group operations-desc">
                     <?php echo form_textarea($operations_desc); ?>
                 </div>
                 <div>
-                    <?php echo form_checkbox($terminalDiseases_check); ?>
                     هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
                 </div>
                 <div class="form-group terminalDiseases-desc">
                     <?php echo form_textarea($terminalDiseases_desc); ?>
                 </div>
                 <div>
-                    <?php echo form_checkbox($boneFractures_check); ?>
                     هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
                 </div>
                 <div class="form-group boneFractures-desc">
                     <?php echo form_textarea($boneFractures_desc); ?>
                 </div>
                 <div>
-                    <?php echo form_checkbox($drugs_check); ?>
                     هل تتناول أدوية ؟
                 </div>
                 <div class="form-group drugs-desc">
                     <?php echo form_textarea($drugs_desc); ?>
                 </div>
-
+                <br><br>
                 <div>
                     <?php echo form_checkbox($overall_agreement); ?>
                     أقر بأن جميع البيانات المذكورة صحيحة و على مسئوليتي الشخصية طبقاً

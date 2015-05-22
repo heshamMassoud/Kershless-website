@@ -8,50 +8,6 @@ $(function () {
     var height_image_name = "empty";
 
     // test
-    // New health section:
-    document.getElementById('operations_check').onclick = function() {
-      var operation_textArea = $('.form-group.operations-desc');
-      if (this.checked) {
-        // if checked ...
-        operation_textArea.show("slow");
-      } else {
-        // if not checked ...
-        operation_textArea.hide("slow");
-      }
-    };
-
-    document.getElementById('terminalDiseases_check').onclick = function() {
-      var terminalDiseases_textArea = $('.form-group.terminalDiseases-desc');
-      if (this.checked) {
-        // if checked ...
-        terminalDiseases_textArea.show("slow");
-      } else {
-        // if not checked ...
-        terminalDiseases_textArea.hide("slow");
-      }
-    };
-
-    document.getElementById('boneFractures_check').onclick = function() {
-      var boneFractures_textArea = $('.form-group.boneFractures-desc');
-      if (this.checked) {
-        // if checked ...
-        boneFractures_textArea.show("slow");
-      } else {
-        // if not checked ...
-        boneFractures_textArea.hide("slow");
-      }
-    };
-
-    document.getElementById('drugs_check').onclick = function() {
-      var drugs_textArea = $('.form-group.drugs-desc');
-      if (this.checked) {
-        // if checked ...
-        drugs_textArea.show("slow");
-      } else {
-        // if not checked ...
-        drugs_textArea.hide("slow");
-      }
-    };
 
     // ########## Right Column JS Server Validation####################
     if ($('#fullname').attr('class') == 'form-control input_form_error') {

@@ -220,9 +220,6 @@ input[type="radio"]:checked:after {
 .frecode input {
   background: url('/Assets/Icons/users.png') no-repeat 97% 8px;
 }
-.form-group.operations-desc, .form-group.terminalDiseases-desc, .form-group.boneFractures-desc, .form-group.drugs-desc {
-  display: none;
-}
 /* Media  */
 
 @media only screen and (min-width: 990px) {

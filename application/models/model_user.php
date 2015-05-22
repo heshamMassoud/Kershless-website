@@ -235,13 +235,9 @@ class Model_user extends CI_MODEL
         $name_agreement = $this->input->post("name_agreement");
         $picture_agreement = $this->input->post("picture_agreement");
         $overall_agreement = $this->input->post("overall_agreement");
-        $operations_check = $this->input->post("operations_check");
         $operations_desc = $this->input->post("operations_desc");
-        $terminalDiseases_check = $this->input->post("terminalDiseases_check");
         $terminalDiseases_desc = $this->input->post("terminalDiseases_desc");
-        $boneFractures_check = $this->input->post("boneFractures_check");
         $boneFractures_desc = $this->input->post("boneFractures_desc");
-        $drugs_check = $this->input->post("drugs_check");
         $drugs_desc = $this->input->post("drugs_desc");
 
 
@@ -346,18 +342,6 @@ class Model_user extends CI_MODEL
         if ($picture_agreement != "accept") {
             $picture_agreement = "reject";
         }
-        if ($operations_check != "accept") {
-            $operations_check = "reject";
-        }
-        if ($terminalDiseases_check != "accept") {
-            $terminalDiseases_check = "reject";
-        }
-        if ($boneFractures_check != "accept") {
-            $boneFractures_check = "reject";
-        }
-        if ($drugs_check != "accept") {
-            $drugs_check = "reject";
-        }
         if ($overall_agreement != "accept") {
             $overall_agreement = "reject";
         }
@@ -402,13 +386,9 @@ class Model_user extends CI_MODEL
             'name_agreement' => $name_agreement,
             'picture_agreement' => $picture_agreement,
             'overall_agreement' => $overall_agreement,
-            'operations_check' => $operations_check,
             'operations_desc' => $operations_desc,
-            'terminalDiseases_check' => $terminalDiseases_check,
             'terminalDiseases_desc' => $terminalDiseases_desc,
-            'boneFractures_check' => $boneFractures_check,
             'boneFractures_desc' => $boneFractures_desc,
-            'drugs_check' => $drugs_check,
             'drugs_desc' => $drugs_desc,
             'date' => $current_date
         );
