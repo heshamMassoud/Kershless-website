@@ -558,6 +558,14 @@ $drugs_desc = array(
     'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
+$allergy_desc = array(
+    'name' => 'allergy_desc',
+    'id' => 'allergy_desc',
+    'class' => 'input_form',
+    'value' => set_value('allergy_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
+);
+
 $overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
 $overall_agreement = array(
     'name' => 'overall_agreement',
@@ -1348,6 +1356,12 @@ $overall_agreement = array(
                 </div>
                 <div class="form-group drugs-desc">
                     <?php echo form_textarea($drugs_desc); ?>
+                </div>
+                <div>
+                  هل لديك حساسية من أطعمة معينة ؟
+                </div>
+                <div class="form-group allergy-desc">
+                    <?php echo form_textarea($allergy_desc); ?>
                 </div>
                 <br><br>
                 <div>

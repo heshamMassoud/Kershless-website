@@ -239,6 +239,7 @@ class Model_user extends CI_MODEL
         $terminalDiseases_desc = $this->input->post("terminalDiseases_desc");
         $boneFractures_desc = $this->input->post("boneFractures_desc");
         $drugs_desc = $this->input->post("drugs_desc");
+        $allergy_desc = $this->input->post("allergy_desc");
 
 
         $fullname = $this->security->xss_clean($fullname);
@@ -265,6 +266,7 @@ class Model_user extends CI_MODEL
         $terminalDiseases_desc = $this->security->xss_clean($terminalDiseases_desc);
         $boneFractures_desc = $this->security->xss_clean($boneFractures_desc);
         $drugs_desc = $this->security->xss_clean($drugs_desc);
+        $allergy_desc = $this->security->xss_clean($allergy_desc);
 
 
         if ($gender == 1) {
@@ -390,6 +392,7 @@ class Model_user extends CI_MODEL
             'terminalDiseases_desc' => $terminalDiseases_desc,
             'boneFractures_desc' => $boneFractures_desc,
             'drugs_desc' => $drugs_desc,
+            'allergy_desc' => $allergy_desc,
             'date' => $current_date
         );
 
