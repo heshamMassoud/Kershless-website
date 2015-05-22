@@ -291,7 +291,7 @@ if (form_error('friend_code') != '') {
 //########## Left Column php Form Helper Input SERVER SIDE ERROR HANDELING ####################
 
 if (form_error('mobile_number') != '') {
-    $mobile_number_class = "col-md-8 form-control mob input_form_error";
+    $mobile_number_class = "col-md-9 form-control mob input_form_error";
     $mobile_number_hidden_error = array(
         'id' => 'mobile_number_hidden_error',
         'name' => 'mobile_number_hidden_error',
@@ -300,7 +300,7 @@ if (form_error('mobile_number') != '') {
     );
     echo form_input($mobile_number_hidden_error);
 } else {
-    $mobile_number_class = "col-md-8 form-control mob input_form";
+    $mobile_number_class = "col-md-9 form-control mob input_form";
 }
 
 if (form_error('dial_code') != '') {
@@ -525,36 +525,45 @@ $picture_agreement = array(
 );
 
 
-$operations_check = $this->input->post('operations_check', TRUE) == null ? FALSE : TRUE;
-$operations_check = array(
-    'name' => 'operations_check',
-    'id' => 'operations_check',
-    'value' => 'accept',
-    'checked' => $operations_check
+$operations_desc = array(
+    'name' => 'operations_desc',
+    'id' => 'operations_desc',
+    'class' => 'input_form',
+    'value' => set_value('operations_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-$terminalDiseases_check = $this->input->post('terminalDiseases_check', TRUE) == null ? FALSE : TRUE;
-$terminalDiseases_check = array(
-    'name' => 'terminalDiseases_check',
-    'id' => 'terminalDiseases_check',
-    'value' => 'accept',
-    'checked' => $terminalDiseases_check
+
+$terminalDiseases_desc = array(
+    'name' => 'terminalDiseases_desc',
+    'id' => 'terminalDiseases_desc',
+    'class' => 'input_form',
+    'value' => set_value('terminalDiseases_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-$boneFractures_check = $this->input->post('boneFractures_check', TRUE) == null ? FALSE : TRUE;
-$boneFractures_check = array(
-    'name' => 'boneFractures_check',
-    'id' => 'boneFractures_check',
-    'value' => 'accept',
-    'checked' => $boneFractures_check
+$boneFractures_desc = array(
+    'name' => 'boneFractures_desc',
+    'id' => 'boneFractures_desc',
+    'class' => 'input_form',
+    'value' => set_value('boneFractures_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
-$drugs_check = $this->input->post('drugs_check', TRUE) == null ? FALSE : TRUE;
-$drugs_check = array(
-    'name' => 'drugs_check',
-    'id' => 'drugs_check',
-    'value' => 'accept',
-    'checked' => $drugs_check
+$drugs_desc = array(
+    'name' => 'drugs_desc',
+    'id' => 'drugs_desc',
+    'class' => 'input_form',
+    'value' => set_value('drugs_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
+);
+
+$allergy_desc = array(
+    'name' => 'allergy_desc',
+    'id' => 'allergy_desc',
+    'class' => 'input_form',
+    'value' => set_value('allergy_desc'),
+    'placeholder' => 'من فضلك أذكر التفاصيل'
 );
 
 $overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
@@ -574,15 +583,19 @@ $overall_agreement = array(
     echo form_upload($height_image_file_upload); ?></div>
 <div class="container">
     <div class="row logo">
-        <img src="<?php echo base_url(); ?>Assets/Images/application_logo_new.png"
-             class="img-responsive" alt="Kershless">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">  <a href="<?php echo base_url(); ?>new">
+          <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
+              class="img-responsive" alt="Kershless">
+        </a></div>
+
+        <div class="col-md-5"></div>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات عامة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 gen-info">
+              <h3>بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>
@@ -1234,16 +1247,15 @@ $overall_agreement = array(
                 </form>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات المسابقة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 com-info">
+              <h3>بيانات المسابقة</h3>
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
@@ -1277,16 +1289,14 @@ $overall_agreement = array(
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات التواصل</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
+              <h3>بيانات التواصل</h3>
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
@@ -1315,34 +1325,45 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات الحالة الصحية</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
-
+              <h3>بيانات الحالة الصحية</h3>
                 <div>
-                    <?php echo form_checkbox($operations_check); ?>
                     هل تعرضت لعمليات جراحية ؟
                 </div>
+                <div class="form-group operations-desc">
+                    <?php echo form_textarea($operations_desc); ?>
+                </div>
                 <div>
-                    <?php echo form_checkbox($terminalDiseases_check); ?>
                     هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
                 </div>
+                <div class="form-group terminalDiseases-desc">
+                    <?php echo form_textarea($terminalDiseases_desc); ?>
+                </div>
                 <div>
-                    <?php echo form_checkbox($boneFractures_check); ?>
                     هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
                 </div>
+                <div class="form-group boneFractures-desc">
+                    <?php echo form_textarea($boneFractures_desc); ?>
+                </div>
                 <div>
-                    <?php echo form_checkbox($drugs_check); ?>
                     هل تتناول أدوية ؟
                 </div>
-
+                <div class="form-group drugs-desc">
+                    <?php echo form_textarea($drugs_desc); ?>
+                </div>
+                <div>
+                  هل لديك حساسية من أطعمة معينة ؟
+                </div>
+                <div class="form-group allergy-desc">
+                    <?php echo form_textarea($allergy_desc); ?>
+                </div>
+                <br><br>
                 <div>
                     <?php echo form_checkbox($overall_agreement); ?>
                     أقر بأن جميع البيانات المذكورة صحيحة و على مسئوليتي الشخصية طبقاً
@@ -1363,7 +1384,7 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <footer>
@@ -1373,8 +1394,5 @@ $overall_agreement = array(
     </footer>
 </div>
 
-<script src="<?php echo base_url(); ?>js/jquery.js"></script>
-<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>js/scripts.js"></script>
 </body>
 </html>
