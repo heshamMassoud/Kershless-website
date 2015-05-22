@@ -235,10 +235,11 @@ class Model_user extends CI_MODEL
         $name_agreement = $this->input->post("name_agreement");
         $picture_agreement = $this->input->post("picture_agreement");
         $overall_agreement = $this->input->post("overall_agreement");
-        $operations_check = $this->input->post("operations_check");
-        $terminalDiseases_check = $this->input->post("terminalDiseases_check");
-        $boneFractures_check = $this->input->post("boneFractures_check");
-        $drugs_check = $this->input->post("drugs_check");
+        $operations_desc = $this->input->post("operations_desc");
+        $terminalDiseases_desc = $this->input->post("terminalDiseases_desc");
+        $boneFractures_desc = $this->input->post("boneFractures_desc");
+        $drugs_desc = $this->input->post("drugs_desc");
+        $allergy_desc = $this->input->post("allergy_desc");
 
 
         $fullname = $this->security->xss_clean($fullname);
@@ -261,6 +262,11 @@ class Model_user extends CI_MODEL
         $reasonToBeKershless = $this->security->xss_clean($reasonToBeKershless);
         $provocation = $this->security->xss_clean($provocation);
         $friendCode = $this->security->xss_clean($friendCode);
+        $operations_desc = $this->security->xss_clean($operations_desc);
+        $terminalDiseases_desc = $this->security->xss_clean($terminalDiseases_desc);
+        $boneFractures_desc = $this->security->xss_clean($boneFractures_desc);
+        $drugs_desc = $this->security->xss_clean($drugs_desc);
+        $allergy_desc = $this->security->xss_clean($allergy_desc);
 
 
         if ($gender == 1) {
@@ -338,18 +344,6 @@ class Model_user extends CI_MODEL
         if ($picture_agreement != "accept") {
             $picture_agreement = "reject";
         }
-        if ($operations_check != "accept") {
-            $operations_check = "reject";
-        }
-        if ($terminalDiseases_check != "accept") {
-            $terminalDiseases_check = "reject";
-        }
-        if ($boneFractures_check != "accept") {
-            $boneFractures_check = "reject";
-        }
-        if ($drugs_check != "accept") {
-            $drugs_check = "reject";
-        }
         if ($overall_agreement != "accept") {
             $overall_agreement = "reject";
         }
@@ -394,10 +388,11 @@ class Model_user extends CI_MODEL
             'name_agreement' => $name_agreement,
             'picture_agreement' => $picture_agreement,
             'overall_agreement' => $overall_agreement,
-            'operations_check' => $operations_check,
-            'terminalDiseases_check' => $terminalDiseases_check,
-            'boneFractures_check' => $boneFractures_check,
-            'drugs_check' => $drugs_check,
+            'operations_desc' => $operations_desc,
+            'terminalDiseases_desc' => $terminalDiseases_desc,
+            'boneFractures_desc' => $boneFractures_desc,
+            'drugs_desc' => $drugs_desc,
+            'allergy_desc' => $allergy_desc,
             'date' => $current_date
         );
 
