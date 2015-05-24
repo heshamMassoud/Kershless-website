@@ -375,6 +375,9 @@ $(function() {
 
   $("#profile_picture_upload").hover(
     function() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return;
+      }
       $(this).css('cursor', 'pointer');
       $('#profile_picture_upload').attr('title',
         'Drag & Drop or Click to upload');
