@@ -1368,7 +1368,7 @@ $overall_agreement = array(
                     <?php echo form_checkbox($overall_agreement); ?>
                     أقر بأن جميع البيانات المذكورة صحيحة و على مسئوليتي الشخصية طبقاً
                     <a id="agreement_rules"
-                       href="http://www.Kershless.com/register/rules" target="_blank"
+                       href="<?php echo base_url();?>register/rules" target="_blank"
                        style="text-decoration: none; color: #16a085;">للشروط و الأحكام.</a>
                     *
                 </div>

@@ -11,18 +11,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title>الشروط و الأحكام</title>
-<link rel="shortcut icon" href="/Assets/Images/application_logo_new.png">
+<meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
+
+<title>Kershless</title>
+<link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="/Assets/css/bootstrap-theme.min.css">
+	href="<?php echo base_url(); ?>Assets/css/bootstrap-theme.min.css">
 <!-- Bootstrap RTL -->
-<link href="/Assets/css/bootstrap-rtl.css" rel="stylesheet">
-<link rel="stylesheet" href="/Assets/css/style.css">
+<link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
 
-<script src="/Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -36,20 +39,24 @@ li {
 <body>
 	<div class="container">
 		<div class="row logo">
-			<img src="/Assets/Images/application_logo_new.png"
-				class="img-responsive" alt="Kershless">
+			<div class="col-md-5"></div>
+			<div class="col-md-2"> <a href="<?php echo base_url(); ?>new">
+				<img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
+					class="img-responsive" alt="Kershless"></a>
+			</div>
+			<div class="col-md-5"></div>
 		</div>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4" style="text-align: center;">
 				<h2
-					style="font-family: DINNextLTArabic-Light !important; color: white;">الشروط
+					style="font-family: DINNextLTArabic-Light !important;">الشروط
 					و الأحكام</h2>
 				<br>
 			</div>
 			<div class="col-md-4"></div>
 		</div>
-		<div class="row" style="color: white; font-size: 16px;">
+		<div class="row" style=" ont-size: 16px;">
 			<p>
 				<b style="font-family: DINNextLTArabic-Light !important;">من أجل
 					الاشتراك في المسابقة يتعين عليك الموافقة على "الشروط والأحكام"
@@ -140,9 +147,5 @@ li {
 			<p class="col-md-4"></p>
 		</footer>
 	</div>
-
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/scripts.js"></script>
 </body>
 </html>
