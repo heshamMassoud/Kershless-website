@@ -833,14 +833,9 @@ class Register extends CI_Controller
             }*/
         } else {
             //echo "errors";
-            $this->load->view("view_register_v2");
+            $this->load->view("view_register");
             //echo validation_errors();
         }
     }
 
 }
-
-
-
-
-
