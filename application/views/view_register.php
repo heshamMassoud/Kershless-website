@@ -37,7 +37,7 @@
 </head>
 <?php
 
-echo form_open_multipart('register/register_validation/');
+echo form_open_multipart('register/');
 
 
 //####### Form Submitter ################
