@@ -25,7 +25,7 @@
 <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
 
-<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -147,5 +147,6 @@ li {
 			<p class="col-md-4"></p>
 		</footer>
 	</div>
+	<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </body>
 </html>

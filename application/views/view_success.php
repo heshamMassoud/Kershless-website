@@ -11,19 +11,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title>شكرا</title>
-<link rel="shortcut icon" href="/Assets/Images/application_logo_new.png">
+<link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="/Assets/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap-theme.min.css">
 <!-- Bootstrap RTL -->
-<link href="/Assets/css/bootstrap-rtl.css" rel="stylesheet">
-<link rel="stylesheet" href="/Assets/css/style.css">
-<link href="/Assets/Stylesheets/stylesheet.css" rel="stylesheet"
+<link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
+<link href="<?php echo base_url(); ?>Assets/Stylesheets/stylesheet.css" rel="stylesheet"
 	type="text/css">
 
-<script src="/Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,17 +33,17 @@
 	<div class="container">
 		<div class="row logo">
 			<a href="http://www.kershless.com/"><img
-				src="/Assets/Images/kersh_success.png" class="img-responsive"
+				src="<?php echo base_url(); ?>Assets/Images/kersh_success.png" class="img-responsive"
 				alt="Kershless"> </a>
 		</div>
 		<div class="row logo">
-			<img src="/Assets/Images/kersh_thumb.png" class="img-responsive"
+			<img src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive"
 				alt="Kershless">
 		</div>
 		<div class="row" style="color: white; font-size: 16px;">
 			<p class="col-md-4"></p>
 			<p class="col-md-4" style="text-align: center; font-size: x-large;">
-				<b style="font-family: DINNextLTArabic-Light !important;">شكرا <?php 
+				<b style="font-family: DINNextLTArabic-Light !important;">شكرا <?php
 				echo $name ?> على التسجيل معنا في كرشلس ، سوف يصلك إيميل خلال دقائق
 					به كود التسجيل الخاص بك أرسله لأصدقائك لتكونوا معاً في نفس الموسم
 				</b>
@@ -77,8 +76,9 @@
 		</footer>
 	</div>
 
-	<script src="js/jquery.js"></script>
-	<script src="/Assets/js/bootstrap.min.js"></script>
-	<script src="/Assets/js/scripts.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="<?php echo base_url(); ?>Assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url(); ?>Assets/js/scripts.js"></script>
+	<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </body>
 </html>
