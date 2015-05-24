@@ -109,7 +109,7 @@
                 <br> you lose
                 <br>
               </h1>
-              <a class="btn btn-primary" role="button" href="http://www.kershless.com/register">
+              <a class="btn btn-primary" role="button" href="<?php echo base_url(); ?>register">
               Register Now
             </a>
             </div>
