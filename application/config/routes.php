@@ -42,8 +42,12 @@ $route['default_controller'] = "main";
 $route['404_override'] = '';
 
 $route['new'] = "main/index2";
-$route['register'] = "register";
-$route['register/register_validation'] = "register/register_validation";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $route['register'] = "register/register_validation";
+}
+else {
+  $route['register'] = "register";
+}
 $route['register/rules'] = "register/rules";
 $route['(:any)'] = "errors/error_404";
 
