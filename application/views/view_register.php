@@ -30,14 +30,6 @@
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
 
-
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript"
-            src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
-    <script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
-    <script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -1393,6 +1385,10 @@ $overall_agreement = array(
         <p class="col-md-12 copyrights">&copy; Kershless 2015</p>
     </footer>
 </div>
-
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </body>
 </html>
