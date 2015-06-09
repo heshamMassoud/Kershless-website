@@ -57,6 +57,8 @@ li {
 			<div class="col-md-4"></div>
 		</div>
 		<div class="row" style=" ont-size: 16px;">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
 			<p>
 				<b style="font-family: DINNextLTArabic-Light !important;">من أجل
 					الاشتراك في المسابقة يتعين عليك الموافقة على "الشروط والأحكام"
@@ -138,9 +140,9 @@ li {
 					على الإنترنت على أنه لن يلقى على &reg;Kershless أي التزام بإعلام كل
 					متسابق على حدة بهذه الشروط والأحكام الإضافية.</li>
 			</ol>
-
+			</div>
+			<div class="col-md-3"></div>
 		</div>
-
 		<footer>
 			<p class="col-md-4"></p>
 			<p class="col-md-4" style="text-align: center;">&copy; Kershless 2014</p>
