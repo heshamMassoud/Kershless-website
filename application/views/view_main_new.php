@@ -67,7 +67,7 @@
             <a href="#what">What is Kershless?</a>
           </li>
           <li class="page-scroll">
-            <a href="#arabic">Arabic</a>
+            <a href="#arabic" class="arabic">عربي</a>
           </li>
           <!--
           <li>

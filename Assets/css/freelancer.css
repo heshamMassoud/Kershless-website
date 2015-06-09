@@ -4,6 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@font-face {
+  font-family: 'GE_Thameen_Light';
+  src: url('../fonts/GE_Thameen_Light.otf');
+}
 body {
   overflow-x: hidden;
 }
@@ -384,11 +388,13 @@ footer .footer-below {
 .footer-right-a {
   padding-left: 12px;
 }
-
-.sitemap{
+.sitemap {
   color: #fff;
 }
-.sitemap:hover{
+.sitemap:hover {
   text-decoration: none;
   color: #fff;
+}
+.arabic {
+  font-family: "GE_Thameen_Light"
 }
