@@ -17,10 +17,14 @@ a, a:hover, a:focus, a:active, a.active {
   outline: 0;
   color: #18bc9c;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
+}
+h3 {
+  text-transform: uppercase;
+  font-family: "HelveticaNeue-Light" !important;
 }
 hr.star-light, hr.star-primary {
   margin: 25px auto 30px;
@@ -116,8 +120,7 @@ header .intro-text .skills {
 }
 .navbar {
   text-transform: uppercase;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "HelveticaNeue-Light";
 }
 .navbar a:focus {
   outline: 0;

@@ -69,6 +69,7 @@
           <li class="page-scroll">
             <a href="#arabic">Arabic</a>
           </li>
+          <!--
           <li>
             <a href="#search"><i class="fa fa-search"></i></a>
           </li>
@@ -77,7 +78,7 @@
           </li>
           <li>
             <a href="#login">Tarek Massoud</a>
-          </li>
+          </li>-->
 
         </ul>
       </div>
@@ -191,27 +192,23 @@
             Copyright &copy; Kershless 2015
           </div>
           </div>
-          <div class="footer-col col-md-1"></div>
+          <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
             <ul class="list-inline">
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
               </li>
               <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
               </li>
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
               </li>
               <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
               </li>
             </ul>
           </div>
-          <div class="footer-col col-md-1"></div>
         </div>
       </div>
     </div>
