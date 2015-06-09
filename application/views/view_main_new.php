@@ -126,7 +126,9 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div><br><br>
+    </div>
+    <br>
+    <br>
     <div class="row">
       <div class="text-center">
         <a role="button" href="<?php echo base_url(); ?>register" class="btn btn-default register-now">Register Now</a>
@@ -139,19 +141,37 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2>What is Kershless?</h2>
+          <h3>What is Kershless?</h3>
           <br>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <p>
+            Kershless is a world that gathers people striving to reach their optimum weight in a healthy manner.
+             This target would be achieved by competing in groups with other members who want to change their lifestyle
+             and reach their weight loss goal, too.</p>
+            <p>Kershless
+            will help you reach your target weight through an online competition where all contestants encourage
+             one another.
+             Its slogan is “Together We Can”! You will find constant enthusiasm, competition, encouragement and support to help
+              you reach
+            your goal.</p>
+            <p> Kershless’ team of coaches will follow up on the contestants’ progress throughout the competition
+               to help them reach their best performance and lose the extra weight in a healthy manner.</p>
+            <p> A Kershless season lasts for 16 weeks and
+            consists of 12 players. Each contestant should aim to lose as much weight as s/he could each week.
+             A winner is announced at the end of the week. The game plan changes during the competition to keep
+             all contestants engaged. Female contestants’
+            information will be handled discreetly and with absolute confidentiality. Further rules and regulations
+             will be shared with you after you register and join Kershless.</p>
+            <p> Want to lose weight? You are not alone! Join Kershless and make your dream
+            come true!
+          </p>
+          <div class="col-lg-2"></div>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- About Section -->
