@@ -61,10 +61,10 @@
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
-            <a href="#what">What is Kershless?</a>
+            <a href="#home">Home</a>
           </li>
           <li class="page-scroll">
-            <a href="#about">About</a>
+            <a href="#what">What is Kershless?</a>
           </li>
           <li class="page-scroll">
             <a href="#arabic">Arabic</a>
@@ -174,39 +174,25 @@
       </div>
   </section>
 
-  <!-- About Section -->
-  <section class="alternative" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>About</h2>
-          <br>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-        </div>
-      </div>
-      <!-- /.row -->
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="text-center">
+  <footer>
     <div class="footer-above">
       <div class="container">
         <div class="row">
+          <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
-            <h3>Location</h3>
-            <p>3481 Melrose Place
-              <br>Beverly Hills, CA 90210</p>
+            <div>
+              <a class="sitemap footer-left-a" href="#">Home</a> |
+              <a class="sitemap footer-middle-a" href="#">What is Kershless?</a> |
+              <a class="sitemap footer-right-a" href="#">Contact Us</a>
           </div>
+          <br>
+            <div>
+            Copyright &copy; Kershless 2015
+          </div>
+          </div>
+          <div class="footer-col col-md-1"></div>
           <div class="footer-col col-md-4">
-            <h3>Around the Web</h3>
             <ul class="list-inline">
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -225,19 +211,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer-col col-md-4">
-            <h3>About Freelancer</h3>
-            <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            Copyright &copy; Your Website 2014
-          </div>
+          <div class="footer-col col-md-1"></div>
         </div>
       </div>
     </div>
