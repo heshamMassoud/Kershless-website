@@ -50,3 +50,16 @@ This custom css file is written to override or add to any bootstrap.min.css styl
   left: 0%;
   right: 0%;
 }
+
+.register-now:hover {
+  background-color: #28b998;
+  border-radius: 40px;
+  border-color: transparent;
+}
+
+.register-now {
+  background-color: #ffffff;
+  border-radius: 40px;
+  border-color: #28b998;
+  color: #28b998;
+}

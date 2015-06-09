@@ -87,7 +87,7 @@
   </nav>
 
 
-  <!-- What is Kershless? Section -->
+  <!-- Slider Section -->
   <section class="main first" id="home">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -109,9 +109,6 @@
                 <br> you lose
                 <br>
               </h1>
-              <a class="btn btn-primary" role="button" href="<?php echo base_url(); ?>register">
-              Register Now
-            </a>
             </div>
           </div>
         </div>
@@ -129,6 +126,11 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div><br><br>
+    <div class="row">
+      <div class="text-center">
+        <a role="button" href="<?php echo base_url(); ?>register" class="btn btn-default register-now">Register Now</a>
+      </div>
     </div>
   </section>
 
