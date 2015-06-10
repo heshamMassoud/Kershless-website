@@ -353,7 +353,7 @@ function buildDayDropdown($name = '', $value = '')
 function buildYearDropdown($name = '', $value = '')
 {
     $current_year = 1900;
-    while ($current_year <= 1995) {
+    while ($current_year <= 2000) {
         $year[$current_year] = $current_year;
         $current_year++;
     }
