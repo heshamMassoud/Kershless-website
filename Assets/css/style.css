@@ -193,7 +193,7 @@ input[type="radio"]:checked:after {
 
 .bir-da select {
   height: 34px;
-  background: url('../Icons/play.png') no-repeat 10px 8px;
+  background: url('../Icons/play.png') no-repeat 5% 50%;
 }
 .full-name input {
   background: url('../Icons/user.png') no-repeat 97% 8px;
@@ -202,10 +202,14 @@ input[type="radio"]:checked:after {
   background: url('../Icons/wrench.png') no-repeat 97% 8px;
 }
 .cnty select {
-  background: url('../Icons/location.png') no-repeat 97% 8px;
+  background: url('../Icons/location.png'), url('../Icons/play.png');
+  background-position: 97% 8px, 2% 50%;
+  background-repeat: no-repeat;
 }
 .nation select {
-  background: url('../Icons/flag2.png') no-repeat 97% 8px;
+  background: url('../Icons/flag2.png'), url('../Icons/play.png');
+  background-position: 97% 8px, 2% 50%;
+  background-repeat: no-repeat;
 }
 .mail input {
   background: url('../Icons/envelope.png') no-repeat 97% 8px;
