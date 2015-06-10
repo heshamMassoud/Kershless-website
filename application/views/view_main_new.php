@@ -20,6 +20,7 @@
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
   <!-- Custom Fonts -->
   <link href="<?php echo base_url(); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

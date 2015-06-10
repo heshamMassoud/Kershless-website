@@ -3,11 +3,6 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
-@font-face {
-  font-family: 'GE_Thameen_Light';
-  src: url('../fonts/GE_Thameen_Light.otf');
-}
 body {
   overflow-x: hidden;
 }
@@ -396,5 +391,5 @@ footer .footer-below {
   color: #fff;
 }
 .arabic {
-  font-family: "GE_Thameen_Light"
+  font-family: "thameen"
 }
