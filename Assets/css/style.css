@@ -25,7 +25,9 @@ footer {
 .sex label span, .marital h4, .marital label span, .jobtype input,
 .nation select, .cnty select, .picture-agreement, .photoboth div,
 .weight input, .reas textarea, .provo textarea, .frecode input,
-.con-info input, .con-info textarea, .con-info div, .con-info div a, footer .required {
+.con-info input, .con-info textarea, .con-info div, .con-info div a,
+footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
+.rules-title h2  {
   font-family: "thameen" !important;
 }
 h3 {
