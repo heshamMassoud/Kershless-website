@@ -16,9 +16,12 @@
     <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
 
     <title>Kershless</title>
+
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
     <link rel="stylesheet"
@@ -29,6 +32,7 @@
     <!-- Bootstrap RTL -->
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -353,7 +357,7 @@ function buildDayDropdown($name = '', $value = '')
 function buildYearDropdown($name = '', $value = '')
 {
     $current_year = 1900;
-    while ($current_year <= 1995) {
+    while ($current_year <= 2000) {
         $year[$current_year] = $current_year;
         $current_year++;
     }
@@ -414,7 +418,7 @@ $friend_code = array(
     'id' => 'friend_code',
     'class' => $friend_code_class,
     'value' => set_value('friend_code'),
-    'placeholder' => 'كود التسجيل الخاص بصديقك',
+    'placeholder' => 'كود التسجيل الخاص بصديقك ..If more than one: codeI, codeII, codeIII, etc',
     'onBlur' => 'friend_code_client_validation_blur();',
     'onFocus' => 'friend_code_client_validation_focus();'
 );
@@ -465,7 +469,7 @@ $mobile_number = array(
     'id' => 'mobile_number',
     'class' => $mobile_number_class,
     'value' => set_value('mobile_number'),
-    'placeholder' => 'رقم الهاتف *',
+    'placeholder' => 'رقم الهاتف * Number on WhatsApp',
     'onBlur' => 'mobile_number_client_validation_blur();',
     'onFocus' => 'mobile_number_client_validation_focus();'
 );
@@ -494,7 +498,7 @@ $facebook = array(
     'name' => 'facebook',
     'id' => 'facebook',
     'value' => set_value('facebook'),
-    'placeholder' => 'فيسبوك',
+    'placeholder' => 'فيسبوك Ex: www.facebook.com/your_username',
     'class' => $facebook_class,
     'onBlur' => 'facebook_client_validation_blur();',
     'onFocus' => 'facebook_client_validation_focus();'
@@ -522,7 +526,7 @@ $operations_desc = array(
     'id' => 'operations_desc',
     'class' => 'input_form',
     'value' => set_value('operations_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => '  هل تعرضت لعمليات جراحية ؟ من فضلك أذكر التفاصيل.'
 );
 
 
@@ -531,7 +535,7 @@ $terminalDiseases_desc = array(
     'id' => 'terminalDiseases_desc',
     'class' => 'input_form',
     'value' => set_value('terminalDiseases_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟ من فضلك أذكر التفاصيل.'
 );
 
 $boneFractures_desc = array(
@@ -539,7 +543,7 @@ $boneFractures_desc = array(
     'id' => 'boneFractures_desc',
     'class' => 'input_form',
     'value' => set_value('boneFractures_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟ من فضلك أذكر التفاصيل.'
 );
 
 $drugs_desc = array(
@@ -547,7 +551,7 @@ $drugs_desc = array(
     'id' => 'drugs_desc',
     'class' => 'input_form',
     'value' => set_value('drugs_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تتناول أدوية ؟ من فضلك أذكر التفاصيل.'
 );
 
 $allergy_desc = array(
@@ -555,7 +559,7 @@ $allergy_desc = array(
     'id' => 'allergy_desc',
     'class' => 'input_form',
     'value' => set_value('allergy_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك أذكر التفاصيل.'
 );
 
 $overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
@@ -596,6 +600,11 @@ $overall_agreement = array(
                     <div class="form-group full-name">
                         <?php echo form_input($full_name_english); ?>
                     </div>
+                    <div class="form-group name-agreement">
+                        <?php echo form_checkbox($name_agreement); ?>
+                        موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
+                    </div>
+
 
                     <div class="form-group bir-da">
                         <div>تاريخ الميلاد *</div>
@@ -1251,7 +1260,11 @@ $overall_agreement = array(
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
-                    <span>(Files(.png/.jpg/.jpeg) should be less than 2 MB) </span>
+                    <span>Files(.png/.jpg/.jpeg) should be less than 2 MB </span>
+                </div>
+                <div class="form-group picture-agreement">
+                    <?php echo form_checkbox($picture_agreement); ?>
+                    موافق علي عرض صورتي في النتائج على وسائل التواصل الاجتماعي
                 </div>
                 <div class="form-group photoboth">
                     <div id="weight_upload_div"
@@ -1277,7 +1290,6 @@ $overall_agreement = array(
                 </div>
                 <div class="form-group frecode">
                     <?php echo form_input($friend_code); ?>
-                    <span>(..If more than one: code1, code2, code3, etc) </span>
                 </div>
             </div>
         </div>
@@ -1292,7 +1304,6 @@ $overall_agreement = array(
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
-                    <label><span>(Number on WhatsApp)</span> </label>
                 </div>
 
                 <div class="form-group mail">
@@ -1301,17 +1312,9 @@ $overall_agreement = array(
 
                 <div class="form-group fb">
                     <?php echo form_input($facebook); ?>
-                    <span>(Ex: www.facebook.com/your_username) </span>
                 </div>
 
-                <div>
-                    <?php echo form_checkbox($name_agreement); ?>
-                    موافق علي عرض أسمي في النتائج علي الفيس بوك
-                </div>
-                <div>
-                    <?php echo form_checkbox($picture_agreement); ?>
-                    موافق علي عرض صورتي في النتائج علي الفيس بوك
-                </div>
+
 
 
             </div>
@@ -1325,32 +1328,17 @@ $overall_agreement = array(
         <div class="col-md-6">
             <div class="col-md-12 con-info">
               <h3>بيانات الحالة الصحية</h3>
-                <div>
-                    هل تعرضت لعمليات جراحية ؟
-                </div>
                 <div class="form-group operations-desc">
                     <?php echo form_textarea($operations_desc); ?>
-                </div>
-                <div>
-                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
                 </div>
                 <div class="form-group terminalDiseases-desc">
                     <?php echo form_textarea($terminalDiseases_desc); ?>
                 </div>
-                <div>
-                    هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
-                </div>
                 <div class="form-group boneFractures-desc">
                     <?php echo form_textarea($boneFractures_desc); ?>
                 </div>
-                <div>
-                    هل تتناول أدوية ؟
-                </div>
                 <div class="form-group drugs-desc">
                     <?php echo form_textarea($drugs_desc); ?>
-                </div>
-                <div>
-                  هل لديك حساسية من أطعمة معينة ؟
                 </div>
                 <div class="form-group allergy-desc">
                     <?php echo form_textarea($allergy_desc); ?>

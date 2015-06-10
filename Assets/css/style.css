@@ -1,14 +1,7 @@
 /* Main Style */
 
-@font-face {
-  font-family: 'din_next_lt_arabiclight';
-  src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot');
-  src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot?#iefix') format('embedded-opentype'), url('/Assets/fonts/dinnextltarabic-light-webfont.woff') format('woff'), url('/Assets/fonts/dinnextltarabic-light-webfont.ttf') format('truetype'), url('/Assets/fonts/dinnextltarabic-light-webfont.svg#din_next_lt_arabiclight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 * {
-  font-family: 'din_next_lt_arabiclight' !important;
+  font-family: "HelveticaNeue-Light" !important;
   font-weight: normal !important;
 }
 body {
@@ -22,10 +15,18 @@ footer {
 }
 .logo img {
   margin: 0px auto;
-  padding-top: 5px;
+  padding-top: 18px;
 }
 * {
   outline: 0px !important;
+}
+.com-info h3, .gen-info h3, .con-info h3, .gen-info .form-group input#fullname,
+.gen-info .name-agreement, .bir-da div, .bir-da select, .sex h4,
+.sex label span, .marital h4, .marital label span, .jobtype input,
+.nation select, .cnty select, .picture-agreement, .photoboth div,
+.weight input, .reas textarea, .provo textarea, .frecode input,
+.con-info input, .con-info textarea, .con-info div, .con-info div a, footer .required {
+  font-family: "thameen" !important;
 }
 h3 {
   color: #fff;
@@ -48,6 +49,7 @@ h3 {
   float: left;
   margin-left: 0px !important;
 }
+
 /* Form Work */
 
 .com-info, .gen-info, .con-info {
@@ -87,7 +89,7 @@ textarea {
   line-height: 40px !important;
 }
 .form-group select {
-  line-height: 22px !important;
+  line-height: 18px !important;
 }
 input:focus, .bir-da select:focus, .mobno input:focus, .mobno input:focus, .mail input:focus, .fb input:focus, .frecode input:focus, .reas textarea:focus, .provo textarea:focus {
   background-color: #eaedf1 !important;
@@ -154,7 +156,7 @@ input[type="radio"]:checked:after {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background: url('/Assets/Images/profile_pic_cyan.png');
+  background: url('../Images/profile_pic_cyan.png');
 }
 .uplpho span {
   text-align: center;
@@ -189,37 +191,45 @@ input[type="radio"]:checked:after {
 .input_form_error {
   /*border: 1px solid #D45044 !important;*/
 }
+
 /* icons */
 
 .bir-da select {
   height: 34px;
-  background: url('/Assets/Icons/play.png') no-repeat 10px 8px;
+  background: url('../Icons/play.png') no-repeat 5% 50%;
 }
 .full-name input {
-  background: url('/Assets/Icons/user.png') no-repeat 97% 8px;
+  background: url('../Icons/user.png') no-repeat 97% 8px;
 }
 .jobtype input {
-  background: url('/Assets/Icons/wrench.png') no-repeat 97% 8px;
+  background: url('../Icons/wrench.png') no-repeat 97% 8px;
 }
 .cnty select {
-  background: url('/Assets/Icons/location.png') no-repeat 97% 8px;
+  background: url('../Icons/location.png'), url('../Icons/play.png');
+  background-position: 97% 8px, 2% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .nation select {
-  background: url('/Assets/Icons/flag2.png') no-repeat 97% 8px;
+  background: url('../Icons/flag2.png'), url('../Icons/play.png');
+  background-position: 97% 8px, 2% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .mail input {
-  background: url('/Assets/Icons/envelope.png') no-repeat 97% 8px;
+  background: url('../Icons/envelope.png') no-repeat 97% 8px;
 }
 .fb input {
-  background: url('/Assets/Icons/facebook_1.png') no-repeat 97% 8px;
+  background: url('../Icons/facebook_1.png') no-repeat 97% 8px;
 }
 .mob {
-  background: url('/Assets/Icons/mobile.png') no-repeat 97% 8px;
+  background: url('../Icons/mobile.png') no-repeat 97% 8px;
   width: 73%;
 }
 .frecode input {
-  background: url('/Assets/Icons/users.png') no-repeat 97% 8px;
+  background: url('../Icons/users.png') no-repeat 97% 8px;
 }
+
 /* Media  */
 
 @media only screen and (min-width: 990px) {
