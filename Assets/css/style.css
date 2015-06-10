@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'din_next_lt_arabiclight';
-  src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot');
-  src: url('/Assets/fonts/dinnextltarabic-light-webfont.eot?#iefix') format('embedded-opentype'), url('/Assets/fonts/dinnextltarabic-light-webfont.woff') format('woff'), url('/Assets/fonts/dinnextltarabic-light-webfont.ttf') format('truetype'), url('/Assets/fonts/dinnextltarabic-light-webfont.svg#din_next_lt_arabiclight') format('svg');
+  src: url('../fonts/dinnextltarabic-light-webfont.eot');
+  src: url('../fonts/dinnextltarabic-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinnextltarabic-light-webfont.woff') format('woff'), url('../fonts/dinnextltarabic-light-webfont.ttf') format('truetype'), url('../fonts/dinnextltarabic-light-webfont.svg#din_next_lt_arabiclight') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -154,7 +154,7 @@ input[type="radio"]:checked:after {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background: url('/Assets/Images/profile_pic_cyan.png');
+  background: url('../Images/profile_pic_cyan.png');
 }
 .uplpho span {
   text-align: center;
@@ -193,32 +193,32 @@ input[type="radio"]:checked:after {
 
 .bir-da select {
   height: 34px;
-  background: url('/Assets/Icons/play.png') no-repeat 10px 8px;
+  background: url('../Icons/play.png') no-repeat 10px 8px;
 }
 .full-name input {
-  background: url('/Assets/Icons/user.png') no-repeat 97% 8px;
+  background: url('../Icons/user.png') no-repeat 97% 8px;
 }
 .jobtype input {
-  background: url('/Assets/Icons/wrench.png') no-repeat 97% 8px;
+  background: url('../Icons/wrench.png') no-repeat 97% 8px;
 }
 .cnty select {
-  background: url('/Assets/Icons/location.png') no-repeat 97% 8px;
+  background: url('../Icons/location.png') no-repeat 97% 8px;
 }
 .nation select {
-  background: url('/Assets/Icons/flag2.png') no-repeat 97% 8px;
+  background: url('../Icons/flag2.png') no-repeat 97% 8px;
 }
 .mail input {
-  background: url('/Assets/Icons/envelope.png') no-repeat 97% 8px;
+  background: url('../Icons/envelope.png') no-repeat 97% 8px;
 }
 .fb input {
-  background: url('/Assets/Icons/facebook_1.png') no-repeat 97% 8px;
+  background: url('../Icons/facebook_1.png') no-repeat 97% 8px;
 }
 .mob {
-  background: url('/Assets/Icons/mobile.png') no-repeat 97% 8px;
+  background: url('../Icons/mobile.png') no-repeat 97% 8px;
   width: 73%;
 }
 .frecode input {
-  background: url('/Assets/Icons/users.png') no-repeat 97% 8px;
+  background: url('../Icons/users.png') no-repeat 97% 8px;
 }
 /* Media  */
 
