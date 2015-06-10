@@ -596,6 +596,11 @@ $overall_agreement = array(
                     <div class="form-group full-name">
                         <?php echo form_input($full_name_english); ?>
                     </div>
+                    <div class="form-group">
+                        <?php echo form_checkbox($name_agreement); ?>
+                        موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
+                    </div>
+
 
                     <div class="form-group bir-da">
                         <div>تاريخ الميلاد *</div>
@@ -1253,6 +1258,10 @@ $overall_agreement = array(
                          class="<?php echo $profile_picture_class ?>"></div>
                     <span>(Files(.png/.jpg/.jpeg) should be less than 2 MB) </span>
                 </div>
+                <div class="form-group">
+                    <?php echo form_checkbox($picture_agreement); ?>
+                    موافق علي عرض صورتي في النتائج على وسائل التواصل الاجتماعي
+                </div>
                 <div class="form-group photoboth">
                     <div id="weight_upload_div"
                          class="<?php echo $weight_image_class ?>">
@@ -1304,14 +1313,7 @@ $overall_agreement = array(
                     <span>(Ex: www.facebook.com/your_username) </span>
                 </div>
 
-                <div>
-                    <?php echo form_checkbox($name_agreement); ?>
-                    موافق علي عرض أسمي في النتائج علي الفيس بوك
-                </div>
-                <div>
-                    <?php echo form_checkbox($picture_agreement); ?>
-                    موافق علي عرض صورتي في النتائج علي الفيس بوك
-                </div>
+
 
 
             </div>
