@@ -522,7 +522,7 @@ $operations_desc = array(
     'id' => 'operations_desc',
     'class' => 'input_form',
     'value' => set_value('operations_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => '  هل تعرضت لعمليات جراحية ؟ من فضلك أذكر التفاصيل.'
 );
 
 
@@ -531,7 +531,7 @@ $terminalDiseases_desc = array(
     'id' => 'terminalDiseases_desc',
     'class' => 'input_form',
     'value' => set_value('terminalDiseases_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟ من فضلك أذكر التفاصيل.'
 );
 
 $boneFractures_desc = array(
@@ -539,7 +539,7 @@ $boneFractures_desc = array(
     'id' => 'boneFractures_desc',
     'class' => 'input_form',
     'value' => set_value('boneFractures_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟ من فضلك أذكر التفاصيل.'
 );
 
 $drugs_desc = array(
@@ -547,7 +547,7 @@ $drugs_desc = array(
     'id' => 'drugs_desc',
     'class' => 'input_form',
     'value' => set_value('drugs_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل تتناول أدوية ؟ من فضلك أذكر التفاصيل.'
 );
 
 $allergy_desc = array(
@@ -555,7 +555,7 @@ $allergy_desc = array(
     'id' => 'allergy_desc',
     'class' => 'input_form',
     'value' => set_value('allergy_desc'),
-    'placeholder' => 'من فضلك أذكر التفاصيل'
+    'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك أذكر التفاصيل.'
 );
 
 $overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
@@ -1324,32 +1324,17 @@ $overall_agreement = array(
         <div class="col-md-6">
             <div class="col-md-12 con-info">
               <h3>بيانات الحالة الصحية</h3>
-                <div>
-                    هل تعرضت لعمليات جراحية ؟
-                </div>
                 <div class="form-group operations-desc">
                     <?php echo form_textarea($operations_desc); ?>
-                </div>
-                <div>
-                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
                 </div>
                 <div class="form-group terminalDiseases-desc">
                     <?php echo form_textarea($terminalDiseases_desc); ?>
                 </div>
-                <div>
-                    هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
-                </div>
                 <div class="form-group boneFractures-desc">
                     <?php echo form_textarea($boneFractures_desc); ?>
                 </div>
-                <div>
-                    هل تتناول أدوية ؟
-                </div>
                 <div class="form-group drugs-desc">
                     <?php echo form_textarea($drugs_desc); ?>
-                </div>
-                <div>
-                  هل لديك حساسية من أطعمة معينة ؟
                 </div>
                 <div class="form-group allergy-desc">
                     <?php echo form_textarea($allergy_desc); ?>
