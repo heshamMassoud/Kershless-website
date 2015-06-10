@@ -414,7 +414,7 @@ $friend_code = array(
     'id' => 'friend_code',
     'class' => $friend_code_class,
     'value' => set_value('friend_code'),
-    'placeholder' => 'كود التسجيل الخاص بصديقك',
+    'placeholder' => 'كود التسجيل الخاص بصديقك (..If more than one: code1, code2, code3, etc)',
     'onBlur' => 'friend_code_client_validation_blur();',
     'onFocus' => 'friend_code_client_validation_focus();'
 );
@@ -465,7 +465,7 @@ $mobile_number = array(
     'id' => 'mobile_number',
     'class' => $mobile_number_class,
     'value' => set_value('mobile_number'),
-    'placeholder' => 'رقم الهاتف *',
+    'placeholder' => 'رقم الهاتف * (Number on WhatsApp)',
     'onBlur' => 'mobile_number_client_validation_blur();',
     'onFocus' => 'mobile_number_client_validation_focus();'
 );
@@ -494,7 +494,7 @@ $facebook = array(
     'name' => 'facebook',
     'id' => 'facebook',
     'value' => set_value('facebook'),
-    'placeholder' => 'فيسبوك',
+    'placeholder' => 'فيسبوك (Ex: www.facebook.com/your_username)',
     'class' => $facebook_class,
     'onBlur' => 'facebook_client_validation_blur();',
     'onFocus' => 'facebook_client_validation_focus();'
@@ -1286,7 +1286,6 @@ $overall_agreement = array(
                 </div>
                 <div class="form-group frecode">
                     <?php echo form_input($friend_code); ?>
-                    <span>(..If more than one: code1, code2, code3, etc) </span>
                 </div>
             </div>
         </div>
@@ -1301,7 +1300,6 @@ $overall_agreement = array(
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
-                    <label><span>(Number on WhatsApp)</span> </label>
                 </div>
 
                 <div class="form-group mail">
@@ -1310,7 +1308,6 @@ $overall_agreement = array(
 
                 <div class="form-group fb">
                     <?php echo form_input($facebook); ?>
-                    <span>(Ex: www.facebook.com/your_username) </span>
                 </div>
 
 
