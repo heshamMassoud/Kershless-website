@@ -16,9 +16,12 @@
     <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
 
     <title>Kershless</title>
+
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
     <link rel="stylesheet"
@@ -29,6 +32,7 @@
     <!-- Bootstrap RTL -->
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -414,7 +418,7 @@ $friend_code = array(
     'id' => 'friend_code',
     'class' => $friend_code_class,
     'value' => set_value('friend_code'),
-    'placeholder' => 'كود التسجيل الخاص بصديقك (..If more than one: code1, code2, code3, etc)',
+    'placeholder' => 'كود التسجيل الخاص بصديقك ..If more than one: codeI, codeII, codeIII, etc',
     'onBlur' => 'friend_code_client_validation_blur();',
     'onFocus' => 'friend_code_client_validation_focus();'
 );
@@ -465,7 +469,7 @@ $mobile_number = array(
     'id' => 'mobile_number',
     'class' => $mobile_number_class,
     'value' => set_value('mobile_number'),
-    'placeholder' => 'رقم الهاتف * (Number on WhatsApp)',
+    'placeholder' => 'رقم الهاتف * Number on WhatsApp',
     'onBlur' => 'mobile_number_client_validation_blur();',
     'onFocus' => 'mobile_number_client_validation_focus();'
 );
@@ -494,7 +498,7 @@ $facebook = array(
     'name' => 'facebook',
     'id' => 'facebook',
     'value' => set_value('facebook'),
-    'placeholder' => 'فيسبوك (Ex: www.facebook.com/your_username)',
+    'placeholder' => 'فيسبوك Ex: www.facebook.com/your_username',
     'class' => $facebook_class,
     'onBlur' => 'facebook_client_validation_blur();',
     'onFocus' => 'facebook_client_validation_focus();'
@@ -596,7 +600,7 @@ $overall_agreement = array(
                     <div class="form-group full-name">
                         <?php echo form_input($full_name_english); ?>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group name-agreement">
                         <?php echo form_checkbox($name_agreement); ?>
                         موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
                     </div>
@@ -1256,9 +1260,9 @@ $overall_agreement = array(
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
-                    <span>(Files(.png/.jpg/.jpeg) should be less than 2 MB) </span>
+                    <span>Files(.png/.jpg/.jpeg) should be less than 2 MB </span>
                 </div>
-                <div class="form-group">
+                <div class="form-group picture-agreement">
                     <?php echo form_checkbox($picture_agreement); ?>
                     موافق علي عرض صورتي في النتائج على وسائل التواصل الاجتماعي
                 </div>
