@@ -87,7 +87,7 @@ textarea {
   line-height: 40px !important;
 }
 .form-group select {
-  line-height: 22px !important;
+  line-height: 18px !important;
 }
 input:focus, .bir-da select:focus, .mobno input:focus, .mobno input:focus, .mail input:focus, .fb input:focus, .frecode input:focus, .reas textarea:focus, .provo textarea:focus {
   background-color: #eaedf1 !important;
@@ -205,11 +205,13 @@ input[type="radio"]:checked:after {
   background: url('../Icons/location.png'), url('../Icons/play.png');
   background-position: 97% 8px, 2% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .nation select {
   background: url('../Icons/flag2.png'), url('../Icons/play.png');
   background-position: 97% 8px, 2% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .mail input {
   background: url('../Icons/envelope.png') no-repeat 97% 8px;
