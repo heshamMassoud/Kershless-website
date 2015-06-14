@@ -580,7 +580,7 @@ $overall_agreement = array(
 <div class="container">
     <div class="row logo">
       <div class="col-md-5"></div>
-      <div class="col-md-2">  <a href="<?php echo base_url(); ?>new">
+      <div class="col-md-2">  <a href="new">
           <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
               class="img-responsive" alt="Kershless">
         </a></div>
@@ -1348,7 +1348,7 @@ $overall_agreement = array(
                     <?php echo form_checkbox($overall_agreement); ?>
                     أقر بأن جميع البيانات المذكورة صحيحة و على مسئوليتي الشخصية طبقاً
                     <a id="agreement_rules"
-                       href="<?php echo base_url();?>register/rules" target="_blank"
+                       href="register/rules" target="_blank"
                        style="text-decoration: none; color: #16a085;">للشروط و الأحكام.</a>
                     *
                 </div>
