@@ -703,7 +703,7 @@ class Register extends CI_Controller
 						follow us on: <a href=\"https://www.facebook.com/Kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">fb</a>
 						| <a href=\"http://www.twitter.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">twitter</a>
 						| <a href=\"http://www.youtube.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">youtube</a>
-							
+
 						</td>
 						</tr>
 						</table>
@@ -764,8 +764,8 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('facebook', 'فيسبوك', 'xss_clean|valid_facebook');
         $this->form_validation->set_rules('weight', 'الوزن', 'xss_clean|numeric|greater_than[0]|required');
         $this->form_validation->set_rules('height', 'الطول', 'xss_clean|valid_height|required|numeric|greater_than[0]');
-        $this->form_validation->set_rules('reason', 'الهدف', 'required|xss_clean');
-        $this->form_validation->set_rules('provocation', 'الكلمة الموجهة للمنافسين', 'required|xss_clean');
+        $this->form_validation->set_rules('reason', 'الهدف', 'required|xss_clean|arabic');
+        $this->form_validation->set_rules('provocation', 'الكلمة الموجهة للمنافسين', 'required|xss_clean|arabic');
         $this->form_validation->set_rules('friend_code', 'كود التسجيل الخاص بصديقك', 'xss_clean|valid_kershless_code[User.kershless_code]');
         //$this->form_validation->set_rules('name_agreement', 'Agree', 'trim');
         //$this->form_validation->set_rules('picture_agreement', 'Agree', 'trim');
