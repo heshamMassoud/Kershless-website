@@ -61,13 +61,22 @@
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
-            <a href="#what">What is Kershless?</a>
+            <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
           <li class="page-scroll">
             <a href="#about">About</a>
           </li>
           <li class="page-scroll">
-            <a href="#arabic">Arabic</a>
+            <?php
+            $current_lang = $this->lang->lang();
+            if ($current_lang == 'en') {
+              $other_lang = 'ar';
+            }
+            else{
+              $other_lang = 'en';
+            }
+            ?>
+            <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
           <li>
             <a href="#search"><i class="fa fa-search"></i></a>
@@ -78,7 +87,6 @@
           <li>
             <a href="#login">Tarek Massoud</a>
           </li>
-
         </ul>
       </div>
       <!-- /.navbar-collapse -->
