@@ -1297,9 +1297,12 @@ class CI_Form_validation {
 
 	}
 	// --------------------------------------------------------------------
-	
-	
-	
+	public function arabic($str)
+	{
+		return ( ! preg_match("/^ *[\p{Arabic}]*$/ui", $str)) ? FALSE : TRUE;
+	}
+
+
 
 	/**
 	 * Alpha-numeric
