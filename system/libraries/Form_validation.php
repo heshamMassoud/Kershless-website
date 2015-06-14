@@ -1281,9 +1281,9 @@ class CI_Form_validation {
 		//1.81
 		//return ( ! preg_match("/^[a-z]+ [a-z]+ [a-z]+$/i", $str)) ? FALSE : TRUE;[\u{0900}-\u{097F}]+
 		//return ( ! preg_match("/^([\p{Arabic}]+ [\p{Arabic}]+ [\p{Arabic}]+ *)|([A-Za-z][a-z]* [A-Za-z][a-z]* [A-Za-z][a-z]* *)$/ui", $str)) ? FALSE : TRUE;
-		return ( ! preg_match("/^ *[\p{Arabic}]+ +[\p{Arabic}]+ +[\p{Arabic}]+ *$/ui", $str)) ? FALSE : TRUE;
-		
-		
+		return ( ! preg_match("/^ *[\p{Arabic}]+ +[\p{Arabic}]+ +[\p{Arabic}]+( [\p{Arabic}]*)* *$/ui", $str)) ? FALSE : TRUE;
+
+
 	}
 	// --------------------------------------------------------------------
 
