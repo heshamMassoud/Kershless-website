@@ -14,7 +14,7 @@ $(function() {
         event.preventDefault();
     });
     $('a.sitemap').bind('click', function(event) {
-        alert($anchor.attr('href'));
+        var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
