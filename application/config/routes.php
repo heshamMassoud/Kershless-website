@@ -38,20 +38,31 @@
 |
 */
 
+
+
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 
-$route['new'] = "main/index2";
+// URI like '/en/about' -> use controller 'about'
+//$route['^(en|de|fr|nl)/(.+)$'] = "$2";
+
+// '/en', '/de', '/fr' and '/nl' URIs -> use default controller
+$route['^(en|de|fr|nl|ar)$'] = $route['default_controller'];
+
+
+
+$route['^(en|ar)/new'] = "main/index2";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $route['register'] = "register/register_validation";
+  $route['^(en|ar)/register'] = "register/register_validation";
 }
 else {
-  $route['register'] = "register";
+  $route['^(en|ar)/register'] = "register";
 }
-$route['register/rules'] = "register/rules";
+$route['^(en|ar)/register/rules'] = "register/rules";
 $route['(:any)'] = "errors/error_404";
 
 //$route['default_controller'] = "main";
+
 
 
 /* End of file routes.php */

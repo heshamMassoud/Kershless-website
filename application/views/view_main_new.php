@@ -20,6 +20,7 @@
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
   <!-- Custom Fonts -->
   <link href="<?php echo base_url(); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,8 +35,16 @@
     <![endif]-->
 
 </head>
-
-<body id="page-top" class="index">
+<?php
+$current_lang = $this->lang->lang();
+if ($current_lang == 'en') {
+  $other_lang = 'ar';
+}
+else{
+  $other_lang = 'en';
+}
+?>
+<body id="page-top" class="index"  style="<?php if($current_lang == 'ar') {echo 'direction:rtl;font-family: \'thameen\' !important';} else {echo 'font-family: \'HelveticaNeue-Light\' !important';} ?>">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -53,7 +62,6 @@
         </a>
 
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
@@ -61,14 +69,15 @@
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
-            <a href="#what">What is Kershless?</a>
+            <a href="#home">Home</a>
           </li>
           <li class="page-scroll">
-            <a href="#about">About</a>
+            <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
           <li class="page-scroll">
-            <a href="#arabic">Arabic</a>
+            <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
+          <!--
           <li>
             <a href="#search"><i class="fa fa-search"></i></a>
           </li>
@@ -77,8 +86,7 @@
           </li>
           <li>
             <a href="#login">Tarek Massoud</a>
-          </li>
-
+          </li>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -87,7 +95,7 @@
   </nav>
 
 
-  <!-- What is Kershless? Section -->
+  <!-- Slider Section -->
   <section class="main first" id="home">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -109,9 +117,6 @@
                 <br> you lose
                 <br>
               </h1>
-              <a class="btn btn-primary" role="button" href="<?php echo base_url(); ?>register">
-              Register Now
-            </a>
             </div>
           </div>
         </div>
@@ -130,6 +135,15 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="text-center">
+        <a role="button" href="register" class="btn btn-default register-now">
+          <?php echo lang('register_now'); ?>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- What is Kershless? Section -->
@@ -137,84 +151,56 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2>What is Kershless?</h2>
+          <h3><?php echo lang('what_is_kershless'); ?></h3>
           <br>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="alternative" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>About</h2>
-          <br>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <p><?php echo lang('what_is_kershless_1'); ?></p>
+          <p><?php echo lang('what_is_kershless_2'); ?></p>
+          <p><?php echo lang('what_is_kershless_3'); ?></p>
+          <p><?php echo lang('what_is_kershless_4'); ?></p>
+          <p><?php echo lang('what_is_kershless_5'); ?></p>
+          <div class="col-lg-2"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-        </div>
-      </div>
-      <!-- /.row -->
-    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer>
     <div class="footer-above">
       <div class="container">
         <div class="row">
+          <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
-            <h3>Location</h3>
-            <p>3481 Melrose Place
-              <br>Beverly Hills, CA 90210</p>
+            <div>
+              <a class="sitemap footer-left-a" href="#home">Home</a> |
+              <a class="sitemap footer-middle-a" href="#what">What is Kershless?</a> |
+              <a class="sitemap footer-right-a" href="#contact">Contact Us</a>
           </div>
+          <br>
+            <div>
+            Copyright &copy; Kershless 2015
+          </div>
+          </div>
+          <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
-            <h3>Around the Web</h3>
             <ul class="list-inline">
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
               </li>
               <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
               </li>
               <li>
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
               </li>
               <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
               </li>
             </ul>
-          </div>
-          <div class="footer-col col-md-4">
-            <h3>About Freelancer</h3>
-            <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            Copyright &copy; Your Website 2014
           </div>
         </div>
       </div>
