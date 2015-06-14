@@ -54,7 +54,6 @@
         </a>
 
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
@@ -65,10 +64,19 @@
             <a href="#home">Home</a>
           </li>
           <li class="page-scroll">
-            <a href="#what">What is Kershless?</a>
+            <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
           <li class="page-scroll">
-            <a href="#arabic" class="arabic">عربي</a>
+            <?php
+            $current_lang = $this->lang->lang();
+            if ($current_lang == 'en') {
+              $other_lang = 'ar';
+            }
+            else{
+              $other_lang = 'en';
+            }
+            ?>
+            <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
           <!--
           <li>
@@ -80,7 +88,6 @@
           <li>
             <a href="#login">Tarek Massoud</a>
           </li>-->
-
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -184,9 +191,9 @@
           <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
             <div>
-              <a class="sitemap footer-left-a" href="#">Home</a> |
-              <a class="sitemap footer-middle-a" href="#">What is Kershless?</a> |
-              <a class="sitemap footer-right-a" href="#">Contact Us</a>
+              <a class="sitemap footer-left-a" href="#home">Home</a> |
+              <a class="sitemap footer-middle-a" href="#what">What is Kershless?</a> |
+              <a class="sitemap footer-right-a" href="#contact">Contact Us</a>
           </div>
           <br>
             <div>

@@ -3,15 +3,20 @@
 
 class Main extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('language');
+		$this->lang->load('homepage');
+	}
+
 	public function index()
 	{
-		$this->load->helper('url');
 		$this->load->view("view_main");
 	}
 
 	public function index2()
 	{
-		$this->load->helper('url');
 		$this->load->view("view_main_new");
 	}
 
@@ -20,7 +25,7 @@ class Main extends CI_Controller {
 	{
 		$this->load->view("view_email");
 	}
-	
+
 
 	public function send_email()
 	{
@@ -40,14 +45,14 @@ class Main extends CI_Controller {
 				<p>
 				http://wwww.kershless.com/download_report/0gBcwgbMv97fK+Q6IAywUMU4vbU=
 				</p>
-					
+
 				</div>
 				<p>
 				Best Regards,
 				<p>The Kershless System.</p>
 				</p>
 				</div>";
-			
+
 		$message_new = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 				<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns=\"http://www.w3.org/1999/xhtml\" style=\"width: 100%;\">
 				<head>
@@ -156,7 +161,7 @@ class Main extends CI_Controller {
 				follow us on: <a href=\"https://www.facebook.com/Kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">fb</a>
 				| <a href=\"http://www.twitter.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">twitter</a>
 				| <a href=\"http://www.youtube.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">youtube</a>
-					
+
 				</td>
 				</tr>
 				</table>
@@ -180,8 +185,3 @@ class Main extends CI_Controller {
 		echo $this->email->print_debugger();
 	}
 }
-
-
-
-
-
