@@ -35,8 +35,16 @@
     <![endif]-->
 
 </head>
-
-<body id="page-top" class="index">
+<?php
+$current_lang = $this->lang->lang();
+if ($current_lang == 'en') {
+  $other_lang = 'ar';
+}
+else{
+  $other_lang = 'en';
+}
+?>
+<body id="page-top" class="index"  style="<?php if($current_lang == 'ar') {echo 'direction:rtl;font-family: \'thameen\' !important';} else {echo 'font-family: \'HelveticaNeue-Light\' !important';} ?>">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -67,15 +75,6 @@
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
           <li class="page-scroll">
-            <?php
-            $current_lang = $this->lang->lang();
-            if ($current_lang == 'en') {
-              $other_lang = 'ar';
-            }
-            else{
-              $other_lang = 'en';
-            }
-            ?>
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
           <!--
@@ -140,7 +139,9 @@
     <br>
     <div class="row">
       <div class="text-center">
-        <a role="button" href="<?php echo base_url(); ?>register" class="btn btn-default register-now">Register Now</a>
+        <a role="button" href="register" class="btn btn-default register-now">
+          <?php echo lang('register_now'); ?>
+        </a>
       </div>
     </div>
   </section>
@@ -150,34 +151,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3>What is Kershless?</h3>
+          <h3><?php echo lang('what_is_kershless'); ?></h3>
           <br>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-          <p>
-            Kershless is a world that gathers people striving to reach their optimum weight in a healthy manner.
-             This target would be achieved by competing in groups with other members who want to change their lifestyle
-             and reach their weight loss goal, too.</p>
-            <p>Kershless
-            will help you reach your target weight through an online competition where all contestants encourage
-             one another.
-             Its slogan is “Together We Can”! You will find constant enthusiasm, competition, encouragement and support to help
-              you reach
-            your goal.</p>
-            <p> Kershless’ team of coaches will follow up on the contestants’ progress throughout the competition
-               to help them reach their best performance and lose the extra weight in a healthy manner.</p>
-            <p> A Kershless season lasts for 16 weeks and
-            consists of 12 players. Each contestant should aim to lose as much weight as s/he could each week.
-             A winner is announced at the end of the week. The game plan changes during the competition to keep
-             all contestants engaged. Female contestants’
-            information will be handled discreetly and with absolute confidentiality. Further rules and regulations
-             will be shared with you after you register and join Kershless.</p>
-            <p> Want to lose weight? You are not alone! Join Kershless and make your dream
-            come true!
-          </p>
+          <p><?php echo lang('what_is_kershless_1'); ?></p>
+          <p><?php echo lang('what_is_kershless_2'); ?></p>
+          <p><?php echo lang('what_is_kershless_3'); ?></p>
+          <p><?php echo lang('what_is_kershless_4'); ?></p>
+          <p><?php echo lang('what_is_kershless_5'); ?></p>
           <div class="col-lg-2"></div>
         </div>
       </div>
