@@ -138,15 +138,17 @@ input[type="radio"]:checked:after {
 }
 .gobtn {
   background: #16a085 !important;
-  border: 0px;
-  border-bottom: 2px solid #5c5c5c;
-  position: relative;
+  border-radius: 40px;
+  border-color: #28b998 !important;
   margin: 0px auto;
   display: block;
-  margin-top: 40px;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
+  margin-top: 25px;
+  width: 200px;
+  transition: all 0.3s ease 0s;
+}
+.gobtn:hover {
+  background: #28b998 !important;
+  border-color: #28b998 !important;
 }
 #profile_picture_upload {
   text-align: center;
