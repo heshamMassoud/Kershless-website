@@ -368,7 +368,7 @@ $(function() {
         } else {
           // alert("However you want to handle error that
           // dropped file wasn't an image");
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
 
       });
@@ -501,7 +501,7 @@ $(function() {
 
           // $('#profile_picture_upload').attr('class','normal');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
@@ -753,7 +753,7 @@ $(function() {
           // $('#weight_upload_div').attr('class','uploaded');
           // $('#weight_upload_div').tipsy('hide');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
@@ -821,7 +821,7 @@ $(function() {
           // $('#height_upload_div').attr('class','uploaded');
           // $('#height_upload_div').tipsy('hide');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
