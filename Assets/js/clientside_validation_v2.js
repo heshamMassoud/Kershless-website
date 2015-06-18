@@ -158,7 +158,7 @@ $(function() {
     $('#provocation').tipsy('show');
   }
 
-  if ($('#friend_code').attr('class') == 'form-control input_form_error') {
+  if ($('#friend_code').attr('class') == 'input_form_error') {
     $('#friend_code').attr('title',
       $('#friend_code_hidden_error').attr('value'));
     // alert($('#fullname').attr('title'));
@@ -368,7 +368,7 @@ $(function() {
         } else {
           // alert("However you want to handle error that
           // dropped file wasn't an image");
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
 
       });
@@ -501,7 +501,7 @@ $(function() {
 
           // $('#profile_picture_upload').attr('class','normal');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
@@ -753,7 +753,7 @@ $(function() {
           // $('#weight_upload_div').attr('class','uploaded');
           // $('#weight_upload_div').tipsy('hide');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
@@ -821,7 +821,7 @@ $(function() {
           // $('#height_upload_div').attr('class','uploaded');
           // $('#height_upload_div').tipsy('hide');
         } else {
-          alert(":) لو سمحت حط صورة");
+          alert("صورة فقط من فضلك! ");
         }
       });
 
@@ -1231,7 +1231,7 @@ function friend_code_client_validation_blur() {
         regex = /^1[3-9]K(M|F)(([1-9][0-9]*)|(0))((,1[3-9]K(M|F)(([1-9][0-9]*)|(0))|, 1[3-9]K(M|F)(([1-9][0-9]*)|(0))))*$/;
     }
     if (!regex.test(field.value)) {
-      $("#friend_code").attr('class', 'form-control input_form_error');
+      $("#friend_code").attr('class', 'input_form_error');
       $('#friend_code').attr('title', 'الكود غير صحيح');
       $('#friend_code').tipsy({
         trigger: 'manual',
@@ -1249,7 +1249,7 @@ function friend_code_client_validation_blur() {
 }
 
 function friend_code_client_validation_focus() {
-  $("#friend_code").attr('class', 'form-control input_form');
+  $("#friend_code").attr('class', 'input_form');
   $('#friend_code').tipsy('hide');
 }
 
