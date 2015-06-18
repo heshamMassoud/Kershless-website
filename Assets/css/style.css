@@ -248,6 +248,16 @@ div#height_upload_div.loading{
   background-position-y: 50%;
 }
 
+div#weight_upload_div.uploaded{
+  color: #28b997;
+}
+
+div#height_upload_div.uploaded{
+  color: #28b997;
+}
+
+
+
 /* Media  */
 
 @media only screen and (min-width: 990px) {
