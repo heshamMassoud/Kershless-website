@@ -1352,10 +1352,6 @@ $overall_agreement = array(
                        style="text-decoration: none; color: #16a085;">للشروط و الأحكام.</a>
                     *
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
                 <?php
                 echo form_submit($form_submitter);
                 echo form_close();
