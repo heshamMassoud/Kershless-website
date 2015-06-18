@@ -234,6 +234,20 @@ input[type="radio"]:checked:after {
   background: url('../Icons/users.png') no-repeat 97% 8px;
 }
 
+div#weight_upload_div.loading{
+  background: url('../Images/2.gif') no-repeat;
+  background-color: #5c5c5c;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+div#height_upload_div.loading{
+  background: url('../Images/2.gif') no-repeat;
+  background-color: #5c5c5c;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
 /* Media  */
 
 @media only screen and (min-width: 990px) {
