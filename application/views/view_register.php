@@ -270,7 +270,7 @@ if (form_error('provocation') != '') {
 }
 
 if (form_error('friend_code') != '') {
-    $friend_code_class = "form-control input_form_error";
+    $friend_code_class = "input_form_error";
     $friend_code_hidden_error = array(
         'id' => 'friend_code_hidden_error',
         'name' => 'friend_code_hidden_error',
@@ -280,7 +280,7 @@ if (form_error('friend_code') != '') {
     echo form_input($friend_code_hidden_error);
 
 } else {
-    $friend_code_class = "form-control input_form";
+    $friend_code_class = "input_form";
 }
 
 
@@ -418,7 +418,7 @@ $friend_code = array(
     'id' => 'friend_code',
     'class' => $friend_code_class,
     'value' => set_value('friend_code'),
-    'placeholder' => 'كود التسجيل الخاص بصديقك ..If more than one: codeI, codeII, codeIII, etc',
+    'placeholder' => 'كود التسجيل الخاص بصديقك ..(لو أكثر من واحد : codeI, codeII, codeIII, etc)',
     'onBlur' => 'friend_code_client_validation_blur();',
     'onFocus' => 'friend_code_client_validation_focus();'
 );
@@ -469,7 +469,7 @@ $mobile_number = array(
     'id' => 'mobile_number',
     'class' => $mobile_number_class,
     'value' => set_value('mobile_number'),
-    'placeholder' => 'رقم الهاتف * Number on WhatsApp',
+    'placeholder' => 'رقم الهاتف على الوتساب*',
     'onBlur' => 'mobile_number_client_validation_blur();',
     'onFocus' => 'mobile_number_client_validation_focus();'
 );
@@ -498,7 +498,7 @@ $facebook = array(
     'name' => 'facebook',
     'id' => 'facebook',
     'value' => set_value('facebook'),
-    'placeholder' => 'فيسبوك Ex: www.facebook.com/your_username',
+    'placeholder' => 'فيسبوك Ex: fb.com/username',
     'class' => $facebook_class,
     'onBlur' => 'facebook_client_validation_blur();',
     'onFocus' => 'facebook_client_validation_focus();'
@@ -1289,7 +1289,7 @@ $overall_agreement = array(
                     <?php echo form_textarea($provocation); ?>
                 </div>
                 <div class="form-group frecode">
-                    <?php echo form_input($friend_code); ?>
+                    <?php echo form_textarea($friend_code); ?>
                 </div>
             </div>
         </div>
