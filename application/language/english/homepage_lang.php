@@ -2,9 +2,9 @@
 //example of placeholders: $lang['welcome'] = "English, %s.";
 
 /*Header*/
+$lang['home'] = 'home';
 $lang['what_is_kershless'] = 'What is Kershless ?';
 $lang['switch_lang'] = 'عربي';
-
 
 /*Main content*/
 $lang['register_now'] = "Register Now";

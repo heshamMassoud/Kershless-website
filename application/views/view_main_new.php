@@ -69,7 +69,7 @@ else{
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
-            <a href="#home">Home</a>
+            <a href="#home"><?php echo lang('home'); ?></a>
           </li>
           <li class="page-scroll">
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>

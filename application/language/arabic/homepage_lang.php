@@ -2,6 +2,7 @@
 //example of placeholders: $lang['welcome'] = "English, %s.";
 
 /*Header*/
+$lang['home'] = 'الرئيسية';
 $lang['what_is_kershless'] = 'يعني إيه كرشلس ؟';
 $lang['switch_lang'] = 'English';
 
