@@ -3,7 +3,7 @@
 
 /*Header*/
 $lang['home'] = 'الرئيسية';
-$lang['what_is_kershless'] = 'يعني إيه كرشلس ؟';
+$lang['what_is_kershless'] = 'ما هو كرشلس ؟';
 $lang['switch_lang'] = 'English';
 
 /*Main content*/
