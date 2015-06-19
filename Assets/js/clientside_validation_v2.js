@@ -288,7 +288,7 @@ $(function() {
                 action: 'deleteimage',
                 imagefile: profile_picture_name,
               },
-              url: '/Assets/scripts/delete_file.php',
+              url: '../Assets/scripts/delete_file.php',
               success: function(msg) {
                 // alert(msg);
               }
@@ -297,7 +297,7 @@ $(function() {
           }
 
           xhr.open('POST',
-            '/Assets/scripts/handle_file_upload.php',
+            '../Assets/scripts/handle_file_upload.php',
             true);
           xhr.onload = function() {
             if (xhr.status === 200) {
@@ -320,11 +320,9 @@ $(function() {
                     var aspectRatio = imageWidth / imageHeight;
                     // alert(image.width + "X" +
                     // image.height);
-                    image.width = "126";
+                    image.width = "200";
                     image.id = "draggableImg0";
-                    image.height = (126 * imageHeight) / (imageWidth);
-                    image.style.left = "0px";
-                    image.style.top = image.height / 4 + "px";
+                    image.height = (200 * imageHeight) / (imageWidth);
                     // alert(image.width + "X" +
                     // image.height);
 
@@ -338,10 +336,8 @@ $(function() {
                     newDiv.style.cursor = "move";
                     x.appendChild(newDiv);
                     newDiv.appendChild(image);
-
-                    $("#draggable0")
-                      .draggable();
-
+                    $("#draggable0").draggable();
+                    $('#profile_picture_upload').attr('style','background: url()');
                   }, 100);
                 /*
                  * $.post("<?php echo base_url();
@@ -433,18 +429,19 @@ $(function() {
                 action: 'deleteimage',
                 imagefile: profile_picture_name,
               },
-              url: '/Assets/scripts/delete_file.php',
+              url: '../Assets/scripts/delete_file.php',
               success: function(msg) {
                 // alert(msg);
               }
             })
           }
           xhr.open('POST',
-            '/Assets/scripts/handle_file_upload.php',
+            '../Assets/scripts/handle_file_upload.php',
             true);
 
           xhr.onload = function() {
             if (xhr.status === 200) {
+
               // alert(this.response.indexOf("Invalid
               // file"));
               if (this.response.indexOf("Invalid file") >= 0) {
@@ -465,13 +462,13 @@ $(function() {
                     var aspectRatio = imageWidth / imageHeight;
                     // alert(image.width + "X" +
                     // image.height);
-                    image.width = "126";
+                    image.width = "189";
                     image.id = "draggableImg0";
-                    image.height = (126 * imageHeight) / (imageWidth);
-                    image.style.left = "0px";
-                    image.style.top = image.height / 4 + "px";
-                    // alert(image.width + "X" +
-                    // image.height);
+                    image.height = (189 * imageHeight) / (imageWidth);
+
+                    var marginTop = image.height/4;
+                    image.style.marginTop = '-'+marginTop + 'px';
+                    image.style.marginRight = '-31.5px';
 
                     var x = document
                       .getElementById("profile_picture_upload");
@@ -482,9 +479,9 @@ $(function() {
                     newDiv.style.cursor = "move";
                     x.appendChild(newDiv);
                     newDiv.appendChild(image);
+                    $("#draggable0").draggable();
+                    $('#profile_picture_upload').attr('style','background: url()');
 
-                    $("#draggable0")
-                      .draggable();
                   }, 100);
                 // alert('uploaded');
                 $('#profile_picture_upload')
