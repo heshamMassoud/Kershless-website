@@ -22,11 +22,11 @@ class MY_Lang extends CI_Lang {
 
   // languages
   private $languages = array(
+    'ar' => 'arabic',
     'en' => 'english',
     'de' => 'german',
     'fr' => 'french',
     'nl' => 'dutch',
-    'ar' => 'arabic'
   );
 
   // special URIs (not localized)
@@ -51,7 +51,7 @@ class MY_Lang extends CI_Lang {
     global $RTR;
 
     $this->uri = $URI->uri_string();
-    $this->default_uri = $RTR->default_controller;
+    $this->default_uri = "";
 
     $uri_segment = $this->get_uri_lang($this->uri);
     $this->lang_code = $uri_segment['lang'] ;
@@ -151,6 +151,10 @@ class MY_Lang extends CI_Lang {
   // default language: first element of $this->languages
   function default_lang()
   {
+    //***CURRENTLY FORCE DEFAULT LANGUAGE FROM HERE
+    reset($this->languages);
+    return key($this->languages);
+    //***
     $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
     $browser_lang = substr($browser_lang, 0,2);
     if(array_key_exists($browser_lang, $this->languages))
