@@ -68,11 +68,12 @@ else{
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
-          <li class="page-scroll">
-            <a href="#home">Home</a>
-          </li>
+
           <li class="page-scroll">
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
+          </li>
+          <li class="page-scroll">
+            <a href="#home"><?php echo lang('home'); ?></a>
           </li>
           <!--<li class="page-scroll">
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
@@ -163,6 +164,7 @@ else{
           <p><?php echo lang('what_is_kershless_3'); ?></p>
           <p><?php echo lang('what_is_kershless_4'); ?></p>
           <p><?php echo lang('what_is_kershless_5'); ?></p>
+          <p><?php echo lang('what_is_kershless_6'); ?></p>
           <div class="col-lg-2"></div>
         </div>
       </div>
@@ -176,9 +178,9 @@ else{
           <div class="footer-col col-md-2"></div>
           <div class="footer-col col-md-4">
             <div>
-              <a class="sitemap footer-left-a" href="#home">Home</a> |
-              <a class="sitemap footer-middle-a" href="#what">What is Kershless?</a> |
-              <a class="sitemap footer-right-a" href="#contact">Contact Us</a>
+              <a class="sitemap footer-left-a" href="#home"><?php echo lang('home'); ?></a>
+              <a class="sitemap footer-middle-a" href="#what"><?php echo lang('what_is_kershless'); ?></a>
+              <!--<a class="sitemap footer-right-a" href="#contact">Contact Us</a>-->
           </div>
           <br>
             <div>
@@ -198,7 +200,7 @@ else{
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
               </li>
               <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                <!--<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>-->
               </li>
             </ul>
           </div>
