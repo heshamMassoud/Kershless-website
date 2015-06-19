@@ -51,7 +51,7 @@ class MY_Lang extends CI_Lang {
     global $RTR;
 
     $this->uri = $URI->uri_string();
-    $this->default_uri = $RTR->default_controller;
+    $this->default_uri = "";
 
     $uri_segment = $this->get_uri_lang($this->uri);
     $this->lang_code = $uri_segment['lang'] ;

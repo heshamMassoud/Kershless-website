@@ -45,10 +45,7 @@ $route['404_override'] = '';
 
 // URI like '/en/about' -> use controller 'about'
 //$route['^(en|de|fr|nl)/(.+)$'] = "$2";
-
-// '/en', '/de', '/fr' and '/nl' URIs -> use default controller
-$route['^(en|de|fr|nl|ar)$'] = $route['default_controller'];
-
+$route['^(en|ar)$'] = $route['default_controller'];
 
 
 $route['^(en|ar)/new'] = "main/index2";
