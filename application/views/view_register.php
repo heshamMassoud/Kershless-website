@@ -1370,6 +1370,7 @@ $overall_agreement = array(
     </footer>
 </div>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script type="text/javascript"
         src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
