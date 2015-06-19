@@ -74,10 +74,10 @@ else{
           <li class="page-scroll">
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
-          <li class="page-scroll">
+          <!--<li class="page-scroll">
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
-          <!--
+
           <li>
             <a href="#search"><i class="fa fa-search"></i></a>
           </li>

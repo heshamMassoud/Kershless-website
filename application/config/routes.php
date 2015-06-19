@@ -45,17 +45,17 @@ $route['404_override'] = '';
 
 // URI like '/en/about' -> use controller 'about'
 //$route['^(en|de|fr|nl)/(.+)$'] = "$2";
-$route['^(en|ar)$'] = $route['default_controller'];
+$route['^(ar)$'] = $route['default_controller'];
 
 
-$route['^(en|ar)/new'] = "main/index2";
+$route['^(ar)/new'] = "main/index2";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $route['^(en|ar)/register'] = "register/register_validation";
+  $route['^(ar)/register'] = "register/register_validation";
 }
 else {
-  $route['^(en|ar)/register'] = "register";
+  $route['^(ar)/register'] = "register";
 }
-$route['^(en|ar)/register/rules'] = "register/rules";
+$route['^(ar)/register/rules'] = "register/rules";
 $route['(:any)'] = "errors/error_404";
 
 //$route['default_controller'] = "main";
