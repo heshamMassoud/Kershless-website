@@ -164,7 +164,6 @@ else{
           <p><?php echo lang('what_is_kershless_3'); ?></p>
           <p><?php echo lang('what_is_kershless_4'); ?></p>
           <p><?php echo lang('what_is_kershless_5'); ?></p>
-          <p><?php echo lang('what_is_kershless_6'); ?></p>
           <div class="col-lg-2"></div>
         </div>
       </div>
@@ -175,35 +174,23 @@ else{
     <div class="footer-above">
       <div class="container">
         <div class="row">
-          <div class="footer-col col-md-2"></div>
+          <div class="footer-col col-md-4"></div>
           <div class="footer-col col-md-4">
-            <div>
-              <a class="sitemap footer-left-a" href="#home"><?php echo lang('home'); ?></a>
-              <a class="sitemap footer-middle-a" href="#what"><?php echo lang('what_is_kershless'); ?></a>
-              <!--<a class="sitemap footer-right-a" href="#contact">Contact Us</a>-->
-          </div>
-          <br>
-            <div>
-            Copyright &copy; Kershless 2015
-          </div>
-          </div>
-          <div class="footer-col col-md-2"></div>
-          <div class="footer-col col-md-4">
-            <ul class="list-inline">
-              <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
-              </li>
-              <li>
+            <div class="row">
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>&nbsp;
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>&nbsp;
                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-              </li>
-              <li>
-                <!--<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>-->
-              </li>
-            </ul>
+            </div>
           </div>
+          <div class="footer-col col-md-4"></div>
+        </div>
+        <div class="row">
+          <div class="footer-col col-md-4"></div>
+          <div class="footer-col col-md-4 copy-right">
+              Copyright &copy; Kershless 2015
+          </div>
+          <div class="footer-col col-md-4"></div>
+        </div>
         </div>
       </div>
     </div>

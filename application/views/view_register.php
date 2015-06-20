@@ -578,9 +578,9 @@ $overall_agreement = array(
     echo form_upload($weight_image_file_upload);
     echo form_upload($height_image_file_upload); ?></div>
 <div class="container">
-    <div class="row logo">
+    <div class="row logo-register">
       <div class="col-md-5"></div>
-      <div class="col-md-2">  <a href="new">
+      <div class="col-md-2">  <a href="<?php echo base_url();?>">
           <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
               class="img-responsive" alt="Kershless">
         </a></div>
@@ -1260,7 +1260,9 @@ $overall_agreement = array(
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
-                    <span>Files(.png/.jpg/.jpeg) should be less than 2 MB </span>
+                         <label class="file-size">حجم الصورة أقل من </label><label>&nbsp;2MB</label>
+                         <span class="file-type">(png .jpg .jpeg.)</span>
+                         <br>
                 </div>
                 <div class="form-group picture-agreement">
                     <?php echo form_checkbox($picture_agreement); ?>
