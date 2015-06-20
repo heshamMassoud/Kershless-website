@@ -15,7 +15,6 @@ footer {
 }
 .logo img {
   margin: 0px auto;
-  padding-top: 18px;
 }
 * {
   outline: 0px !important;
@@ -31,7 +30,7 @@ footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
   font-family: "thameen" !important;
 }
 
-.uplpho  {
+.uplpho {
   text-align: center !important;
 }
 
@@ -288,4 +287,11 @@ select {
   -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: '';
+}
+
+/*Success page*/
+.thanks-text {
+  text-align: center;
+  font-family: "thameen" !important;
+  margin-top: 40px;
 }

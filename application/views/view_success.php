@@ -20,8 +20,7 @@
 <!-- Bootstrap RTL -->
 <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
-<link href="<?php echo base_url(); ?>Assets/Stylesheets/stylesheet.css" rel="stylesheet"
-	type="text/css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,21 +31,25 @@
 <body>
 	<div class="container">
 		<div class="row logo">
-			<a href="http://www.kershless.com/"><img
-				src="<?php echo base_url(); ?>Assets/Images/kersh_success.png" class="img-responsive"
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+			<a href="<?php echo base_url();?>"><img
+				src="<?php echo base_url(); ?>Assets/Images/kershless_success.png" class="img-responsive"
 				alt="Kershless"> </a>
+			</div>
+			<div class="col-md-4"></div>
+
 		</div>
 		<div class="row logo">
 			<img src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive"
 				alt="Kershless">
 		</div>
-		<div class="row" style="color: white; font-size: 16px;">
+		<div class="row">
 			<p class="col-md-4"></p>
-			<p class="col-md-4" style="text-align: center; font-size: x-large;">
-				<b style="font-family: DINNextLTArabic-Light !important;">شكرا <?php
-				echo $name ?> على التسجيل معنا في كرشلس ، سوف يصلك إيميل خلال دقائق
+			<p class="col-md-4 thanks-text">
+				شكرا <?php
+				echo $name; ?> على التسجيل معنا في كرشلس ، سوف يصلك إيميل خلال دقائق
 					به كود التسجيل الخاص بك أرسله لأصدقائك لتكونوا معاً في نفس الموسم
-				</b>
 			</p>
 			<p class="col-md-4"></p>
 
@@ -71,7 +74,7 @@
 
 		<footer>
 			<p class="col-md-4"></p>
-			<p class="col-md-4" style="text-align: center;font-family: DINNextLTArabic-Light !important;">&copy; Kershless 2014</p>
+			<p class="col-md-4" style="text-align: center;">&copy; Kershless 2015</p>
 			<p class="col-md-4"></p>
 		</footer>
 	</div>
