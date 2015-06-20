@@ -580,7 +580,7 @@ $overall_agreement = array(
 <div class="container">
     <div class="row logo">
       <div class="col-md-5"></div>
-      <div class="col-md-2">  <a href="new">
+      <div class="col-md-2">  <a href="<?php echo base_url();?>">
           <img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
               class="img-responsive" alt="Kershless">
         </a></div>
