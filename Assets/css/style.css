@@ -27,9 +27,14 @@ footer {
 .weight input, .reas textarea, .provo textarea, .frecode textarea,
 .con-info input, .con-info textarea, .con-info div, .con-info div a,
 footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
-.rules-title h2  {
+.rules-title h2, .uplpho label.file-size  {
   font-family: "thameen" !important;
 }
+
+.uplpho  {
+  text-align: center !important;
+}
+
 h3 {
   color: #fff;
   text-align: center;
