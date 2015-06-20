@@ -16,6 +16,10 @@ footer {
 .logo img {
   margin: 0px auto;
 }
+.logo-register img {
+  margin: 0px auto;
+  padding-top: 18px;
+}
 * {
   outline: 0px !important;
 }
