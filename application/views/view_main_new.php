@@ -164,7 +164,6 @@ else{
           <p><?php echo lang('what_is_kershless_3'); ?></p>
           <p><?php echo lang('what_is_kershless_4'); ?></p>
           <p><?php echo lang('what_is_kershless_5'); ?></p>
-          <p><?php echo lang('what_is_kershless_6'); ?></p>
           <div class="col-lg-2"></div>
         </div>
       </div>
