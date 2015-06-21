@@ -38,10 +38,10 @@ class Main extends CI_Controller {
 		$email_address = $_POST['email'];
 		$message = $_POST['message'];
 
-		$email_body = $message . $this->email->newline . "Sent from: " . $name . " (" . $email_address . ")";
+		$email_body = $message . "<br>Sent from: " . $name . " (" . $email_address . ")";
 		$this->load->library('email');
 		$this->email->from('applications@kershless.com','Kershless');
-		$this->email->to('heshamhamdymassoud@gmail.com');
+		$this->email->to('applications@kershless.com');
 		$this->email->subject('Website Contact Form: '. $name);
 		$this->email->message($email_body);
 		$this->email->send();
