@@ -110,7 +110,6 @@ else{
         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
         <li data-target="#carousel-example-generic" data-slide-to="6"></li>
         <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="8"></li>
       </ol>
 
       <!-- Wrapper for slides -->
