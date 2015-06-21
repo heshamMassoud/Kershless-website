@@ -56,6 +56,7 @@ else {
   $route['^(ar)/register'] = "register";
 }
 $route['^(ar)/register/rules'] = "register/rules";
+$route['^(ar)/main/contact'] = "main/contact";
 $route['(:any)'] = "errors/error_404";
 
 //$route['default_controller'] = "main";

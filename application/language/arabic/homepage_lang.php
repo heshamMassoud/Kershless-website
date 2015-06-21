@@ -3,6 +3,7 @@
 
 /*Header*/
 $lang['home'] = 'الرئيسية';
+$lang['contact'] = 'تواصل معنا';
 $lang['what_is_kershless'] = 'ما هو كرشلس ؟';
 $lang['switch_lang'] = 'English';
 

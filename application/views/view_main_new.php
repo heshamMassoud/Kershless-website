@@ -20,6 +20,7 @@
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/contact-form.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
   <!-- Custom Fonts -->
@@ -70,10 +71,10 @@ else{
           </li>
 
           <li class="page-scroll">
-            <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
+            <a href="#contact"><?php echo lang('contact'); ?></a>
           </li>
           <li class="page-scroll">
-            <a href="#home"><?php echo lang('home'); ?></a>
+            <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
           <!--<li class="page-scroll">
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
@@ -169,6 +170,91 @@ else{
       </div>
   </section>
 
+  <?php
+  $name = array(
+      'name' => 'name',
+      'id' => 'name',
+      'class' => 'form-control',
+      'value' => set_value('name'),
+      'placeholder' => 'الاسم *',
+      'required' => 'required',
+      'data-validation-required-message' => "من فضلك أدخل الاسم  "
+  );
+
+  $email = array(
+      'name' => 'email',
+      'id' => 'email',
+      'class' => 'form-control',
+      'type' => 'email',
+      'value' => set_value('dial_code'),
+      'placeholder' => 'البريد الإلكتروني *',
+      'required' => 'required',
+      'data-validation-required-message' => "من فضلك أدخل البريد الإلكتروني   "
+  );
+
+  $message = array(
+      'name' => 'message',
+      'title' => 'message',
+      'id' => 'message',
+      'value' => set_value('message'),
+      'placeholder' => 'كيف نساعدك *',
+      'required' => 'required',
+      'data-validation-required-message' => "من فضلك أدخل الرسالة "
+  );
+  $send_message = array(
+      'name' => 'send',
+      'class' => 'btn btn-default send-message',
+      'id' => 'form_submitter',
+      'value' => 'ارسل'
+  );
+  ?>
+
+  <!-- Contact Section -->
+  <form name="sendMessage" acttion="main/contact" id="contactForm" method="post" accept-charset="utf-8" enctype="multipart/form-data" novalidate>
+  <section id="contact">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h3><?php echo lang('contact'); ?></h3>
+              <br>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                  <div class="col-md-12">
+                    <div id="success"></div>
+                      <div class="row">
+                        <div class="form-group email col-md-6 control-group">
+                            <?php echo form_input($email); ?>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group name col-md-6 control-group">
+                            <?php echo form_input($name); ?>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="row control-group">
+                        <div class="form-group message col-md-12">
+                            <?php echo form_textarea($message); ?>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                            <?php
+                              echo form_submit($send_message);
+                              ?>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3"></div>
+          </div>
+      </div>
+  </section>
+</form>
+
   <!-- Footer -->
   <footer>
     <div class="footer-above">
@@ -215,6 +301,10 @@ else{
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/classie.js"></script>
   <script src="<?php echo base_url(); ?>Assets/js/cbpAnimatedHeader.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="<?php echo base_url(); ?>Assets/js/jqBootstrapValidation.js"></script>
+  <script src="<?php echo base_url(); ?>Assets/js/contact_me.js"></script>
 
   <!-- Custom Theme JavaScript -->
   <script src="<?php echo base_url(); ?>Assets/js/freelancer.js"></script>

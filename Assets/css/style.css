@@ -103,7 +103,7 @@ textarea {
 }
 input:focus, .bir-da select:focus, .mobno input:focus, .mobno input:focus, .mail input:focus, .fb input:focus, .frecode input:focus, .reas textarea:focus, .provo textarea:focus {
   background-color: #eaedf1 !important;
-  border: 1px solid #16a085 !important;
+  border: 1px solid #28b998 !important;
   outline: none;
 }
 .full-name input, .jobtype input, .cnty select, .nation select, .mail input, .fb input, .mob, .frecode input {

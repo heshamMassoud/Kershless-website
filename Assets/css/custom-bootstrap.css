@@ -91,3 +91,7 @@ footer .footer-col {
   font-family: "HelveticaNeue-Light" !important;
   font-size:12px;
 }
+
+button.close {
+  float: left;
+}
