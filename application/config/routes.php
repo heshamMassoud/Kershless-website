@@ -49,7 +49,6 @@ $route['^(ar)$'] = $route['default_controller'];
 
 
 $route['^(ar)/new'] = "main/index2";
-$route['^(ar)/s'] = "register/test";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $route['^(ar)/register'] = "register/register_validation";
 }
