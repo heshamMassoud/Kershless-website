@@ -99,31 +99,44 @@ else{
 
   <!-- Slider Section -->
   <section class="main first" id="home">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="direction:ltr">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
-
-          <div class="carousel-caption">
-            <div class="container">
-              <h1>
-                Kershless is a game
-                <br> you win when
-                <br> you lose
-                <br>
-              </h1>
-            </div>
-          </div>
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_1.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider.jpg" />
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_2.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_3.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_4.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_5.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_6.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_7.jpg" />
+        </div>
+        <div class="item">
+          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_8.jpg" />
         </div>
       </div>
 
