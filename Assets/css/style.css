@@ -168,7 +168,12 @@ input[type="radio"]:checked:after {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background: url('../Images/profile_pic_cyan.png');
+  background: url('../Images/profile_picture.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+
 }
 .uplpho span {
   text-align: center;
