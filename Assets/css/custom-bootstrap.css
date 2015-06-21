@@ -95,3 +95,11 @@ footer .footer-col {
 button.close {
   float: left;
 }
+
+.carousel-indicators {
+  padding-right: 0px !important;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
