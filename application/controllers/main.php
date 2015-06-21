@@ -6,6 +6,7 @@ class Main extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('form');
 		$this->load->helper('language');
 		$this->lang->load('homepage');
 	}
@@ -26,6 +27,23 @@ class Main extends CI_Controller {
 		$this->load->view("view_email");
 	}
 
+	public function contact()
+	{
+		if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+		{
+			echo "No arguments Provided!";
+			return false;
+		}
+		$name = $_POST['name'];
+		$email_address = $_POST['email'];
+		$message = $_POST['message'];
+		$this->load->library('email');
+		$this->email->from('applications@kershless.com','Kershless');
+		$this->email->to('heshamhamdymassoud@gmail.com');
+		$this->email->subject('Contact Us: '. $name . "(" . $email_address . ")");
+		$this->email->message($message);
+		$this->email->send();
+	}
 
 	public function send_email()
 	{
