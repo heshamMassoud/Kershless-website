@@ -305,6 +305,7 @@ select {
 /*Success page*/
 .thanks-text {
   text-align: center;
-  font-family: "thameen" !important;
+  font-family: "jf" !important;
+  font-size: 20px;
   margin-top: 40px;
 }
