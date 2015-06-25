@@ -148,12 +148,10 @@ class Model_user extends CI_MODEL
 				<meta property=\"og:title\" content=\"*|MC:SUBJECT|*\" />
 				<title>Kershless Email Notification</title>
 				</head>
-				<body style=\"width: auto !important; text-align: left; background-color: white; margin: 0px; padding: 0px;\" bgcolor=\"white\"><style type=\"text/css\">
-				@font-face { font-family: GE SS Text UltraLight !important; src: url('/kershlesswebsite/Assets/fonts/GE SS Text UltraLight.otf') format(\"opentype\") !important; }
-				&gt;</style>&#13;
+				<body style=\"width: auto !important; text-align: left; background-color: white; margin: 0px; padding: 0px;\" bgcolor=\"white\">
 				&#13;
 				<table width=\"100%\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"contentbg\" style=\"background-color: white;\" bgcolor=\"white\"><tr><td valign=\"top\">&#13;
-				<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"templateColor01\" valign=\"top\" style=\"background-color: #34495e; padding: 0;\" bgcolor=\"#34495e\">&#13;
+				<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"templateColor01\" valign=\"top\" style=\"background-color: #ffffff; padding: 0;\" bgcolor=\"#34495e\">&#13;
 				<!-- // Begin Template PreHeader \\ -->&#13;
 				<table class=\"BoxWrap\" width=\"50%\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td height=\"30\">&#13;
 				<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td class=\"text\" mc:edit=\"header_Txt\" style=\"color: white; font-family: 'Arial', sans-serif; font-size: 13px; font-weight: normal; line-height: 18px; text-align: left; text-decoration: none; padding: 10px 0;\" align=\"left\">&#13;
@@ -181,12 +179,12 @@ class Model_user extends CI_MODEL
 				<table class=\"BoxWrap\" width=\"100%\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td>&#13;
 				<table class=\"BoxWrap\" border=\"0\" width=\"290\" align=\"left\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td align=\"center\">&#13;
 				</td>&#13;
-				<td class=\"title\" style=\"text-align: center; color: white; font-family: GE SS Text UltraLight; font-size: 24px; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-align: left; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/small_email.png\" alt=\"logo\" style=\"max-width: 401px; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
+				<td class=\"title\" style=\"text-align: center; color: white; font-family: GE SS Text UltraLight; font-size: 24px; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-align: left; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/kershless_logo.svg\" alt=\"logo\" style=\"max-width: 401px; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
 				<br />&#13;
 				شكرا لتسجيلك معنا سيتم التواصل معك لاحقا&#13;
 				<hr width=\"250\" />&#13;
 				كود التسجيل الخاص بك هو&#13;
-				<br /><label style=\"font-family: Impact, Charcoal, sans-serif; color: white;\">" . $kershless_code . "</label>&#13;
+				<br /><label style=\"font-family: Impact, Charcoal, sans-serif; color: #34495e ;\">" . $kershless_code . "</label>&#13;
 						<br />&#13;
 						يمكن لأصدقائك استخدام كود التسجيل الخاص بك إذا أردتم الإشتراك في نفس الموسم &#13;
 						<hr width=\"250\" /></td>&#13;
@@ -195,7 +193,7 @@ class Model_user extends CI_MODEL
 						</tr><!-- // ********************************************************************************************************* \\ --><tr><td class=\"templateColor01\" valign=\"top\" style=\"background-color: #34495e; padding: 30px 0px;\" align=\"center\" height=\"100\" mc:edit=\"footer_Copyrights\" bgcolor=\"#34495e\">&#13;
 						<!-- // Begin Module: Footer \\ -->&#13;
 						&#13;
-						<a href=\"#\" class=\"button\" style=\"color: white; font-family: 'Arial', sans-serif; font-size: 11px; font-weight: normal; line-height: 14px; text-align: center; text-decoration: none;\"> Copyright 2014 - All Rights Reserved Kershless</a>			 &#13;
+						<a href=\"#\" class=\"button\" style=\"color: #34495e ; font-family: 'Arial', sans-serif; font-size: 11px; font-weight: normal; line-height: 14px; text-align: center; text-decoration: none;\"> Copyright 2015 - All Rights Reserved Kershless</a>			 &#13;
 						<!-- // End Module: Footer \\ -->&#13;
 						</td>&#13;
 						</tr></table></td>&#13;
