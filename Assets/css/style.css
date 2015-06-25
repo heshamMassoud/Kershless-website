@@ -34,6 +34,10 @@ footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
   font-family: "jf" !important;
 }
 
+label.file-size {
+  font-size: 10px;
+}
+
 .uplpho {
   text-align: center !important;
 }

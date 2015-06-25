@@ -1262,7 +1262,6 @@ $overall_agreement = array(
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
                          <label class="file-size">حجم الصورة أقل من </label><label>&nbsp;2MB</label>
-                         <span class="file-type">(png .jpg .jpeg.)</span>
                          <br>
                 </div>
                 <div class="form-group picture-agreement">
