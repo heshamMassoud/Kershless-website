@@ -1,7 +1,7 @@
 /* Main Style */
 
 * {
-  font-family: "HelveticaNeue-Light" !important;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
   font-weight: normal !important;
 }
 body {
@@ -30,8 +30,8 @@ footer {
 .weight input, .reas textarea, .provo textarea, .frecode textarea,
 .con-info input, .con-info textarea, .con-info div, .con-info div a,
 footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
-.rules-title h2, .uplpho label.file-size  {
-  font-family: "thameen" !important;
+.rules-title h2, .uplpho label.file-size, button#bottom_middle_submit  {
+  font-family: "jf" !important;
 }
 
 .uplpho {

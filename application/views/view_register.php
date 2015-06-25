@@ -32,6 +32,7 @@
     <!-- Bootstrap RTL -->
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/fonts/jf/font.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
     <!--[if lt IE 9]>
