@@ -37,7 +37,7 @@ This custom css file is written to override or add to any bootstrap.min.css styl
     /* 0.8x default size */
   }
   .item > img {
-    height: 100% !important;
+    height: 389px !important;
     object-fit: none;
   }
   html, body {
