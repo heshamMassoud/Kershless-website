@@ -16,12 +16,16 @@
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap RTL -->
+  <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
   <link href="<?php echo base_url(); ?>Assets/css/custom-bootstrap.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/contact-form.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/fonts/jf/font.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
+
 
   <!-- Custom Fonts -->
   <link href="<?php echo base_url(); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -45,7 +49,7 @@ else{
   $other_lang = 'en';
 }
 ?>
-<body id="page-top" class="index"  style="<?php if($current_lang == 'ar') {echo 'direction:rtl;font-family: \'thameen\' !important';} else {echo 'font-family: \'HelveticaNeue-Light\' !important';} ?>">
+<body id="page-top" class="index"  style="<?php if($current_lang == 'ar') {echo 'font-family: \'jf\' !important';} else {echo 'font-family: \'HelveticaNeue-Light\' !important';} ?>">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -59,23 +63,25 @@ else{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#page-top">
-          <img class="img-responsive" src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png" alt="">
+          <img class="img-responsive logo" src="<?php echo base_url(); ?>Assets/Images/kershless_logo.svg" width="170px" alt="">
         </a>
 
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-left">
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
 
           <li class="page-scroll">
-            <a href="#contact"><?php echo lang('contact'); ?></a>
-          </li>
-          <li class="page-scroll">
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
+
+          <li class="page-scroll">
+            <a href="#contact"><?php echo lang('contact'); ?></a>
+          </li>
+
           <!--<li class="page-scroll">
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
@@ -99,44 +105,33 @@ else{
 
   <!-- Slider Section -->
   <section class="main first" id="home">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="direction:ltr">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-      </ol>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_1.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_1.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_2.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_2.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_3.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_3.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_4.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_4.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_5.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_5.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_6.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_6.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_7.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_7.jpg" />
         </div>
         <div class="item">
-          <img style="width:100%;" src="<?php echo base_url(); ?>Assets/Images/slider_8.jpg" />
+          <img src="<?php echo base_url(); ?>Assets/Images/slider_8.jpg" />
         </div>
       </div>
 
@@ -233,17 +228,17 @@ else{
             </div>
           </div>
           <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
                   <div class="col-md-12">
                     <div id="success"></div>
                       <div class="row">
-                        <div class="form-group email col-md-6 control-group">
-                            <?php echo form_input($email); ?>
-                            <p class="help-block text-danger"></p>
-                        </div>
                         <div class="form-group name col-md-6 control-group">
                             <?php echo form_input($name); ?>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group email col-md-6 control-group">
+                            <?php echo form_input($email); ?>
                             <p class="help-block text-danger"></p>
                         </div>
                       </div>
@@ -262,7 +257,7 @@ else{
                       </div>
                   </div>
               </div>
-              <div class="col-md-3"></div>
+              <div class="col-md-2"></div>
           </div>
       </div>
   </section>
