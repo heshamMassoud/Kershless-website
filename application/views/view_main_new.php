@@ -63,23 +63,25 @@ else{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#page-top">
-          <img class="img-responsive" src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png" alt="">
+          <img class="img-responsive logo" src="<?php echo base_url(); ?>Assets/Images/kershless_logo.svg" width="170px" alt="">
         </a>
 
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-left">
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
 
           <li class="page-scroll">
-            <a href="#contact"><?php echo lang('contact'); ?></a>
-          </li>
-          <li class="page-scroll">
             <a href="#what"><?php echo lang('what_is_kershless'); ?></a>
           </li>
+
+          <li class="page-scroll">
+            <a href="#contact"><?php echo lang('contact'); ?></a>
+          </li>
+
           <!--<li class="page-scroll">
             <a href="<?php echo  base_url() . $this->lang->switch_uri($other_lang); ?>"><?php echo lang('switch_lang'); ?></a>
           </li>
