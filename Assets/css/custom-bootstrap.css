@@ -36,6 +36,14 @@ This custom css file is written to override or add to any bootstrap.min.css styl
     font-size: 1em;
     /* 0.8x default size */
   }
+  .item > img {
+    height: 100% !important;
+    object-fit: none;
+  }
+  html, body {
+    max-width: 100% !important;
+    overflow-x: hidden;
+  }
 }
 .profile-img-card {
   width: 56px;
