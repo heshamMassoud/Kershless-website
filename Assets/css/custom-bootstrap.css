@@ -107,3 +107,7 @@ button.close {
 .text-danger, .text-danger:hover {
   font-size: 12px;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #2c3e50;
+}
