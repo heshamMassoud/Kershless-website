@@ -4,14 +4,17 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="ar">
+<html class="no-js" lang="ar" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title>الشروط و الأحكام</title>
-<meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
+<meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
+<meta property="og:image:width" content="496"/>
+<meta property="og:image:height" content="351"/>
 
 <title>Kershless</title>
 <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
@@ -43,7 +46,7 @@ li {
 		<div class="row logo">
 			<div class="col-md-5"></div>
 			<div class="col-md-2"> <a href="<?php echo base_url(); ?>new">
-				<img src="<?php echo base_url(); ?>Assets/Images/kershless_190x98.png"
+				<img src="<?php echo base_url(); ?>Assets/Images/kershless_logo.svg"
 					class="img-responsive" alt="Kershless"></a>
 			</div>
 			<div class="col-md-5"></div>

@@ -8,12 +8,16 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="ar"   prefix="og: http://ogp.me/ns#">
+<html class="no-js" lang="ar" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
+    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
+    <meta property="og:image:width" content="496"/>
+    <meta property="og:image:height" content="351"/>
+    
 
     <title>Kershless</title>
 
@@ -592,7 +596,7 @@ $overall_agreement = array(
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="col-md-12 gen-info">
-              <h3>بيانات عامة</h3>
+              <h3 class="gen-h3">بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>

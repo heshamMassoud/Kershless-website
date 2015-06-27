@@ -70,6 +70,11 @@ h3 {
   background: #fff;
   padding: 14px;
 }
+
+.gen-h3 {
+  margin-top: 0px;
+}
+
 .full-name input, .bir-da select, .jobtype input, .cnty select, .nation select, .mobno input, .mail input, .fb input, .frecode input, textarea, .weight input {
   background-color: #eaedf1 !important;
   border: 1px solid #eaedf1 !important;
