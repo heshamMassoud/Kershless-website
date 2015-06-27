@@ -1,8 +1,5 @@
 /* Main Style */
 
-.name, .email, .message textarea  {
-  font-family: "thameen" !important;
-}
 
 .name input, .email input, textarea{
   background-color: #eaedf1 !important;
@@ -36,6 +33,9 @@ input:focus, .name input:focus, .email input:focus, .message textarea:focus {
   background-color: #eaedf1 !important;
   border: 1px solid #28b998 !important;
   outline: none;
+}
+div.error > input, div.warning > input,div.error > div >textarea, div.warning > div > textarea  {
+  border: 1px solid #e74c3c !important;
 }
 .send-message {
   background-color: #ffffff;

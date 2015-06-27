@@ -103,3 +103,7 @@ button.close {
 .carousel-control.left, .carousel-control.right {
     background-image: none
 }
+
+.text-danger, .text-danger:hover {
+  font-size: 12px;
+}
