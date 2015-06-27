@@ -88,7 +88,7 @@ footer .footer-col {
 }
 
 .copy-right {
-  font-family: "HelveticaNeue-Light" !important;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
   font-size:12px;
 }
 
