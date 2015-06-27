@@ -592,7 +592,7 @@ $overall_agreement = array(
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="col-md-12 gen-info">
-              <h3>بيانات عامة</h3>
+              <h3 class="gen-h3">بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>
