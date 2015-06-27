@@ -1,9 +1,12 @@
-<html  prefix="og: http://ogp.me/ns#">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <!-- //**local_to_global FOR all  paths remove '/Kershless'-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
+    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
+    <meta property="og:image:width" content="496"/>
+    <meta property="og:image:height" content="351"/>
     <title>Welcome to Kershless</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
     <style>

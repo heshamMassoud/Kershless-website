@@ -4,7 +4,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="ar">
+<html class="no-js" lang="ar" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
@@ -12,7 +13,10 @@
 
 <title>شكرا</title>
 <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
-<meta name="description" content="">
+<meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
+<meta property="og:image:width" content="496"/>
+<meta property="og:image:height" content="351"/>
+
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
