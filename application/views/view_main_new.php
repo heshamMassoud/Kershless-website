@@ -102,7 +102,6 @@ else{
     <!-- /.container-fluid -->
   </nav>
 
-
   <!-- Slider Section -->
   <section class="main first" id="home">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -148,7 +147,7 @@ else{
     <br>
     <br>
     <div class="row">
-      <div class="text-center">
+      <div class="text-center register-row">
         <a role="button" href="register" class="btn btn-default register-now">
           <?php echo lang('register_now'); ?>
         </a>

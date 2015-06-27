@@ -31,6 +31,14 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
+$('.navbar-toggle').hover(function() {
+    $('.icon-bar').css('background-color','#ffffff');
+    $('.navbar-toggle').css('background-color','#2c3e50');
+}, function() {
+    $('.icon-bar').css('background-color','#2c3e50');
+    $('.navbar-toggle').css('background-color','#ffffff');
+});
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
