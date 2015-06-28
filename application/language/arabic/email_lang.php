@@ -4,13 +4,13 @@
   *
   * PHP version 5
 
-   * @category  PHP
-   * @package   Language
-   * @subpackage   Arabic
-   * @author    Hesham Massoud <hesham.massoud@tum.de>
-   * @copyright 2013-2015 Kershless
-   * @license   http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE
-   * @link      http://www.kershless.com
+  * @category   PHP
+  * @package   Language
+  * @subpackage   Arabic
+  * @author   Hesham Massoud <hesham.massoud@tum.de>
+  * @copyright   2013-2015 Kershless
+  * @license   http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE
+  * @link   http://www.kershless.com
   */
 
 $lang['email_must_be_array']
