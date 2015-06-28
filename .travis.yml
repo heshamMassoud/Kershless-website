@@ -7,4 +7,4 @@ script:
   - phpunit Test.php
   - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
-  - phpcs --extensions=php 
+  - phpcs --extensions=php applications/language
