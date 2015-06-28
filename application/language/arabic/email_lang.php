@@ -1,18 +1,18 @@
 <?php
 /**
- * Sets all 'Arabic' e-mail messages.
- *
- * PHP version 5
+  * Sets all 'Arabic' e-mail messages.
+  *
+  * PHP version 5
 
- * @category  PHP
- * @package   Application
- * @subpackage   Language
- * @subpackage   Arabic
- * @author    Hesham Massoud <hesham.massoud@tum.de>
- * @copyright 2013-2015 Kershless
- * @license   https://github.com/heshamMassoud/Kershless/blob/develop/LICENSE.md GNU GENERAL PUBLIC LICENSE
- * @link      http://www.kershless.com
- */
+  * @category  PHP
+  * @package   Language
+  * @subpackage   Arabic
+  * @author    Hesham Massoud <hesham.massoud@tum.de>
+  * @copyright 2013-2015 Kershless
+  * @license   https://github.com/heshamMassoud/
+  * Kershless/blob/develop/LICENSE.md GNU GENERAL PUBLIC LICENSE
+  * @link      http://www.kershless.com
+  */
 
 $lang['email_must_be_array']
     = 'The email validation method must be passed an array.';
