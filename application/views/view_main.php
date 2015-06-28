@@ -50,7 +50,7 @@ style="font-family: DINNextLTArabic-Light !important; text-decoration: none; col
 
     <div id="register_now_ar"
          style="font-family: DINNextLTArabic-Light !important; text-decoration: none; color: white; font-size: xx-large;">
-        عفواً ..... باب التسجيل مغلق حالياً، موعدنا ١ يناير ٢٠١٥
+        عفواً ..... باب التسجيل مغلق حالياً، موعدنا ١ يوليو ٢٠١٥
         <br><br>
     </div>
 
@@ -70,7 +70,7 @@ style="font-family: DINNextLTArabic-Light !important; text-decoration: none; col
 
 </div>
 <div id="footer" style="font-family: DINNextLTArabic-Light !important;">All
-    Rights Reserved &copy; kershless.com 2014
+    Rights Reserved &copy; kershless.com 2015
 </div>
 
 
