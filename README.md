@@ -1,4 +1,4 @@
-#![alt tag](https://raw.githubusercontent.com/heshamMassoud/Kershless/master/Assets/Images/tab-logo.png)
+#![alt tag](https://raw.githubusercontent.com/heshamMassoud/Kershless/master/Assets/Images/tab-logo.png) https://travis-ci.org/heshamMassoud/Kershless.svg?branch=develop
 This is the official repository for the Kershless webapp.
 
 
