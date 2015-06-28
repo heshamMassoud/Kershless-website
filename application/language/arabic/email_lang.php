@@ -1,14 +1,16 @@
 <?php
 /**
-  Contains all arabic localised messages related to the e-mailing system.
+  Sets all 'Arabic' e-mail messages.
 
   PHP version 5
 
   @category  PHP
-  @package   application/language
+  @package   Application
+  @subpackage   Language
+  @subpackage   Arabic
   @author    Hesham Massoud <hesham.massoud@tum.de>
   @copyright 2013-2015 Kershless
-  @license   https://github.com/heshamMassoud/Kershless/blob/develop/LICENSE.md
+  @license   https://github.com/heshamMassoud/Kershless/blob/develop/LICENSE.md GNU GENERAL PUBLIC LICENSE
   @link      http://www.kershless.com
   */
 
