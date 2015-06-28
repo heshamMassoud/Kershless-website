@@ -1,8 +1,16 @@
 <?php
-
 /**
-This file contains all arabic localised messages related to the e-mailing system.
-**/
+  Contains all arabic localised messages related to the e-mailing system.
+
+  PHP version 5
+
+  @category  PHP
+  @package   application/language
+  @author    Hesham Massoud <hesham.massoud@tum.de>
+  @copyright 2013-2015 Kershless
+  @license   https://github.com/heshamMassoud/Kershless/blob/develop/LICENSE.md
+  @link      http://www.kershless.com
+  */
 
 $lang['email_must_be_array']
     = 'The email validation method must be passed an array.';
