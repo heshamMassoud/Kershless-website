@@ -6,3 +6,4 @@ php:
 script: phpunit Test.php
         pyrus install pear/PHP_CodeSniffer
         phpenv rehash
+        phpcs
