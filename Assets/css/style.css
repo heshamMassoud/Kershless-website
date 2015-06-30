@@ -300,6 +300,9 @@ div#height_upload_div.uploaded{
     width: 100%;
     margin-bottom: 10px;
   }
+  img.img-responsive.thumbs-up {
+    width: 50%;
+  }
 }
 select {
   -moz-appearance: none;
