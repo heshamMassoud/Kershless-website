@@ -162,6 +162,10 @@ section.first {
 @media(max-width:767px) {
   section {
     padding: 75px 0;
+    margin-top: 70px;
+  }
+  .carousel-inner>.item>img {
+      margin-top: 50px;
   }
 }
 #portfolio .portfolio-item {

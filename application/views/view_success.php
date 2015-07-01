@@ -46,7 +46,7 @@
 
 		</div>
 		<div class="row logo">
-			<img src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive"
+			<img  src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive thumbs-up"
 				alt="Kershless">
 		</div>
 		<div class="row">

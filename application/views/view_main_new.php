@@ -273,9 +273,9 @@ else{
           <div class="footer-col col-md-4"></div>
           <div class="footer-col col-md-4">
             <div class="row">
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>&nbsp;
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>&nbsp;
-                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                <a href="https://www.facebook.com/Kershless" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>&nbsp;
+                <a href="https://instagram.com/kershless" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>&nbsp;
+                <a href="https://twitter.com/kershless" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
             </div>
           </div>
           <div class="footer-col col-md-4"></div>

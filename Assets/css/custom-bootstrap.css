@@ -123,3 +123,7 @@ button.close {
 .text-center.register-row {
   margin-top: -40px;
 }
+
+.carousel-inner>.item>img {
+  margin: auto;
+}
