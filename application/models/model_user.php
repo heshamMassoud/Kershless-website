@@ -89,7 +89,7 @@ class Model_user extends CI_MODEL
                 <table class=\"BoxWrap\" width=\"100%\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td>&#13;
                 <table class=\"BoxWrap\" border=\"0\" width=\"290\" align=\"left\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td align=\"center\">&#13;
                 </td>&#13;
-                <td class=\"title\" style=\"text-align: center; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; text-align: center !important; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/kershless_190x98.png\" alt=\"logo\" style=\"max-width: 401px; text-align:center !important; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
+                <td class=\"title\" style=\"text-align: center; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; text-align: center !important; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/kershless_190x98.png\" alt=\"logo\" style=\"max-width: 401px; text-align:center !important; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;  margin: auto;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
                 <br />&#13;
                 عزيزي " . $friend_fullname . "، صديقك " . $applicant_fullname . "<br />(" . $applicant_email . ")
                 &#13;
@@ -175,7 +175,7 @@ class Model_user extends CI_MODEL
 				<table class=\"BoxWrap\" width=\"100%\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td>&#13;
 				<table class=\"BoxWrap\" border=\"0\" width=\"290\" align=\"left\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 280px !important;\"><tr><td align=\"center\">&#13;
 				</td>&#13;
-				<td class=\"title\" style=\"text-align: center; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; text-align: center !important; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/kershless_190x98.png\" alt=\"logo\" style=\"max-width: 401px; text-align:center !important; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
+				<td class=\"title\" style=\"text-align: center; line-height: 30px; text-decoration: none;\" align=\"center\"><a href=\"www.kershless.com\" style=\"font-family: 'Arial', sans-serif; text-align: center !important; font-size: 14px; font-weight: normal; line-height: 18px; color: #77cc33; text-decoration: none;\"><img src=\"http://kershless.com/Assets/Images/kershless_190x98.png\" alt=\"logo\" style=\"max-width: 401px; text-align:center !important; max-height: 194px; outline: none; text-decoration: none; display: block; border: 0px none;  margin: auto;\" mc:label=\"image\" mc:edit=\"logo\" /></a>&#13;
 				<br />&#13;
 				شكرا لتسجيلك معنا سيتم التواصل معك لاحقا&#13;
 				<hr width=\"250\" />&#13;
