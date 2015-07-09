@@ -60,16 +60,18 @@ This custom css file is written to override or add to any bootstrap.min.css styl
 }
 
 .register-now:hover {
-  background-color: #28b998;
+  background-color: #CF000F;/*#28b998; #registrationClosed*/
   border-radius: 40px;
   border-color: transparent;
 }
 
 .register-now {
-  background-color: #ffffff;
+  background-color: #F22613 !important;/*#ffffff; #registrationClosed*/
   border-radius: 40px;
-  border-color: #28b998;
-  color: #28b998;
+  /*border-color: #28b998; #registrationClosed*/
+  /*color: #28b998;#registrationClosed*/
+  border-color: transparent !important;/*#registrationClosed*/
+  cursor: default;/*#registrationClosed*/
   padding-top: 19.5px;
   padding-bottom: 19.5px;
   width: 200px;
