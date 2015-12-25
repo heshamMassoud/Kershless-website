@@ -151,8 +151,8 @@ else{
     <br>
     <div class="row">
       <div class="text-center register-row">
-        <a role="button" href="register" class="btn btn-default register-now">
-          <?php echo lang('register_now'); ?>
+        <a role="button" href="" class="btn btn-default register-now" onclick="return false;">
+          <?php echo lang('registration_closed'); ?>
         </a>
       </div>
     </div>

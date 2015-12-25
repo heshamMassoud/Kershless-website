@@ -21,7 +21,7 @@ if(ENVIRONMENT == "production") {
     $config['base_url']	= 'http://www.kershless.com/';
 }
 else {
-    $config['base_url']	= 'http://localhost/kershless/';
+    $config['base_url']	= 'http://localhost/Kershless/';
 }
 
 /*
