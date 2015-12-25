@@ -1049,6 +1049,7 @@ class CI_Form_validation {
 	{
 		list($table, $field)=explode('.', $field);
 		$input_kershless_codes_string = $str;
+		$input_kershless_codes_string = str_replace(' ', '', $input_kershless_codes_string);
 		$input_kershless_codes = explode(",", $input_kershless_codes_string);
 		$valid = true;
 		foreach ($input_kershless_codes as $kershless_code) {

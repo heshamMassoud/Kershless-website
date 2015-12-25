@@ -48,14 +48,15 @@ $route['404_override'] = '';
 $route['^(ar)$'] = $route['default_controller'];
 
 
-$route['^(ar)/new'] = "main/index2";
+//$route['^(ar)/new'] = "main/index2";
+//$route['^(ar)/s'] = "register/test";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $route['^(ar)/register'] = "register/register_validation";
+  //$route['^(ar)/register'] = "register/register_validation";#registrationClosed*/
 }
 else {
-  $route['^(ar)/register'] = "register";
+  //$route['^(ar)/register'] = "register";#registrationClosed
 }
-$route['^(ar)/register/rules'] = "register/rules";
+//$route['^(ar)/register/rules'] = "register/rules";#registrationClosed
 $route['^(ar)/main/contact'] = "main/contact";
 $route['(:any)'] = "errors/error_404";
 
