@@ -46,13 +46,19 @@
 <?php
 $current_lang = $this->lang->lang();
 if ($current_lang == 'en') {
-  $other_lang = 'ar';
-}
-else{
-  $other_lang = 'en';
+    $other_lang = 'ar';
+} else {
+    $other_lang = 'en';
 }
 ?>
-<body id="page-top" class="index"  style="<?php if($current_lang == 'ar') {echo 'font-family: \'jf\' !important';} else {echo 'font-family: \'HelveticaNeue-Light\' !important';} ?>">
+<body id="page-top" class="index"
+  style="
+    <?php
+    if ($current_lang == 'ar') {
+        echo 'font-family: \'jf\' !important';
+    } else {
+        echo 'font-family: \'HelveticaNeue-Light\' !important';
+    } ?>">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -152,7 +158,7 @@ else{
     <div class="row">
       <div class="text-center register-row">
         <a role="button" href="register" class="btn btn-default register-now">
-          <?php echo lang('register_now'); ?>
+            <?php echo lang('register_now'); ?>
         </a>
       </div>
     </div>
@@ -180,8 +186,8 @@ else{
       </div>
   </section>
 
-  <?php
-  $name = array(
+    <?php
+    $name = array(
       'name' => 'name',
       'id' => 'name',
       'class' => 'form-control',
@@ -189,9 +195,8 @@ else{
       'placeholder' => 'الاسم *',
       'required' => 'required',
       'data-validation-required-message' => "من فضلك أدخل الاسم  "
-  );
-
-  $email = array(
+    );
+    $email = array(
       'name' => 'email',
       'id' => 'email',
       'class' => 'form-control',
@@ -200,9 +205,8 @@ else{
       'placeholder' => 'البريد الإلكتروني *',
       'required' => 'required',
       'data-validation-required-message' => "من فضلك أدخل البريد الإلكتروني   "
-  );
-
-  $message = array(
+    );
+    $message = array(
       'name' => 'message',
       'title' => 'message',
       'id' => 'message',
@@ -210,14 +214,14 @@ else{
       'placeholder' => 'كيف نساعدك *',
       'required' => 'required',
       'data-validation-required-message' => "من فضلك أدخل الرسالة "
-  );
-  $send_message = array(
+    );
+    $send_message = array(
       'name' => 'send',
       'class' => 'btn btn-default send-message',
       'id' => 'form_submitter',
       'value' => 'ارسل'
-  );
-  ?>
+    );
+    ?>
 
   <!-- Contact Section -->
   <form name="sendMessage" acttion="main/contact" id="contactForm" method="post" accept-charset="utf-8" enctype="multipart/form-data" novalidate>
@@ -254,7 +258,7 @@ else{
                         <div class="col-md-12">
                             <?php
                               echo form_submit($send_message);
-                              ?>
+                                ?>
                         </div>
                       </div>
                   </div>
