@@ -6,4 +6,8 @@ script:
   - phpunit Test.php
   - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
-  - phpcs --extensions=php application
+  - phpcs --extensions=php application/views
+  - phpcs --extensions=php application/controllers
+  - phpcs --extensions=php application/language
+  - phpcs --extensions=php application/models
+  - phpcs --extensions=php application/config
