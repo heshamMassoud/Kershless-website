@@ -33,6 +33,8 @@ $lang['switch_lang']
 $lang['register_now']
     = 'سجل الأن';
 
+$lang['registration_closed'] = "باب التسجيل مغلق";
+
 $lang['what_is_kershless_1']
     = 'كرشلس هو عالم يجمع كل من يبحث
     عن الوزن المثالي في مجموعات
