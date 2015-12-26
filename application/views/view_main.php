@@ -7,7 +7,7 @@
  * @category  HTML
  * @package   Views
  * @author    Hesham Massoud <hesham.massoud@tum.de>
- * @copyright 2013-2015 Kershless
+ * @copyright 2013-2016 Kershless
  * @license   http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE
  * @link      http://www.kershless.com
  */
@@ -75,7 +75,7 @@
         </div>
         <div id="footer"
         style="font-family: DINNextLTArabic-Light !important;">
-        All Rights Reserved &copy; kershless.com 2015
+        All Rights Reserved &copy; kershless.com <?php echo date("Y");?>
         </div>
 
 

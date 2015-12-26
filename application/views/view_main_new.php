@@ -283,7 +283,7 @@ else{
         <div class="row">
           <div class="footer-col col-md-4"></div>
           <div class="footer-col col-md-4 copy-right">
-              Copyright &copy; Kershless 2015
+              Copyright &copy; Kershless <?php echo date("Y");?>
           </div>
           <div class="footer-col col-md-4"></div>
         </div>

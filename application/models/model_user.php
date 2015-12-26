@@ -7,7 +7,7 @@
  * @category  PHP
  * @package   Models
  * @author    Hesham Massoud <hesham.massoud@tum.de>
- * @copyright 2013-2015 Kershless
+ * @copyright 2013-2016 Kershless
  * @license   http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE
  * @link      http://www.kershless.com
  */
@@ -24,7 +24,7 @@ if (!defined('BASEPATH')) {
  * @category  PHP
  * @package   Models
  * @author    Hesham Massoud <hesham.massoud@tum.de>
- * @copyright 2013-2015 Kershless
+ * @copyright 2013-2016 Kershless
  * @license   http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE
  * @link      http://www.kershless.com
  */
@@ -402,7 +402,7 @@ class Model_User extends CI_MODEL
                         font-family: 'Arial', sans-serif; font-size: 11px;
                         font-weight: normal; line-height: 14px; text-align: center;
                         text-decoration: none;\">
-                        Copyright 2015 - All Rights Reserved Kershless</a>
+                        Copyright ". date("Y") ." - All Rights Reserved Kershless</a>
                         &#13;
 						<!-- // End Module: Footer \\ -->&#13;
 						</td>&#13;

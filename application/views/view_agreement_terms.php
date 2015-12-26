@@ -149,7 +149,7 @@ li {
 		</div>
 		<footer>
 			<p class="col-md-4"></p>
-			<p class="col-md-4" style="text-align: center;">&copy; Kershless 2015</p>
+			<p class="col-md-4" style="text-align: center;">&copy; Kershless <?php echo date("Y");?></p>
 			<p class="col-md-4"></p>
 		</footer>
 	</div>

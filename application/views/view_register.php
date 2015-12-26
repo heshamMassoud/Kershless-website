@@ -1372,7 +1372,7 @@ $overall_agreement = array(
     <footer>
         <p class="col-md-12 required">(*) بيانات لا يكتمل التسجيل بدونها</p>
 
-        <p class="col-md-12 copyrights">&copy; Kershless 2015</p>
+        <p class="col-md-12 copyrights">&copy; Kershless <?php echo date("Y");?></p>
     </footer>
 </div>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
