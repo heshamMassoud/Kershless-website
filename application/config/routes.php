@@ -51,12 +51,12 @@ $route['^(ar)$'] = $route['default_controller'];
 //$route['^(ar)/new'] = "main/index2";
 //$route['^(ar)/s'] = "register/test";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  //$route['^(ar)/register'] = "register/register_validation";#registrationClosed*/
+  $route['^(ar)/register'] = "register/register_validation";
 }
 else {
-  //$route['^(ar)/register'] = "register";#registrationClosed
+  $route['^(ar)/register'] = "register";
 }
-//$route['^(ar)/register/rules'] = "register/rules";#registrationClosed
+$route['^(ar)/register/rules'] = "register/rules";
 $route['^(ar)/main/contact'] = "main/contact";
 $route['(:any)'] = "errors/error_404";
 
