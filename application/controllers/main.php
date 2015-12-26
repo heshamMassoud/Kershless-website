@@ -1,60 +1,61 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (! defined('BASEPATH')) { exit('No direct script access allowed'); 
+}
 
 
-class Main extends CI_Controller {
+class Main extends CI_Controller
+{
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->helper('form');
-		$this->load->helper('language');
-		$this->lang->load('homepage');
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper('form');
+        $this->load->helper('language');
+        $this->lang->load('homepage');
+    }
 
-	public function index2()
-	{
-		$this->load->view("view_main");
-	}
+    public function index2()
+    {
+        $this->load->view("view_main");
+    }
 
-	public function index()
-	{
-		$this->load->view("view_main_new");
-	}
+    public function index()
+    {
+        $this->load->view("view_main_new");
+    }
 
 
-	public function view_my_custom_index_email()
-	{
-		$this->load->view("view_email");
-	}
+    public function view_my_custom_index_email()
+    {
+        $this->load->view("view_email");
+    }
 
-	public function contact()
-	{
-		if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-		{
-			echo "No arguments Provided!";
-			return false;
-		}
-		$name = $_POST['name'];
-		$email_address = $_POST['email'];
-		$message = $_POST['message'];
+    public function contact()
+    {
+        if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            echo "No arguments Provided!";
+            return false;
+        }
+        $name = $_POST['name'];
+        $email_address = $_POST['email'];
+        $message = $_POST['message'];
 
-		$email_body = $message . "<br>Sent from: " . $name . " (" . $email_address . ")";
-		$this->load->library('email');
-		$this->email->from('applications@kershless.com','Kershless');
-		$this->email->to('contact@kershless.com');
-		$this->email->subject('Website Contact Form: '. $name);
-		$this->email->message($email_body);
-		$this->email->send();
-	}
+        $email_body = $message . "<br>Sent from: " . $name . " (" . $email_address . ")";
+        $this->load->library('email');
+        $this->email->from('applications@kershless.com', 'Kershless');
+        $this->email->to('contact@kershless.com');
+        $this->email->subject('Website Contact Form: '. $name);
+        $this->email->message($email_body);
+        $this->email->send();
+    }
 
-	public function send_email()
-	{
-		//echo $this->create_excel_sheet();
-		$this->load->library('email');
-		$this->email->from('applications@kershless.com','Kershless');
-		$this->email->to('heshamhamdymassoud@gmail.com');
-		$this->email->subject('Weekly Kershless Applications');
-		$message_old = "<div id=\"body\" style=\"color:#16a085;font-size:16px;font-family: 'Open Sans',sans-serif;\">
+    public function send_email()
+    {
+        //echo $this->create_excel_sheet();
+        $this->load->library('email');
+        $this->email->from('applications@kershless.com', 'Kershless');
+        $this->email->to('heshamhamdymassoud@gmail.com');
+        $this->email->subject('Weekly Kershless Applications');
+        $message_old = "<div id=\"body\" style=\"color:#16a085;font-size:16px;font-family: 'Open Sans',sans-serif;\">
 				Dear Kershless Administrator,
 				<p>
 				Kindly find attatched in this e-mail, this week's <b>Kershless applications' report.</b>
@@ -73,7 +74,7 @@ class Main extends CI_Controller {
 				</p>
 				</div>";
 
-		$message_new = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+        $message_new = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 				<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns=\"http://www.w3.org/1999/xhtml\" style=\"width: 100%;\">
 				<head>
 				<!-- Define Charset -->
@@ -139,7 +140,7 @@ class Main extends CI_Controller {
 				</html>
 				";
 
-		$message_newest = "
+        $message_newest = "
 				<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 				<html xmlns=\"http://www.w3.org/1999/xhtml\" style=\"width: 100%;\">
 				<head>
@@ -198,10 +199,10 @@ class Main extends CI_Controller {
 
 
 				";
-		$this->email->message($message_newest);
-		$pathToUploadedFile = "test.csv";
-		//$this->email->attach($pathToUploadedFile);
-		$this->email->send();
-		echo $this->email->print_debugger();
-	}
+        $this->email->message($message_newest);
+        $pathToUploadedFile = "test.csv";
+        //$this->email->attach($pathToUploadedFile);
+        $this->email->send();
+        echo $this->email->print_debugger();
+    }
 }

@@ -1,19 +1,22 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) { exit('No direct script access allowed'); 
+}
 
-/** Error reporting */
+/**
+ * Error reporting 
+*/
 error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+ini_set('display_errors', true);
+ini_set('display_startup_errors', true);
 date_default_timezone_set('Europe/London');
 
 define('EOL', (PHP_SAPI == 'cli') ? PHP_EOL : '<br />');
-define('ENABLE_PHPEXCEL', FALSE);
+define('ENABLE_PHPEXCEL', false);
 
 if (ENABLE_PHPEXCEL) {
     if (ENVIRONMENT == "production") {
-        require_once 'http://kershless.com/Classes/PHPExcel.php';
+        include_once 'http://kershless.com/Classes/PHPExcel.php';
     } else {
-        require_once '/Applications/XAMPP/xamppfiles/htdocs/kershless/Classes/PHPExcel.php';
+        include_once '/Applications/XAMPP/xamppfiles/htdocs/kershless/Classes/PHPExcel.php';
     }
 }
 
@@ -745,7 +748,7 @@ class Register extends CI_Controller
             $this->form_validation->set_rules('height_image_name', 'الصورة طولك', 'required_height_image');
         }
 
-        if ($this->input->post('overall_agreement', TRUE) == null) {
+        if ($this->input->post('overall_agreement', true) == null) {
             $this->form_validation->set_rules('overall_agreement', 'الإقرار', 'required');
             set_checkbox('overall_agreement', '1');
         }

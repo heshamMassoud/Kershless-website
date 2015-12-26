@@ -53,7 +53,7 @@
 			<p class="col-md-4"></p>
 			<p class="col-md-4 thanks-text">
 				شكرا <?php
-				echo $name; ?> على التسجيل معنا في كرشلس ، سوف يصلك إيميل خلال دقائق
+                echo $name; ?> على التسجيل معنا في كرشلس ، سوف يصلك إيميل خلال دقائق
 					به كود التسجيل الخاص بك أرسله لأصدقائك لتكونوا معاً في نفس الموسم
 			</p>
 			<p class="col-md-4"></p>
@@ -87,6 +87,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="<?php echo base_url(); ?>Assets/js/bootstrap.min.js"></script>
 	<script src="<?php echo base_url(); ?>Assets/js/scripts.js"></script>
-	<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="<?php echo base_url(); ?>
+    Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </body>
 </html>

@@ -509,7 +509,7 @@ $facebook = array(
     'onFocus' => 'facebook_client_validation_focus();'
 );
 
-$name_agreement_checkbox = $this->input->post('name_agreement', TRUE) == null ? FALSE : TRUE;
+$name_agreement_checkbox = $this->input->post('name_agreement', true) == null ? false : true;
 $name_agreement = array(
     'name' => 'name_agreement',
     'id' => 'name_agreement',
@@ -517,7 +517,7 @@ $name_agreement = array(
     'checked' => $name_agreement_checkbox
 );
 
-$picture_agreement_checkbox = $this->input->post('picture_agreement', TRUE) == null ? FALSE : TRUE;
+$picture_agreement_checkbox = $this->input->post('picture_agreement', true) == null ? false : true;
 $picture_agreement = array(
     'name' => 'picture_agreement',
     'id' => 'picture_agreement',
@@ -567,7 +567,7 @@ $allergy_desc = array(
     'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك أذكر التفاصيل.'
 );
 
-$overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
+$overall_agreement_checkbox = $this->input->post('overall_agreement', true) == null ? false : true;
 $overall_agreement = array(
     'name' => 'overall_agreement',
     'id' => 'overall_agreement',
@@ -630,10 +630,10 @@ $overall_agreement = array(
                         if ($gender_radiobutton == 1) {
                             ?>
                             <label class="col-md-6"> <?php
-                                echo form_radio('gender', '1', True, 'id="male_radio"');
+                                echo form_radio('gender', '1', true, 'id="male_radio"');
                                 ?> <span>ذكر</span>
                             </label> <label class="col-md-6"> <?php
-                                echo form_radio('gender', '2', False, 'id="female_radio"');
+                                echo form_radio('gender', '2', false, 'id="female_radio"');
                                 ?> <span>أنثي</span>
                             </label>
                         <?php
@@ -641,20 +641,20 @@ $overall_agreement = array(
                             if ($gender_radiobutton == 2) {
                                 ?>
                                 <label class="col-md-6"> <?php
-                                    echo form_radio('gender', '1', False, 'id="male_radio"');
+                                    echo form_radio('gender', '1', false, 'id="male_radio"');
                                     ?> <span>ذكر</span>
                                 </label> <label class="col-md-6"> <?php
-                                    echo form_radio('gender', '2', True, 'id="female_radio"');
+                                    echo form_radio('gender', '2', true, 'id="female_radio"');
                                     ?> <span>أنثي</span>
                                 </label>
                             <?php
                             } else {
                                 ?>
                                 <label class="col-md-6"> <?php
-                                    echo form_radio('gender', '1', True, 'id="male_radio"');
+                                    echo form_radio('gender', '1', true, 'id="male_radio"');
                                     ?> <span>ذكر</span>
                                 </label> <label class="col-md-6"> <?php
-                                    echo form_radio('gender', '2', False, 'id="female_radio"');
+                                    echo form_radio('gender', '2', false, 'id="female_radio"');
                                     ?> <span>أنثي</span>
                                 </label>
                             <?php
@@ -671,13 +671,13 @@ $overall_agreement = array(
                             ?>
 
                             <label class="col-md-4"> <?php
-                                echo form_radio('marital_status', '1', True);
+                                echo form_radio('marital_status', '1', true);
                                 ?> <span>أعزب</span>
                             </label> <label class="col-md-4"> <?php
-                                echo form_radio('marital_status', '2', False);
+                                echo form_radio('marital_status', '2', false);
                                 ?> <span>متزوج</span>
                             </label> <label class="col-md-4"> <?php
-                                echo form_radio('marital_status', '3', False);
+                                echo form_radio('marital_status', '3', false);
                                 ?> <span>ﺃﺧﺭﻯ</span>
                             </label>
                         <?php
@@ -685,13 +685,13 @@ $overall_agreement = array(
                             if ($marital_status_radiobutton == 2) {
                                 ?>
                                 <label class="col-md-4"> <?php
-                                    echo form_radio('marital_status', '1', False);
+                                    echo form_radio('marital_status', '1', false);
                                     ?> <span>أعزب</span>
                                 </label> <label class="col-md-4"> <?php
-                                    echo form_radio('marital_status', '2', True);
+                                    echo form_radio('marital_status', '2', true);
                                     ?> <span>متزوج</span>
                                 </label> <label class="col-md-4"> <?php
-                                    echo form_radio('marital_status', '3', False);
+                                    echo form_radio('marital_status', '3', false);
                                     ?> <span>ﺃﺧﺭﻯ</span>
                                 </label>
                             <?php
@@ -700,13 +700,13 @@ $overall_agreement = array(
                                 if ($marital_status_radiobutton == 3) {
                                     ?>
                                     <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '1', False);
+                                        echo form_radio('marital_status', '1', false);
                                         ?> <span>أعزب</span>
                                     </label> <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '2', False);
+                                        echo form_radio('marital_status', '2', false);
                                         ?> <span>متزوج</span>
                                     </label> <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '3', True);
+                                        echo form_radio('marital_status', '3', true);
                                         ?> <span>ﺃﺧﺭﻯ</span>
                                     </label>
                                 <?php
@@ -714,13 +714,13 @@ $overall_agreement = array(
                                 } else {
                                     ?>
                                     <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '1', True);
+                                        echo form_radio('marital_status', '1', true);
                                         ?> <span>أعزب</span>
                                     </label> <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '2', False);
+                                        echo form_radio('marital_status', '2', false);
                                         ?> <span>متزوج</span>
                                     </label> <label class="col-md-4"> <?php
-                                        echo form_radio('marital_status', '3', False);
+                                        echo form_radio('marital_status', '3', false);
                                         ?> <span>ﺃﺧﺭﻯ</span>
                                     </label>
                                 <?php
