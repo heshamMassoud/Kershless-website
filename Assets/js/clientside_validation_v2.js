@@ -1187,7 +1187,7 @@ function facebook_client_validation_blur() {
   if (field.value == '') {
     return true;
   } else {
-    var regex = /^(((https:\/\/)|(http:\/\/))?(www.)?)?(((facebook)|(fb)).com\/)(([a-zA-Z0-9])+\.)*([a-zA-Z0-9])+$/;
+    var regex = /^(((https:\/\/)|(http:\/\/))?(www.)?)?(((facebook)|(fb)).com\/)(([a-zA-Z0-9])+\.)*([a-zA-0-9])+$/;
     if (!regex.test(field.value)) {
       $("#facebook").attr('class', 'col-md-12 form-control input_form_error');
       $('#facebook').attr('title', 'الفيسبوك غير صحيح');
