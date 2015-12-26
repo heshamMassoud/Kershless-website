@@ -1,8 +1,9 @@
-<?php if (!defined('BASEPATH')) { exit('No direct script access allowed'); 
+<?php if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
 }
 
 /**
- * Error reporting 
+ * Error reporting
 */
 error_reporting(E_ALL);
 ini_set('display_errors', true);
@@ -51,7 +52,7 @@ class Register extends CI_Controller
         $this->load->view("view_agreement_terms");
     }
 
-    function _create_rich_excel_sheet_male()
+    function _createRichExcelSheetMale()
     {
         // Create new PHPExcel object
         echo date('H:i:s'), " Create new PHPExcel object", EOL;
@@ -318,7 +319,7 @@ class Register extends CI_Controller
         echo 'File has been created in ', getcwd(), EOL;
     }
 
-    function _create_rich_excel_sheet_female()
+    function _createRichExcelSheetFemale()
     {
         // Create new PHPExcel object
         echo date('H:i:s'), " Create new PHPExcel object", EOL;
@@ -586,14 +587,14 @@ class Register extends CI_Controller
         echo 'File has been created in ', getcwd(), EOL;
     }
 
-    public function create_excel_sheets()
+    public function createExcelSheets()
     {
-        $this->_create_rich_excel_sheet_male();
-        $this->_create_rich_excel_sheet_female();
+        $this->_createRichExcelSheetMale();
+        $this->_createRichExcelSheetFemale();
     }
 
 
-    public function create_excel_sheet()
+    public function createExcelSheet()
     {
         $this->load->model("model_user");
         $results = $this->model_user->get_all_data();
@@ -639,9 +640,9 @@ class Register extends CI_Controller
     }
 
 
-    public function send_email()
+    public function sendEmail()
     {
-        //echo $this->create_excel_sheet();
+        //echo $this->createExcelSheet();
         $this->load->library('email');
         $this->email->from('applications@kershless.com', 'Kershless');
         $this->email->to('heshamhamdymassoud@gmail.com');
@@ -653,9 +654,9 @@ class Register extends CI_Controller
         echo $this->email->print_debugger();
     }
 
-    public function send_email_to_user($email, $kershless_code, $name)
+    public function sendEmailToUser($email, $kershless_code, $name)
     {
-        //echo $this->create_excel_sheet();
+        //echo $this->createExcelSheet();
         $this->load->library('email');
         $this->email->from('applications@kershless.com', 'Kershless');
         $this->email->to($email);
@@ -727,7 +728,7 @@ class Register extends CI_Controller
     }
 
 
-    public function register_validation()
+    public function registerValidation()
     {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<label>', '</label>');
@@ -782,14 +783,12 @@ class Register extends CI_Controller
         //if (empty($_FILES['height']['file_name']))
         //{
         if (!empty($_FILES['height_image'])) {
-            if ($_FILES['height_image']['error'] == 4)//EMPTY FILE -- UPLOAD_ERR_NO_FILE
-            {
+            if ($_FILES['height_image']['error'] == UPLOAD_ERR_NO_FILE) {
                 $this->form_validation->set_rules('height_image', 'Height Picture', 'required');
             }
         }
         if (!empty($_FILES['weight_image'])) {
-            if ($_FILES['weight_image']['error'] == 4)//EMPTY FILE -- UPLOAD_ERR_NO_FILE
-            {
+            if ($_FILES['weight_image']['error'] == UPLOAD_ERR_NO_FILE) {
                 $this->form_validation->set_rules('weight_image', 'Weight Picture', 'required');
             }
         }
@@ -819,7 +818,7 @@ class Register extends CI_Controller
             $this->model_user->addUser();//$weightData, $heightData);
             $data = array('name' => $this->input->post('fullname'));
             $this->load->view("view_success", $data);
-            //$this->send_email_to_user($this->input->post('email'),$this->input->post('kershless_code'),$this->input->post('fullname'));
+            //$this->sendEmailToUser($this->input->post('email'),$this->input->post('kershless_code'),$this->input->post('fullname'));
             /*
                 }
             else

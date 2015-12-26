@@ -7,7 +7,7 @@
 
  * @category   PHP
  * @package    Language
- * @subpackage arabic
+ * @subpackage Arabic
  * @author     Hesham Massoud <hesham.massoud@tum.de>
  * @copyright  2013-2016 Kershless
  * @license    http://git.io/vtE5Z GNU GENERAL PUBLIC LICENSE

@@ -1,4 +1,5 @@
-<?php if (! defined('BASEPATH')) { exit('No direct script access allowed'); 
+<?php if (! defined('BASEPATH')) {
+    exit('No direct script access allowed');
 }
 
 
@@ -24,14 +25,14 @@ class Main extends CI_Controller
     }
 
 
-    public function view_my_custom_index_email()
+    public function viewMyCustomIndexEmail()
     {
         $this->load->view("view_email");
     }
 
     public function contact()
     {
-        if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             echo "No arguments Provided!";
             return false;
         }
@@ -48,7 +49,7 @@ class Main extends CI_Controller
         $this->email->send();
     }
 
-    public function send_email()
+    public function sendEmail()
     {
         //echo $this->create_excel_sheet();
         $this->load->library('email');
