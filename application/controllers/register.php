@@ -7,14 +7,14 @@ ini_set('display_startup_errors', TRUE);
 date_default_timezone_set('Europe/London');
 
 define('EOL', (PHP_SAPI == 'cli') ? PHP_EOL : '<br />');
+define('ENABLE_PHPEXCEL', FALSE);
 
-/** Include PHPExcel */
-
-
-if (ENVIRONMENT == "production") {
-    require_once 'http://kershless.com/Classes/PHPExcel.php';
-} else {
-    require_once '/Applications/XAMPP/xamppfiles/htdocs/kershless/Classes/PHPExcel.php';
+if (ENABLE_PHPEXCEL) {
+    if (ENVIRONMENT == "production") {
+        require_once 'http://kershless.com/Classes/PHPExcel.php';
+    } else {
+        require_once '/Applications/XAMPP/xamppfiles/htdocs/kershless/Classes/PHPExcel.php';
+    }
 }
 
 class Register extends CI_Controller
