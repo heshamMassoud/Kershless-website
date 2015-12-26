@@ -1234,7 +1234,7 @@ class CI_Form_validation {
 	public function valid_facebook($str)
 	{
 		//https://www.facebook.com/hhmassoud
-		return ( ! preg_match("/^(((https:\/\/)|(http:\/\/))?(www.)?)?(((facebook)|(fb)).com\/)(([a-z0-9])+\.)*([a-z0-9])+$/i", $str)) ? FALSE : TRUE;
+		return ( ! preg_match("/^(((https:\/\/)|(http:\/\/))?(www.)?)?(((facebook)|(fb)).com\/)(([a-zA-Z0-9])+\.)*([a-zA-Z0-9])+$/i", $str)) ? FALSE : TRUE;
 	}
 
 	// --------------------------------------------------------------------
