@@ -18,6 +18,8 @@ $lang['valid_facebook']		 = "يرجى كتابة الفيسبوك اكونت ب�
 $lang['valid_kershless_code'] = "نأسف لا يوجد عضو بهذا الكود في كرشلس";
 $lang['valid_height']		= "يرجى كتابة الطول بشكل صحيح. مثل ١.٨١";
 $lang['valid_arabic_fullname']		= "الإسم ثلاثي و باللغة العربية من فضلك";
+$lang['arabic']		= "باللغة العربية من فضلك";
+
 
 $lang['alpha']				= "The %s field may only contain alphabetical characters.";
 $lang['alpha_spaces']		= "The %s field may only contain alphabetical characters.";
