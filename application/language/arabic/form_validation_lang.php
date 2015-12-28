@@ -113,5 +113,8 @@ $lang['less_than']
 $lang['greater_than']
     = 'The %s field must contain a number greater than %s.';
 
+$lang['arabic']
+    = "باللغة العربية من فضلك";
+
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/arabic/form_validation_lang.php */
