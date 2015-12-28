@@ -720,7 +720,7 @@ $(function() {
             .getElementById("weight_upload_button");
           weight_upload_text.innerHTML = "&nbsp;";
           xhr.open('POST',
-            '/Assets/scripts/handle_file_upload.php',
+            '../Assets/scripts/handle_file_upload.php',
             true);
           xhr.onload = function() {
             if (xhr.status === 200) {
@@ -787,7 +787,7 @@ $(function() {
             .getElementById("height_upload_button");
           height_upload_text.innerHTML = "&nbsp;";
           xhr.open('POST',
-            '/Assets/scripts/handle_file_upload.php',
+            '../Assets/scripts/handle_file_upload.php',
             true);
           xhr.onload = function() {
             if (xhr.status === 200) {
