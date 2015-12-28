@@ -49,9 +49,7 @@ else
 $json = json_encode(array(
   'name' => $fileName,
   'type' => $fileType,
-  'dataUrl' => $dataUrl,
-  'username' => $_REQUEST['username'],
-  'accountnum' => $_REQUEST['accountnum']
+  'dataUrl' => $dataUrl
 ));
 echo $json;
 ?>
