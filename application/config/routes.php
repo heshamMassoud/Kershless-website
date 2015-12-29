@@ -58,6 +58,7 @@ else {
 }
 $route['^(ar)/85eb787e9664e9a94f714daa943c52da/rules'] = "register/rules";
 $route['^(ar)/main/contact'] = "main/contact";
+//$route['^(ar)/email'] = "main/viewMyCustomIndexEmail";
 $route['(:any)'] = "errors/error_404";
 
 //$route['default_controller'] = "main";

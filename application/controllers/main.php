@@ -27,7 +27,7 @@ class Main extends CI_Controller
 
     public function viewMyCustomIndexEmail()
     {
-        $this->load->view("view_email");
+        $this->load->view("view_email_test");
     }
 
     public function contact()
