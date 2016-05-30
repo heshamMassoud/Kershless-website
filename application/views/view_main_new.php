@@ -162,6 +162,13 @@ if ($current_lang == 'en') {
         </a>
       </div>
     </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="text-center">
+          <?php echo lang('registration_openning_date'); ?>
+      </div>
+    </div>
   </section>
 
   <!-- What is Kershless? Section -->
