@@ -59,6 +59,15 @@ if ($current_lang == 'en') {
     } else {
         echo 'font-family: \'HelveticaNeue-Light\' !important';
     } ?>">
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -168,10 +177,13 @@ if ($current_lang == 'en') {
     <div class="container">
       <div class="row">
           <div class="text-center register-row">
-              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FKershless%2Fvideos%2F1034411593280770%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe
+              <!-- Your embedded video player code -->
+              <div class="fb-video" data-href="https://www.facebook.com/Kershless/videos/1034411593280770/" data-width="500" data-show-text="false">
               </div>
-          </div>
+               </div>
   </section>
+
+
 
   <!-- What is Kershless? Section -->
   <section class="main" id="what">
