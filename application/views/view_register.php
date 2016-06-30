@@ -17,7 +17,7 @@
     <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
     <meta property="og:image:width" content="496"/>
     <meta property="og:image:height" content="351"/>
-    
+
 
     <title>Kershless</title>
 
@@ -46,7 +46,7 @@
 </head>
 <?php
 
-echo form_open_multipart('85eb787e9664e9a94f714daa943c52da/');
+echo form_open_multipart('register/');
 
 
 //####### Form Submitter ################
