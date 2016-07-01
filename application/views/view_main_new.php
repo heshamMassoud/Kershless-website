@@ -171,7 +171,14 @@ if ($current_lang == 'en') {
         </a>
       </div>
     </div>
-  </section>
+    <br>
+    <br>
+    <div class="row">
+        <div class="text-center">
+            <?php echo lang('registration_openning_date'); ?>
+        </div>
+    </div>
+</section>
 
   <section class="main" id="video">
     <div class="container">
