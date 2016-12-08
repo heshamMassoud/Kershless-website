@@ -1049,6 +1049,7 @@ class CI_Form_validation {
 	{
 		list($table, $field)=explode('.', $field);
 		$input_kershless_codes_string = $str;
+		$input_kershless_codes_string = str_replace(' ', '', $input_kershless_codes_string);
 		$input_kershless_codes = explode(",", $input_kershless_codes_string);
 		$valid = true;
 		foreach ($input_kershless_codes as $kershless_code) {
@@ -1281,9 +1282,9 @@ class CI_Form_validation {
 		//1.81
 		//return ( ! preg_match("/^[a-z]+ [a-z]+ [a-z]+$/i", $str)) ? FALSE : TRUE;[\u{0900}-\u{097F}]+
 		//return ( ! preg_match("/^([\p{Arabic}]+ [\p{Arabic}]+ [\p{Arabic}]+ *)|([A-Za-z][a-z]* [A-Za-z][a-z]* [A-Za-z][a-z]* *)$/ui", $str)) ? FALSE : TRUE;
-		return ( ! preg_match("/^ *[\p{Arabic}]+ +[\p{Arabic}]+ +[\p{Arabic}]+ *$/ui", $str)) ? FALSE : TRUE;
-		
-		
+		return ( ! preg_match("/^ *[\p{Arabic}]+ +[\p{Arabic}]+ +[\p{Arabic}]+( [\p{Arabic}]*)* *$/ui", $str)) ? FALSE : TRUE;
+
+
 	}
 	// --------------------------------------------------------------------
 
@@ -1297,9 +1298,12 @@ class CI_Form_validation {
 
 	}
 	// --------------------------------------------------------------------
-	
-	
-	
+	public function arabic($str)
+	{
+		return ( ! preg_match("/^ *[\p{Arabic}]*$/ui", $str)) ? FALSE : TRUE;
+	}
+
+
 
 	/**
 	 * Alpha-numeric

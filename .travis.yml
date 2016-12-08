@@ -1,0 +1,9 @@
+language: php
+php:
+  - 5.5
+  - 5.4
+script:
+  - phpunit Test.php
+  - pyrus install pear/PHP_CodeSniffer
+  - phpenv rehash
+  - phpcs --extensions=php application/views/view_main.php

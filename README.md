@@ -1,5 +1,8 @@
 #![alt tag](https://raw.githubusercontent.com/heshamMassoud/Kershless/master/Assets/Images/tab-logo.png)
-Official repository for the Kershless webapp.
+### Status
+[![Build Status](https://travis-ci.org/heshamMassoud/Kershless.svg?branch=develop)](https://travis-ci.org/heshamMassoud/Kershless.svg?branch=develop)
+
+This is the official repository for the Kershless webapp.
 
 
 The purpose of this project is to be the main web application for Kershless, which is basically a weight loss competition aimed to help members in the Kershless community lose weight together faster, easier and healthier.

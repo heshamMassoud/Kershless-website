@@ -8,17 +8,24 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="ar"   prefix="og: http://ogp.me/ns#">
+<html class="no-js" lang="ar" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/tab-logo.png"/>
+    <meta property="og:image" content="<?php echo base_url(); ?>Assets/Images/kershless_496x351.png"/>
+    <meta property="og:image:width" content="496"/>
+    <meta property="og:image:height" content="351"/>
+    
 
     <title>Kershless</title>
+
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/Images/tab-logo.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css">
     <link rel="stylesheet"
@@ -29,14 +36,8 @@
     <!-- Bootstrap RTL -->
     <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
-
-
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript"
-            src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
-    <script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
-    <script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/fonts/jf/font.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -45,7 +46,7 @@
 </head>
 <?php
 
-echo form_open_multipart('register/register_validation/');
+echo form_open_multipart('register/');
 
 
 //####### Form Submitter ################
@@ -274,7 +275,7 @@ if (form_error('provocation') != '') {
 }
 
 if (form_error('friend_code') != '') {
-    $friend_code_class = "form-control input_form_error";
+    $friend_code_class = "input_form_error";
     $friend_code_hidden_error = array(
         'id' => 'friend_code_hidden_error',
         'name' => 'friend_code_hidden_error',
@@ -284,14 +285,14 @@ if (form_error('friend_code') != '') {
     echo form_input($friend_code_hidden_error);
 
 } else {
-    $friend_code_class = "form-control input_form";
+    $friend_code_class = "input_form";
 }
 
 
 //########## Left Column php Form Helper Input SERVER SIDE ERROR HANDELING ####################
 
 if (form_error('mobile_number') != '') {
-    $mobile_number_class = "col-md-8 form-control mob input_form_error";
+    $mobile_number_class = "col-md-9 form-control mob input_form_error";
     $mobile_number_hidden_error = array(
         'id' => 'mobile_number_hidden_error',
         'name' => 'mobile_number_hidden_error',
@@ -300,7 +301,7 @@ if (form_error('mobile_number') != '') {
     );
     echo form_input($mobile_number_hidden_error);
 } else {
-    $mobile_number_class = "col-md-8 form-control mob input_form";
+    $mobile_number_class = "col-md-9 form-control mob input_form";
 }
 
 if (form_error('dial_code') != '') {
@@ -361,7 +362,7 @@ function buildDayDropdown($name = '', $value = '')
 function buildYearDropdown($name = '', $value = '')
 {
     $current_year = 1900;
-    while ($current_year <= 1995) {
+    while ($current_year <= 2000) {
         $year[$current_year] = $current_year;
         $current_year++;
     }
@@ -422,7 +423,7 @@ $friend_code = array(
     'id' => 'friend_code',
     'class' => $friend_code_class,
     'value' => set_value('friend_code'),
-    'placeholder' => 'كود التسجيل الخاص بصديقك',
+    'placeholder' => 'كود التسجيل الخاص بصديقك ..(لو أكثر من واحد : codeI, codeII, codeIII, etc)',
     'onBlur' => 'friend_code_client_validation_blur();',
     'onFocus' => 'friend_code_client_validation_focus();'
 );
@@ -473,7 +474,7 @@ $mobile_number = array(
     'id' => 'mobile_number',
     'class' => $mobile_number_class,
     'value' => set_value('mobile_number'),
-    'placeholder' => 'رقم الهاتف *',
+    'placeholder' => 'رقم الهاتف على الوتساب*',
     'onBlur' => 'mobile_number_client_validation_blur();',
     'onFocus' => 'mobile_number_client_validation_focus();'
 );
@@ -492,7 +493,7 @@ $email = array(
     'name' => 'email',
     'id' => 'email',
     'value' => set_value('email'),
-    'placeholder' => 'الايميل *',
+    'placeholder' => 'البريد الإلكتروني *',
     'class' => $email_class,
     'onBlur' => 'email_client_validation_blur();',
     'onFocus' => 'email_client_validation_focus();'
@@ -502,7 +503,7 @@ $facebook = array(
     'name' => 'facebook',
     'id' => 'facebook',
     'value' => set_value('facebook'),
-    'placeholder' => 'فيسبوك',
+    'placeholder' => 'فيسبوك Ex: fb.com/username',
     'class' => $facebook_class,
     'onBlur' => 'facebook_client_validation_blur();',
     'onFocus' => 'facebook_client_validation_focus();'
@@ -525,36 +526,45 @@ $picture_agreement = array(
 );
 
 
-$operations_check = $this->input->post('operations_check', TRUE) == null ? FALSE : TRUE;
-$operations_check = array(
-    'name' => 'operations_check',
-    'id' => 'operations_check',
-    'value' => 'accept',
-    'checked' => $operations_check
+$operations_desc = array(
+    'name' => 'operations_desc',
+    'id' => 'operations_desc',
+    'class' => 'input_form',
+    'value' => set_value('operations_desc'),
+    'placeholder' => '  هل تعرضت لعمليات جراحية ؟ من فضلك أذكر التفاصيل.'
 );
 
-$terminalDiseases_check = $this->input->post('terminalDiseases_check', TRUE) == null ? FALSE : TRUE;
-$terminalDiseases_check = array(
-    'name' => 'terminalDiseases_check',
-    'id' => 'terminalDiseases_check',
-    'value' => 'accept',
-    'checked' => $terminalDiseases_check
+
+$terminalDiseases_desc = array(
+    'name' => 'terminalDiseases_desc',
+    'id' => 'terminalDiseases_desc',
+    'class' => 'input_form',
+    'value' => set_value('terminalDiseases_desc'),
+    'placeholder' => 'هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟ من فضلك أذكر التفاصيل.'
 );
 
-$boneFractures_check = $this->input->post('boneFractures_check', TRUE) == null ? FALSE : TRUE;
-$boneFractures_check = array(
-    'name' => 'boneFractures_check',
-    'id' => 'boneFractures_check',
-    'value' => 'accept',
-    'checked' => $boneFractures_check
+$boneFractures_desc = array(
+    'name' => 'boneFractures_desc',
+    'id' => 'boneFractures_desc',
+    'class' => 'input_form',
+    'value' => set_value('boneFractures_desc'),
+    'placeholder' => 'هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟ من فضلك أذكر التفاصيل.'
 );
 
-$drugs_check = $this->input->post('drugs_check', TRUE) == null ? FALSE : TRUE;
-$drugs_check = array(
-    'name' => 'drugs_check',
-    'id' => 'drugs_check',
-    'value' => 'accept',
-    'checked' => $drugs_check
+$drugs_desc = array(
+    'name' => 'drugs_desc',
+    'id' => 'drugs_desc',
+    'class' => 'input_form',
+    'value' => set_value('drugs_desc'),
+    'placeholder' => 'هل تتناول أدوية ؟ من فضلك أذكر التفاصيل.'
+);
+
+$allergy_desc = array(
+    'name' => 'allergy_desc',
+    'id' => 'allergy_desc',
+    'class' => 'input_form',
+    'value' => set_value('allergy_desc'),
+    'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك أذكر التفاصيل.'
 );
 
 $overall_agreement_checkbox = $this->input->post('overall_agreement', TRUE) == null ? FALSE : TRUE;
@@ -573,16 +583,20 @@ $overall_agreement = array(
     echo form_upload($weight_image_file_upload);
     echo form_upload($height_image_file_upload); ?></div>
 <div class="container">
-    <div class="row logo">
-        <img src="<?php echo base_url(); ?>Assets/Images/application_logo_new.png"
-             class="img-responsive" alt="Kershless">
+    <div class="row logo-register">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">  <a href="<?php echo base_url();?>">
+          <img src="<?php echo base_url(); ?>Assets/Images/kershless_logo.svg"
+              class="img-responsive" alt="Kershless">
+        </a></div>
+
+        <div class="col-md-5"></div>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات عامة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 gen-info">
+              <h3 class="gen-h3">بيانات عامة</h3>
                 <form role="form">
                     <div class="form-group full-name">
                         <?php echo form_input($full_name); ?>
@@ -591,6 +605,11 @@ $overall_agreement = array(
                     <div class="form-group full-name">
                         <?php echo form_input($full_name_english); ?>
                     </div>
+                    <div class="form-group name-agreement">
+                        <?php echo form_checkbox($name_agreement); ?>
+                        موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
+                    </div>
+
 
                     <div class="form-group bir-da">
                         <div>تاريخ الميلاد *</div>
@@ -1234,20 +1253,24 @@ $overall_agreement = array(
                 </form>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات المسابقة</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 com-info">
+              <h3>بيانات المسابقة</h3>
                 <div class="form-group uplpho">
                     <div id="profile_picture_upload"
                          class="<?php echo $profile_picture_class ?>"></div>
-                    <span>(Files(.png/.jpg/.jpeg) should be less than 2 MB) </span>
+                         <label class="file-size">حجم الصورة أقل من </label><label>&nbsp;3MB</label>
+                         <br>
+                </div>
+                <div class="form-group picture-agreement">
+                    <?php echo form_checkbox($picture_agreement); ?>
+                    موافق علي عرض صورتي في النتائج على وسائل التواصل الاجتماعي
                 </div>
                 <div class="form-group photoboth">
                     <div id="weight_upload_div"
@@ -1272,25 +1295,21 @@ $overall_agreement = array(
                     <?php echo form_textarea($provocation); ?>
                 </div>
                 <div class="form-group frecode">
-                    <?php echo form_input($friend_code); ?>
-                    <span>(..If more than one: code1, code2, code3, etc) </span>
+                    <?php echo form_textarea($friend_code); ?>
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات التواصل</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
+              <h3>بيانات التواصل</h3>
                 <div class="form-group mobno">
                     <?php echo form_input($mobile_number); ?>
                     <?php echo form_input($dial_code); ?>
-                    <label><span>(Number on WhatsApp)</span> </label>
                 </div>
 
                 <div class="form-group mail">
@@ -1299,62 +1318,46 @@ $overall_agreement = array(
 
                 <div class="form-group fb">
                     <?php echo form_input($facebook); ?>
-                    <span>(Ex: www.facebook.com/your_username) </span>
                 </div>
 
-                <div>
-                    <?php echo form_checkbox($name_agreement); ?>
-                    موافق علي عرض أسمي في النتائج علي الفيس بوك
-                </div>
-                <div>
-                    <?php echo form_checkbox($picture_agreement); ?>
-                    موافق علي عرض صورتي في النتائج علي الفيس بوك
-                </div>
+
 
 
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h3>بيانات الحالة الصحية</h3>
-
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <div class="col-md-12 con-info">
-
-
-                <div>
-                    <?php echo form_checkbox($operations_check); ?>
-                    هل تعرضت لعمليات جراحية ؟
+              <h3>بيانات الحالة الصحية</h3>
+                <div class="form-group operations-desc">
+                    <?php echo form_textarea($operations_desc); ?>
                 </div>
-                <div>
-                    <?php echo form_checkbox($terminalDiseases_check); ?>
-                    هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟
+                <div class="form-group terminalDiseases-desc">
+                    <?php echo form_textarea($terminalDiseases_desc); ?>
                 </div>
-                <div>
-                    <?php echo form_checkbox($boneFractures_check); ?>
-                    هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟
+                <div class="form-group boneFractures-desc">
+                    <?php echo form_textarea($boneFractures_desc); ?>
                 </div>
-                <div>
-                    <?php echo form_checkbox($drugs_check); ?>
-                    هل تتناول أدوية ؟
+                <div class="form-group drugs-desc">
+                    <?php echo form_textarea($drugs_desc); ?>
                 </div>
-
+                <div class="form-group allergy-desc">
+                    <?php echo form_textarea($allergy_desc); ?>
+                </div>
+                <br><br>
                 <div>
                     <?php echo form_checkbox($overall_agreement); ?>
                     أقر بأن جميع البيانات المذكورة صحيحة و على مسئوليتي الشخصية طبقاً
                     <a id="agreement_rules"
-                       href="http://www.Kershless.com/register/rules" target="_blank"
+                       href="register/rules" target="_blank"
                        style="text-decoration: none; color: #16a085;">للشروط و الأحكام.</a>
                     *
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
                 <?php
                 echo form_submit($form_submitter);
                 echo form_close();
@@ -1363,7 +1366,7 @@ $overall_agreement = array(
             </div>
 
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 
     <footer>
@@ -1372,9 +1375,11 @@ $overall_agreement = array(
         <p class="col-md-12 copyrights">&copy; Kershless 2015</p>
     </footer>
 </div>
-
-<script src="<?php echo base_url(); ?>js/jquery.js"></script>
-<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-<script src="<?php echo base_url(); ?>js/scripts.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript"
+        src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </body>
 </html>

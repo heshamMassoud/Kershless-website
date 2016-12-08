@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'din_next_lt_arabiclight';
+  src: url('../fonts/dinnextltarabic-light-webfont.eot');
+  src: url('../fonts/dinnextltarabic-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dinnextltarabic-light-webfont.woff') format('woff'), url('../fonts/dinnextltarabic-light-webfont.ttf') format('truetype'), url('../fonts/dinnextltarabic-light-webfont.svg#din_next_lt_arabiclight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'thameen';
+  src: url('../fonts/GE_Thameen_Light.otf');
+}

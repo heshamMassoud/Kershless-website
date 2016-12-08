@@ -3,15 +3,21 @@
 
 class Main extends CI_Controller {
 
-	public function index()
+	public function __construct()
 	{
-		$this->load->helper('url');
-		$this->load->view("view_main");
+		parent::__construct();
+		$this->load->helper('form');
+		$this->load->helper('language');
+		$this->lang->load('homepage');
 	}
 
 	public function index2()
 	{
-		$this->load->helper('url');
+		$this->load->view("view_main");
+	}
+
+	public function index()
+	{
 		$this->load->view("view_main_new");
 	}
 
@@ -20,7 +26,26 @@ class Main extends CI_Controller {
 	{
 		$this->load->view("view_email");
 	}
-	
+
+	public function contact()
+	{
+		if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+		{
+			echo "No arguments Provided!";
+			return false;
+		}
+		$name = $_POST['name'];
+		$email_address = $_POST['email'];
+		$message = $_POST['message'];
+
+		$email_body = $message . "<br>Sent from: " . $name . " (" . $email_address . ")";
+		$this->load->library('email');
+		$this->email->from('applications@kershless.com','Kershless');
+		$this->email->to('contact@kershless.com');
+		$this->email->subject('Website Contact Form: '. $name);
+		$this->email->message($email_body);
+		$this->email->send();
+	}
 
 	public function send_email()
 	{
@@ -40,14 +65,14 @@ class Main extends CI_Controller {
 				<p>
 				http://wwww.kershless.com/download_report/0gBcwgbMv97fK+Q6IAywUMU4vbU=
 				</p>
-					
+
 				</div>
 				<p>
 				Best Regards,
 				<p>The Kershless System.</p>
 				</p>
 				</div>";
-			
+
 		$message_new = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 				<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns=\"http://www.w3.org/1999/xhtml\" style=\"width: 100%;\">
 				<head>
@@ -156,7 +181,7 @@ class Main extends CI_Controller {
 				follow us on: <a href=\"https://www.facebook.com/Kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">fb</a>
 				| <a href=\"http://www.twitter.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">twitter</a>
 				| <a href=\"http://www.youtube.com/kershless\" target=\"_blank\" style=\"text-decoration: none; color: #666666;\">youtube</a>
-					
+
 				</td>
 				</tr>
 				</table>
@@ -180,8 +205,3 @@ class Main extends CI_Controller {
 		echo $this->email->print_debugger();
 	}
 }
-
-
-
-
-

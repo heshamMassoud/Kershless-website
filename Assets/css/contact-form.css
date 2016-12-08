@@ -1,0 +1,53 @@
+/* Main Style */
+
+
+.name input, .email input, textarea{
+  background-color: #eaedf1 !important;
+  border: 1px solid #eaedf1 !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -webkit-appearance: none !important;
+}
+textarea {
+  width: 100%;
+  height: 220px;
+  resize: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+.form-group {
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.form-control input {
+  height: 40px !important;
+  line-height: 40px !important;
+}
+input:focus, .name input:focus, .email input:focus, .message textarea:focus {
+  background-color: #eaedf1 !important;
+  border: 1px solid #28b998 !important;
+  outline: none;
+}
+div.error > input, div.warning > input,div.error > div >textarea, div.warning > div > textarea  {
+  border: 1px solid #e74c3c !important;
+}
+.send-message {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-color: #28b998;
+  color: #28b998;
+  width: 100%;
+}
+.send-message:hover {
+  background-color: #28b998;
+  border-color: transparent;
+}
+.send-message:focus {
+  background-color: #28b998 !important;
+}
