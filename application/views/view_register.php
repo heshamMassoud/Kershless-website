@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/fonts/jf/font.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/fonts.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/intlTelInput.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -293,7 +294,7 @@ if (form_error('friend_code') != '') {
 //########## Left Column php Form Helper Input SERVER SIDE ERROR HANDELING ####################
 
 if (form_error('mobile_number') != '') {
-    $mobile_number_class = "col-md-9 form-control mob input_form_error";
+    $mobile_number_class = "col-md-12 form-control mob input_form_error";
     $mobile_number_hidden_error = array(
         'id' => 'mobile_number_hidden_error',
         'name' => 'mobile_number_hidden_error',
@@ -302,7 +303,7 @@ if (form_error('mobile_number') != '') {
     );
     echo form_input($mobile_number_hidden_error);
 } else {
-    $mobile_number_class = "col-md-9 form-control mob input_form";
+    $mobile_number_class = "col-md-12 form-control mob input_form";
 }
 
 if (form_error('dial_code') != '') {
@@ -483,11 +484,7 @@ $mobile_number = array(
 $dial_code = array(
     'name' => 'dial_code',
     'id' => 'dial_code',
-    'class' => $dial_code_class,
-    'value' => set_value('dial_code'),
-    'placeholder' => 'الكود *',
-    'onBlur' => 'dial_code_client_validation_blur();',
-    'onFocus' => 'dial_code_client_validation_focus();'
+    'type' => 'hidden'
 );
 
 $email = array(
@@ -1382,5 +1379,6 @@ $overall_agreement = array(
         src="<?php echo base_url(); ?>Assets/js/jquery.tipsy.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/clientside_validation_v2.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/intlTelInput.js"></script>
 </body>
 </html>

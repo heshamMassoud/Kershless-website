@@ -755,12 +755,8 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('fullname', 'الإسم الثلاثي', 'required|xss_clean|valid_arabic_fullname');
         $this->form_validation->set_rules('fullname_english', 'الإسم الثلاثي', 'required|xss_clean|valid_english_fullname');
         $this->form_validation->set_rules('job', 'المهنة', 'xss_clean');
-        //$this->form_validation->set_rules('age', 'Age', 'numeric|required|xss_clean');
-        //$this->form_validation->set_rules('country', 'Country of Residence', 'required|xss_clean');
-        //$this->form_validation->set_rules('gender', 'Gender', 'required|xss_clean');
         $this->form_validation->set_rules('country', 'Country of Residence', 'required_country|xss_clean');
         $this->form_validation->set_rules('nationality', 'Nationality', 'required_country|xss_clean');
-        $this->form_validation->set_rules('dial_code', 'Country dial code', 'numeric|required|xss_clean');
         $this->form_validation->set_rules('mobile_number', 'رقم الهاتف', 'numeric|required|xss_clean');
         $this->form_validation->set_rules('email', 'الايميل', 'required|trim|xss_clean|valid_email');
         $this->form_validation->set_rules('facebook', 'فيسبوك', 'xss_clean|valid_facebook');
@@ -769,18 +765,7 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('reason', 'الهدف', 'required|trim|xss_clean|arabic');
         $this->form_validation->set_rules('provocation', 'الكلمة الموجهة للمنافسين', 'required|trim|xss_clean|arabic');
         $this->form_validation->set_rules('friend_code', 'كود التسجيل الخاص بصديقك', 'xss_clean|valid_kershless_code[User.kershless_code]');
-        //$this->form_validation->set_rules('name_agreement', 'Agree', 'trim');
-        //$this->form_validation->set_rules('picture_agreement', 'Agree', 'trim');
-        //$this->form_validation->set_rules('overall_agreement', 'Agree', 'required_checkbox');
-        //$this->form_validation->set_rules('overall_agreement', 'Agree', 'required');
 
-
-        //if (empty($_FILES['weight']['file_name']))
-        //{
-        //  $this->form_validation->set_rules('weight', 'Weight Picture', 'required');
-        //}
-        //if (empty($_FILES['height']['file_name']))
-        //{
         if (!empty($_FILES['height_image'])) {
             if ($_FILES['height_image']['error'] == UPLOAD_ERR_NO_FILE) {
                 $this->form_validation->set_rules('height_image', 'Height Picture', 'required');
@@ -792,49 +777,14 @@ class Register extends CI_Controller
             }
         }
 
-        //}
-
         if ($this->form_validation->run()) {
-            /*
-             $path = realpath(APPPATH . '../uploads');
-            $config['upload_path'] = $path;
-            $config['allowed_types'] = 'gif|jpg|jpeg|png';
-            $config['max_size'] = '200';
-            $config['max_width'] = '1024';
-            $config['max_height'] = '768';
-
-            $this->load->library('upload', $config);
-
-            if ($this->upload->do_upload('weight_image'))
-            {
-            $weightData = $this->upload->data();
-            if($this->upload->do_upload('height_image'))
-            {
-            $heightData = $this->upload->data();
-            */
-            //echo 'uploaded!!!';
             $this->load->model("model_user");
-            $this->model_user->addUser();//$weightData, $heightData);
+            $this->model_user->addUser();
             $data = array('name' => $this->input->post('fullname'));
             $this->load->view("view_success", $data);
-            //$this->sendEmailToUser($this->input->post('email'),$this->input->post('kershless_code'),$this->input->post('fullname'));
-            /*
-                }
-            else
-            {
-            echo $this->upload->display_errors();
-            $this->load->view("view_register");
-            }
 
-            }
-            else {
-            echo $this->upload->display_errors();
-            $this->load->view("view_register");
-            }*/
         } else {
-            //echo "errors";
             $this->load->view("view_register");
-            //echo validation_errors();
         }
     }
 

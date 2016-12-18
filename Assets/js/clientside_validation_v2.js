@@ -7,7 +7,38 @@ $(function() {
   var weight_image_name = "empty";
   var height_image_name = "empty";
 
-  // test
+  $('#mobile_number').intlTelInput({
+      initialCountry: 'eg',
+      preferredCountries: ['eg'],
+      utilsScript: "/kershless-website/Assets/js/intlTel-utils.js"
+  });
+
+    var toggleMobileError = function(showState, errorMessage = 'من فضلك أدخل رقم الهاتف وكود البلد ') {
+        $('#mobile_number').attr('title', '')
+        if (showState === 'show')
+            $('#mobile_number').attr('title', errorMessage)
+        $('#mobile_number').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#mobile_number').tipsy(showState);
+    }
+
+    var isMobileNumberValid = function() {
+        return ($('div.selected-flag')[0].title && $.trim($('#mobile_number').val()) && $('#mobile_number').intlTelInput("isValidNumber"))
+    }
+
+  $('#mobile_number').blur(function() {
+    toggleMobileError('hide');
+    if (isMobileNumberValid())
+        toggleMobileError('hide');
+    else
+        toggleMobileError('show');
+  });
+  $('#mobile_number').on("keyup change", toggleMobileError('hide'));
 
   // ########## Right Column JS Server Validation####################
   if ($('#fullname').attr('class') == 'form-control input_form_error') {
@@ -174,7 +205,7 @@ $(function() {
   }
   // ########## Left Column JS Client Validation####################
 
-  if ($('#mobile_number').attr('class') == 'col-md-8 form-control mob input_form_error') {
+  if ($('#mobile_number').attr('class') == 'col-md-12 form-control mob input_form_error') {
     $('#mobile_number').attr('title',
       $('#mobile_number_hidden_error').attr('value'));
     // alert($('#fullname').attr('title'));
@@ -186,20 +217,6 @@ $(function() {
       gravity: 's'
     });
     $('#mobile_number').tipsy('show');
-  }
-
-  if ($('#dial_code').attr('class') == 'col-md-3 form-control mobCode input_form_error') {
-    $('#dial_code').attr('title',
-      $('#dial_code_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
-    $('#dial_code').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#dial_code').tipsy('show');
   }
 
   if ($('#email').attr('class') == 'col-md-12 form-control input_form_error') {
@@ -516,7 +533,6 @@ $(function() {
         var email_validator = false;
         var facebook_validator = false;
         var mobile_number_validator = false;
-        var dial_code_validator = false;
         var profile_picture_validator = true;
         var weight_image_validator = true;
         var height_image_validator = true;
@@ -585,9 +601,6 @@ $(function() {
         if (mobile_number_client_validation_blur()) {
           mobile_number_validator = true;
         }
-        if (dial_code_client_validation_blur()) {
-          dial_code_validator = true;
-        }
         if (facebook_client_validation_blur()) {
           facebook_validator = true;
         }
@@ -649,8 +662,13 @@ $(function() {
           country_validator = true;
         }
 
-        if (full_name_validator && full_name_english_validator && nationality_validator && country_validator && weight_validator && height_validator && provocation_validator && reason_validator && email_validator && facebook_validator && mobile_number_validator && profile_picture_validator && weight_image_validator && height_image_validator && overall_checkbox_validator && dial_code_validator) {
-          $("#form_submitter").click();
+        if (isMobileNumberValid() && full_name_validator && full_name_english_validator && nationality_validator
+            && country_validator && weight_validator && height_validator && provocation_validator && reason_validator
+            && email_validator && facebook_validator && mobile_number_validator && profile_picture_validator
+            && weight_image_validator && height_image_validator && overall_checkbox_validator) {
+            $('#dial_code').val($('#mobile_number').intlTelInput("getSelectedCountryData").dialCode);
+            $("#form_submitter").click();
+
         }
       });
   /*
@@ -1253,7 +1271,7 @@ function friend_code_client_validation_focus() {
 function mobile_number_client_validation_blur() {
   var field = document.getElementById("mobile_number");
   if (field.value == '') {
-    $("#mobile_number").attr('class', 'col-md-8 form-control mob input_form_error');
+    $("#mobile_number").attr('class', 'col-md-12 form-control mob input_form_error');
     $('#mobile_number').attr('title', '	رقم الهاتف من فضلك');
     $('#mobile_number').tipsy({
       trigger: 'manual',
@@ -1267,7 +1285,7 @@ function mobile_number_client_validation_blur() {
   } else {
     var regex = /^[0-9]*$/;
     if (!regex.test(field.value)) {
-      $("#mobile_number").attr('class', 'col-md-8 form-control mob input_form_error');
+      $("#mobile_number").attr('class', 'col-md-12 form-control mob input_form_error');
       $('#mobile_number').attr('title', 'رقم الهاتف غير صحيح');
       $('#mobile_number').tipsy({
         trigger: 'manual',
@@ -1285,47 +1303,8 @@ function mobile_number_client_validation_blur() {
 }
 
 function mobile_number_client_validation_focus() {
-  $("#mobile_number").attr('class', 'col-md-8 form-control mob input_form');
+  $("#mobile_number").attr('class', 'col-md-12 form-control mob input_form');
   $('#mobile_number').tipsy('hide');
-}
-
-function dial_code_client_validation_blur() {
-  var field = document.getElementById("dial_code");
-  if (field.value == '') {
-    $("#dial_code").attr('class', 'col-md-3 form-control mobCode input_form_error');
-    $('#dial_code').attr('title', '	كود البلد من فضلك');
-    $('#dial_code').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#dial_code').tipsy('show');
-    return false;
-  } else {
-    var regex = /^[0-9]*$/;
-    if (!regex.test(field.value)) {
-      $("#dial_code").attr('class', 'col-md-3 form-control mobCode input_form_error');
-      $('#dial_code').attr('title', 'كود البلد غير صحيح');
-      $('#dial_code').tipsy({
-        trigger: 'manual',
-        fade: false,
-        html: true,
-        opacity: 1,
-        gravity: 's'
-      });
-      $('#dial_code').tipsy('show');
-      return false;
-    } else {
-      return true;
-    }
-  }
-}
-
-function dial_code_client_validation_focus() {
-  $("#dial_code").attr('class', 'col-md-3 form-control mobCode input_form');
-  $('#dial_code').tipsy('hide');
 }
 
 function toggle_overall_agreement_checkbox() {

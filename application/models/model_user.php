@@ -433,7 +433,6 @@ class Model_User extends CI_MODEL
         $day = $this->input->post('DOB');
         $month = $this->input->post('MOB');
         $year = $this->input->post('YOB');
-        //$age = $this->input->post("age");
         $gender = $this->input->post('gender');
         $marital_status = $this->input->post('marital_status');
         $job = $this->input->post('job');
@@ -462,7 +461,6 @@ class Model_User extends CI_MODEL
 
         $fullname = $this->security->xss_clean($fullname);
         $fullname_english = $this->security->xss_clean($fullname_english);
-        //$age = $this->security->xss_clean($age);
         $gender = $this->security->xss_clean($gender);
         $marital_status = $this->security->xss_clean($marital_status);
         $job = $this->security->xss_clean($job);
@@ -570,12 +568,6 @@ class Model_User extends CI_MODEL
         //echo $kershlessCode;
         //13KM0001
 
-        //
-        // $data = array(
-        //          'filename' => $image_data['file_name'],
-        //          'fullpath' => $image_data['full_path']
-        //      );
-
         //prepping the new record
         $newRecord = array(
             'kershless_code' => $kershlessCode,
@@ -593,11 +585,9 @@ class Model_User extends CI_MODEL
             'email' => $email,
             'facebook' => $facebook,
             'weight' => $weight,
-            //'weight_image' => $weight_image['file_name'],$height_image_name
             'weight_image' => $weight_image_name,
             'height' => $height,
             'height_image' => $height_image_name,
-            //'height_image' => $height_image['file_name'],
             'bmi' => $bmi,
             'bmi_category' => $bmi_category,
             'reason' => $reasonToBeKershless,
@@ -628,9 +618,7 @@ class Model_User extends CI_MODEL
 
         $this->db
             ->where('id', $lastId)->update('User', $data);
-        //$this->db->update('User', $data);
 
-        //$this->notify_applicant($lastId);
         $this->_sendEmailToNewApplicant($fullname, $email, $kershlessCode.$lastId);
         if ($friendCode != '') {
             $friendCode = str_replace(' ', '', $friendCode);
@@ -640,9 +628,6 @@ class Model_User extends CI_MODEL
                     ->get_where('User', array('kershless_code' => $value))->row();
                 $this->notifyFriend($lastId, $friend);
             }
-            //echo "There is friend code!";
-        } else {
-            //echo "There is no friend!";
         }
     }
 }

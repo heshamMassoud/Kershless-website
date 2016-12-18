@@ -110,6 +110,10 @@ textarea {
 .form-group select {
   line-height: 18px !important;
 }
+
+.form-group.mobno {
+  overflow: visible;
+}
 input:focus, .bir-da select:focus, .mobno input:focus, .mobno input:focus, .mail input:focus, .fb input:focus, .frecode input:focus, .reas textarea:focus, .provo textarea:focus {
   background-color: #eaedf1 !important;
   border: 1px solid #28b998 !important;
@@ -250,7 +254,7 @@ input[type="radio"]:checked:after {
 }
 .mob {
   background: url('../Icons/mobile.png') no-repeat 97% 8px;
-  width: 73%;
+  width: 100%;
 }
 .frecode input {
   background: url('../Icons/users.png') no-repeat 97% 8px;

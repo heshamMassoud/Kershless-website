@@ -81,10 +81,10 @@ $lang['alpha_dash']
      characters, underscores, and dashes.';
 
 $lang['numeric']
-    = 'The %s field must contain only numbers.';
+    = '%s must contain only numbers.';
 
 $lang['is_numeric']
-    = 'The %s field must contain only numeric characters.';
+    = '%s must contain only numeric characters.';
 
 $lang['integer']
     = 'The %s field must contain an integer.';
@@ -99,7 +99,7 @@ $lang['is_unique']
     = 'نأسف هذا %s مستخدم من عضو مشترك بكرشلس';
 
 $lang['is_natural']
-    = 'The %s field must contain only positive numbers.';
+    = '%s must contain only positive numbers.';
 
 $lang['is_natural_no_zero']
     = 'The %s field must contain a number greater than zero.';
