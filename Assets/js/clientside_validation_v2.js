@@ -1094,7 +1094,7 @@ function reason_client_validation_blur() {
     $('#reason').tipsy('show');
     return false;
   } else {
-    var regex_1 = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ]*$/;
+    var regex_1 = /^[\d\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ._\-/*]*$/;
     if (!regex_1.test(field.value)) // && !regex_2.test(field.value))
     {
       $("#reason").attr('class', 'input_form_error');
@@ -1135,7 +1135,7 @@ function provocation_client_validation_blur() {
     $('#provocation').tipsy('show');
     return false;
   } else {
-    var regex_1 = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ]*$/;
+    var regex_1 = /^[\d\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ._\-/*]*$/;
     if (!regex_1.test(field.value)) // && !regex_2.test(field.value))
     {
       $("#provocation").attr('class', 'input_form_error');
