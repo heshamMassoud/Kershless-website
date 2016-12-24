@@ -20,6 +20,9 @@ $(function() {
         if (enteredTextBeforeKeyPress.charAt(textSize - 1) == ' ' || textSize == 0) {
             this.value += pressedKey.toUpperCase();
             return false;
+        } else {
+            this.value += pressedKey.toLowerCase();
+            return false;
         }
     });
 
