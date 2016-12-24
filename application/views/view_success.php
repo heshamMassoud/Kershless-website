@@ -49,36 +49,21 @@
 			<img  src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive thumbs-up"
 				alt="Kershless">
 		</div>
-		<div class="row">
+		<cla class="row">
 			<p class="col-md-2"></p>
 			<p class="col-md-8 thanks-text">
-				شكرا <?php
-                echo $name; ?> على التسجيل معنا في كرشلس، سوف يصلك إيميل خلال دقائق
-					به كود التسجيل الخاص بك أرسله لأصدقائك لتكونوا معاً في نفس الموسم.
-<br>
- تسجيلك الحالي لا يعني أنك اشتركت في المسابقة و سيتم التواصل معك عن طريق برنامج الوتساب خلال أسبوع من الآن لتأكيد البيانات و مراجعتها و اعتماد اشتراكك في المسابقة في حالة اكتمال جميع البيانات المطلوبة
-و في حالة عدم وصول رسالة بكود تسجيلك على بريدك الالكتروني خلال ساعة فهذا يعني أن هناك خطأ في كتابة البريد الالكتروني و يرجي إعادة التسجيل مرة أخرى.
+                <?php echo $this->lang->line('thanks_word') . $name . $this->lang->line('thanks_message');?>
+                <br>
+                <br>
+                <?php echo $this->lang->line('important_notice');?>
+                <br>
+                <?php echo $this->lang->line('success_message');?>
+                <br><br>
+                <?php echo $this->lang->line('kershless_admin');?>
             </p>
 			<p class="col-md-2"></p>
 
-
 		</div>
-
-		<!-- 		<div class="row"> -->
-		<!-- 			<div class="col-md-4"></div> -->
-		<!--  			<div class="col-md-4" style="text-align: center;">-->
-		<!-- 				<a id="fb" href="https://www.facebook.com/Kershless" target="_blank"> -->
-		<!-- 					<img src="/Kershless/Assets/Icons/facebook.png" width="48" -->
-		<!-- 					height="48" /> -->
-		<!-- 				</a> &nbsp; <a id="tw" href="http://www.twitter.com/kershless" -->
-		<!-- 					target="_blank"><img src="/Kershless/Assets/Icons/twitter.png" -->
-		<!-- 					width="48" height="48" /> </a> &nbsp; <a id="yt" -->
-		<!-- 					href="http://www.youtube.com/kershless" target="_blank"><img -->
-		<!-- 					src="/Kershless/Assets/Icons/youtube.png" width="48" height="48" /> -->
-		<!-- 				</a> &nbsp; -->
-		<!-- 			</div> -->
-		<!-- 			<div class="col-md-4"></div> -->
-		<!-- 		</div> -->
 
 		<footer>
 			<p class="col-md-4"></p>

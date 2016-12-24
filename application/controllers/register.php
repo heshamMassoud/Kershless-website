@@ -30,6 +30,8 @@ class Register extends CI_Controller
         parent::__construct();
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->helper('language');
+        $this->lang->load('register');
         $this->db->simple_query('SET NAMES \'utf-8\'');
     }
 
