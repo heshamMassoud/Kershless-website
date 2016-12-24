@@ -13,6 +13,16 @@ $(function() {
       utilsScript: "/kershless-website/Assets/js/intlTel-utils.js"
   });
 
+    $('#fullname_english').keypress(function(event) {
+        var enteredTextBeforeKeyPress = this.value;
+        var textSize = this.value.length;
+        var pressedKey = String.fromCharCode(event.which);
+        if (enteredTextBeforeKeyPress.charAt(textSize - 1) == ' ' || textSize == 0) {
+            this.value += pressedKey.toUpperCase();
+            return false;
+        }
+    });
+
     var toggleMobileError = function(showState, errorMessage = 'من فضلك أدخل رقم الهاتف وكود البلد ') {
         $('#mobile_number').attr('title', '')
         if (showState === 'show')
