@@ -429,10 +429,15 @@ class Model_User extends CI_MODEL
      *
      * @return void
      */
-    public function addUser()//$weight_image = array(), $height_image = array())
+    public function addUser()
     {
-        $fullname = $this->input->post('fullname');
-        $fullname_english = $this->input->post('fullname_english');
+        $first_name_arabic = $this->input->post('first_name_arabic');
+        $middle_name_arabic = $this->input->post('middle_name_arabic');
+        $family_name_arabic = $this->input->post('family_name_arabic');
+        $first_name_english = $this->input->post('first_name_english');
+        $middle_name_english = $this->input->post('middle_name_english');
+        $family_name_english = $this->input->post('family_name_english');
+
         $day = $this->input->post('DOB');
         $month = $this->input->post('MOB');
         $year = $this->input->post('YOB');
@@ -454,6 +459,7 @@ class Model_User extends CI_MODEL
         $provocation = $this->input->post('provocation');
         $friendCode = $this->input->post('friend_code');
         $name_agreement = $this->input->post('name_agreement');
+        $name_presentation = $this->input->post('name-presentation');
         $picture_agreement = $this->input->post('picture_agreement');
         $overall_agreement = $this->input->post('overall_agreement');
         $operations_desc = $this->input->post('operations_desc');
@@ -462,8 +468,12 @@ class Model_User extends CI_MODEL
         $drugs_desc = $this->input->post('drugs_desc');
         $allergy_desc = $this->input->post('allergy_desc');
 
-        $fullname = $this->security->xss_clean($fullname);
-        $fullname_english = $this->security->xss_clean($fullname_english);
+        $first_name_arabic = $this->security->xss_clean($first_name_arabic);
+        $middle_name_arabic = $this->security->xss_clean($middle_name_arabic);
+        $family_name_arabic = $this->security->xss_clean($family_name_arabic);
+        $first_name_english = $this->security->xss_clean($first_name_english);
+        $middle_name_english = $this->security->xss_clean($middle_name_english);
+        $family_name_english = $this->security->xss_clean($family_name_english);
         $gender = $this->security->xss_clean($gender);
         $marital_status = $this->security->xss_clean($marital_status);
         $job = $this->security->xss_clean($job);
@@ -486,6 +496,22 @@ class Model_User extends CI_MODEL
         $boneFractures_desc = $this->security->xss_clean($boneFractures_desc);
         $drugs_desc = $this->security->xss_clean($drugs_desc);
         $allergy_desc = $this->security->xss_clean($allergy_desc);
+        $initials_arabic = mb_substr($first_name_arabic, 0, 1) . '.' . mb_substr($middle_name_arabic, 0, 1) . '.' . mb_substr($family_name_arabic, 0, 1) . '.';
+        $initials_english = $first_name_english[0] . '.' . $middle_name_english[0] . '.' . $family_name_english[0] . '.';
+        $displayed_name_arabic = $initials_arabic;
+        $displayed_name_english = $initials_english;
+
+        if ($name_agreement == 'accept') {
+            if ($name_presentation == 1) {
+                $displayed_name_arabic = $first_name_arabic . ' ' . $middle_name_arabic;
+                $displayed_name_english = $first_name_english . ' ' . $middle_name_english;
+            } else {
+                $displayed_name_arabic = $first_name_arabic . ' ' . $family_name_arabic;
+                $displayed_name_english = $first_name_english . ' ' . $family_name_english;
+            }
+        }
+
+
 
         if ($gender == 1) {
             $gender = 'male';
@@ -508,7 +534,7 @@ class Model_User extends CI_MODEL
 
         $mobileNumber = '('.$countryCode.')'.$mobileNumber;
 
-        $year_part_of_kershless_code = date('y');
+        $year_part_of_kershless_code = 17;
         $kershlessCode = $year_part_of_kershless_code
                             . 'K' . $gender_part_of_kershless_code;
 
@@ -575,8 +601,14 @@ class Model_User extends CI_MODEL
         $newRecord = array(
             'kershless_code' => $kershlessCode,
             'profile_picture' => $profilePicture,
-            'full_name' => $fullname,
-            'full_name_english' => $fullname_english,
+            'first_name_arabic' => $first_name_arabic,
+            'middle_name_arabic' => $middle_name_arabic,
+            'family_name_arabic' => $family_name_arabic,
+            'display_name_arabic' => $displayed_name_arabic,
+            'first_name_english' => $first_name_english,
+            'middle_name_english' => $middle_name_english,
+            'family_name_english' => $family_name_english,
+            'display_name_english' => $displayed_name_english,
             'date_of_birth' => $date_of_birth,
             'age' => $age,
             'gender' => $gender,
@@ -604,7 +636,7 @@ class Model_User extends CI_MODEL
             'boneFractures_desc' => $boneFractures_desc,
             'drugs_desc' => $drugs_desc,
             'allergy_desc' => $allergy_desc,
-            'date' => $current_date,
+            'date' => $current_date
         );
 
         //run the query
@@ -622,7 +654,7 @@ class Model_User extends CI_MODEL
         $this->db
             ->where('id', $lastId)->update('User', $data);
 
-        $this->_sendEmailToNewApplicant($fullname, $email, $kershlessCode.$lastId);
+        $this->_sendEmailToNewApplicant($first_name_arabic, $email, $kershlessCode.$lastId);
         if ($friendCode != '') {
             $friendCode = str_replace(' ', '', $friendCode);
             $friend_codes = explode(',', $friendCode);

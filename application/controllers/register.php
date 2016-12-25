@@ -733,9 +733,6 @@ class Register extends CI_Controller
     {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<label>', '</label>');
-        //echo $this->input->post('overall_agreement',TRUE)==null ? 0 : 1;
-        //echo "HERE IS THE VARIABLE :";
-        //echo $this->input->post('profile_picture_name');
 
 
         if ($this->input->post('profile_picture_name') == "empty") {
@@ -754,8 +751,14 @@ class Register extends CI_Controller
             $this->form_validation->set_rules('overall_agreement', 'الإقرار', 'required');
             set_checkbox('overall_agreement', '1');
         }
-        $this->form_validation->set_rules('fullname', 'الإسم الثلاثي', 'required|xss_clean|valid_arabic_fullname');
-        $this->form_validation->set_rules('fullname_english', 'الإسم الثلاثي', 'required|xss_clean|valid_english_fullname');
+
+        $this->form_validation->set_rules('first_name_arabic', 'الإسم الاول', 'required|xss_clean|arabic');
+        $this->form_validation->set_rules('middle_name_arabic', 'اسم الأب', 'required|xss_clean|arabic');
+        $this->form_validation->set_rules('family_name_arabic', 'اللقب', 'required|xss_clean|arabic');
+        $this->form_validation->set_rules('first_name_english', 'الإسم الاول', 'required|xss_clean|valid_english_name');
+        $this->form_validation->set_rules('middle_name_english', 'اسم الأب', 'required|xss_clean|valid_english_name');
+        $this->form_validation->set_rules('family_name_english', 'اللقب', 'required|xss_clean|valid_english_name');
+
         $this->form_validation->set_rules('job', 'المهنة', 'xss_clean');
         $this->form_validation->set_rules('country', 'Country of Residence', 'required_country|xss_clean');
         $this->form_validation->set_rules('nationality', 'Nationality', 'required_country|xss_clean');
@@ -782,7 +785,7 @@ class Register extends CI_Controller
         if ($this->form_validation->run()) {
             $this->load->model("model_user");
             $this->model_user->addUser();
-            $data = array('name' => $this->input->post('fullname'));
+            $data = array('name' => $this->input->post('first_name_arabic'));
             $this->load->view("view_success", $data);
 
         } else {

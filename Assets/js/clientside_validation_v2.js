@@ -7,24 +7,75 @@ $(function() {
   var weight_image_name = "empty";
   var height_image_name = "empty";
 
+
   $('#mobile_number').intlTelInput({
       initialCountry: 'eg',
       preferredCountries: ['eg'],
       utilsScript: "/kershless-website/Assets/js/intlTel-utils.js"
   });
 
-    $('#fullname_english').keypress(function(event) {
+    $('#first_name_english').keypress(ensureCorrectCaseOnKeyPress);
+    $('#middle_name_english').keypress(ensureCorrectCaseOnKeyPress);
+    $('#family_name_english').keypress(ensureCorrectCaseOnKeyPress);
+
+    function ensureCorrectCaseOnKeyPress(event) {
         var enteredTextBeforeKeyPress = this.value;
         var textSize = this.value.length;
         var pressedKey = String.fromCharCode(event.which);
         if (enteredTextBeforeKeyPress.charAt(textSize - 1) == ' ' || textSize == 0) {
             this.value += pressedKey.toUpperCase();
-            return false;
         } else {
             this.value += pressedKey.toLowerCase();
-            return false;
+        }
+        injectUserNameinNamePresentationSpan();
+        return false;
+    }
+
+    $('#name_agreement').change(function() {
+        injectUserNameinNamePresentationSpan();
+         if(this.checked) {
+            $('div.form-group.name-presentation').show( "slow" );
+        } else {
+            $('div.form-group.name-presentation').hide( "slow" );
         }
     });
+
+    function injectUserNameinNamePresentationSpan() {
+        var firstName = getUserLocalisedFirstName();
+        var middleName = getUserLocalisedMiddleName();
+        var lastName = getUserLocalisedLastName()
+        var firstMiddleCombination = prepareNameDisplay(firstName, middleName);
+        var firstLastCombination = prepareNameDisplay(firstName, lastName);
+        $('#first-middle-span').html(firstMiddleCombination);
+        $('#first-last-span').html(firstLastCombination);
+    }
+
+    function getUserLocalisedFirstName() {
+        return {
+            'english': $('#first_name_english').val(),
+            'arabic': $('#first_name_arabic').val()
+        }
+    }
+
+    function getUserLocalisedLastName() {
+        return {
+            'english': $('#family_name_english').val(),
+            'arabic': $('#family_name_arabic').val()
+        }
+    }
+
+    function getUserLocalisedMiddleName() {
+        return {
+            'english': $('#middle_name_english').val(),
+            'arabic': $('#middle_name_arabic').val()
+        }
+    }
+
+    function prepareNameDisplay(firstName, secondName) {
+        var englishName = firstName.english + ' ' + secondName.english;
+        var arabicName = firstName.arabic + ' ' + secondName.arabic;
+        return arabicName + ' / ' + englishName;
+    }
 
     var toggleMobileError = function(showState, errorMessage = 'من فضلك أدخل رقم الهاتف وكود البلد ') {
         $('#mobile_number').attr('title', '')
@@ -54,36 +105,82 @@ $(function() {
   $('#mobile_number').on("keyup change", toggleMobileError('hide'));
 
   // ########## Right Column JS Server Validation####################
-  if ($('#fullname').attr('class') == 'form-control input_form_error') {
-    $('#fullname').attr('title', $('#fullname_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
-    $('#fullname').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#fullname').tipsy('show');
-  }
+    if ($('#first_name_arabic').attr('class') == 'form-control input_form_error') {
+        $('#first_name_arabic').attr('title', $('#first_name_arabic_hidden_error').attr('value'));
+        $('#first_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#first_name_arabic').tipsy('show');
+    }
 
-  if ($('#fullname_english').attr('class') == 'form-control input_form_error') {
-    $('#fullname_english').attr('title', $('#fullname_english_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
-    $('#fullname_english').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#fullname_english').tipsy('show');
-  }
+    if ($('#middle_name_arabic').attr('class') == 'form-control input_form_error') {
+        $('#middle_name_arabic').attr('title', $('#middle_name_arabic_hidden_error').attr('value'));
+        $('#middle_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#middle_name_arabic').tipsy('show');
+    }
+
+    if ($('#family_name_arabic').attr('class') == 'form-control input_form_error') {
+        $('#family_name_arabic').attr('title', $('#family_name_arabic_hidden_error').attr('value'));
+        $('#family_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#family_name_arabic').tipsy('show');
+    }
+
+    if ($('#first_name_english').attr('class') == 'form-control input_form_error') {
+        $('#first_name_english').attr('title', $('#first_name_english_hidden_error').attr('value'));
+        $('#first_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#first_name_english').tipsy('show');
+    }
+
+    if ($('#middle_name_english').attr('class') == 'form-control input_form_error') {
+        $('#middle_name_english').attr('title', $('#middle_name_english_hidden_error').attr('value'));
+        $('#middle_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#middle_name_english').tipsy('show');
+    }
+
+    if ($('#family_name_english').attr('class') == 'form-control input_form_error') {
+        $('#family_name_english').attr('title', $('#family_name_english_hidden_error').attr('value'));
+        $('#family_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#family_name_english').tipsy('show');
+    }
+
 
   if ($('#nationality').attr('class') == 'form-control input_form_error') {
     $('#nationality').attr('title',
       $('#nationality_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#nationality').tipsy({
       trigger: 'manual',
       fade: false,
@@ -96,7 +193,6 @@ $(function() {
 
   if ($('#country').attr('class') == 'form-control input_form_error') {
     $('#country').attr('title', $('#country_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#country').tipsy({
       trigger: 'manual',
       fade: false,
@@ -110,7 +206,6 @@ $(function() {
   if ($('#profile_picture_upload').attr('class') == 'input_form_error') {
     $('#profile_picture_upload').attr('title',
       $('#profile_picture_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#profile_picture_upload').tipsy({
       trigger: 'manual',
       fade: false,
@@ -124,7 +219,6 @@ $(function() {
   if ($('#weight_upload_div').attr('class') == 'col-md-6 rightdiv input_form_error') {
     $('#weight_upload_div').attr('title',
       $('#weight_image_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#weight_upload_div').tipsy({
       trigger: 'manual',
       fade: false,
@@ -138,7 +232,6 @@ $(function() {
   if ($('#height_upload_div').attr('class') == 'col-md-6 leftdiv input_form_error') {
     $('#height_upload_div').attr('title',
       $('#height_image_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#height_upload_div').tipsy({
       trigger: 'manual',
       fade: false,
@@ -151,7 +244,6 @@ $(function() {
 
   if ($('#weight').attr('class') == 'col-md-6 input_form_error') {
     $('#weight').attr('title', $('#weight_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#weight').tipsy({
       trigger: 'manual',
       fade: false,
@@ -164,7 +256,6 @@ $(function() {
 
   if ($('#height').attr('class') == 'col-md-6 leftdiv input_form_error') {
     $('#height').attr('title', $('#height_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#height').tipsy({
       trigger: 'manual',
       fade: false,
@@ -177,7 +268,6 @@ $(function() {
 
   if ($('#reason').attr('class') == 'input_form_error') {
     $('#reason').attr('title', $('#reason_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#reason').tipsy({
       trigger: 'manual',
       fade: false,
@@ -191,7 +281,6 @@ $(function() {
   if ($('#provocation').attr('class') == 'input_form_error') {
     $('#provocation').attr('title',
       $('#provocation_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#provocation').tipsy({
       trigger: 'manual',
       fade: false,
@@ -205,7 +294,6 @@ $(function() {
   if ($('#friend_code').attr('class') == 'input_form_error') {
     $('#friend_code').attr('title',
       $('#friend_code_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#friend_code').tipsy({
       trigger: 'manual',
       fade: false,
@@ -221,7 +309,6 @@ $(function() {
   if ($('#mobile_number').attr('class') == 'col-md-12 form-control mob input_form_error') {
     $('#mobile_number').attr('title',
       $('#mobile_number_hidden_error').attr('value'));
-    // alert($('#fullname').attr('title'));
     $('#mobile_number').tipsy({
       trigger: 'manual',
       fade: false,
@@ -535,8 +622,12 @@ $(function() {
   $("#bottom_middle_submit")
     .click(
       function(event) {
-        var full_name_validator = false;
-        var full_name_english_validator = false;
+        var first_arabic_name_validator = false;
+        var middle_arabic_name_validator = false;
+        var family_arabic_name_validator = false;
+        var first_english_name_validator = false;
+        var middle_english_name_validator = false;
+        var family_english_name_validator = false;
         var weight_validator = false;
         var height_validator = false;
         var nationality_validator = true;
@@ -568,7 +659,6 @@ $(function() {
             'col-md-6 leftdiv input_form_error');
           $('#height_upload_div').attr('title',
             'صورة طولك من فضلك');
-          // alert($('#fullname').attr('title'));
           $('#height_upload_div').tipsy({
             trigger: 'manual',
             fade: false,
@@ -584,7 +674,6 @@ $(function() {
             'col-md-6 rightdiv input_form_error');
           $('#weight_upload_div').attr('title',
             '	صورة وزنك من فضلك');
-          // alert($('#fullname').attr('title'));
           $('#weight_upload_div').tipsy({
             trigger: 'manual',
             fade: false,
@@ -600,7 +689,6 @@ $(function() {
             'input_form_error');
           $('#profile_picture_upload').attr('title',
             'الصورة الشخصية من فضلك');
-          // alert($('#fullname').attr('title'));
           $('#profile_picture_upload').tipsy({
             trigger: 'manual',
             fade: false,
@@ -632,13 +720,24 @@ $(function() {
         if (height_client_validation_blur()) {
           height_validator = true;
         }
-        if (full_name_client_validation_blur()) {
-          full_name_validator = true;
+        if (first_arabic_name_client_validation_blur()) {
+            first_arabic_name_validator = true;
         }
-        if (full_name_english_client_validation_blur()) {
-          full_name_english_validator = true;
+        if (middle_arabic_name_client_validation_blur()) {
+            middle_arabic_name_validator = true;
         }
-
+        if (family_arabic_name_client_validation_blur()) {
+            family_arabic_name_validator = true;
+        }
+        if (first_english_name_client_validation_blur()) {
+            first_english_name_validator = true;
+        }
+        if (middle_english_name_client_validation_blur()) {
+            middle_english_name_validator = true;
+        }
+        if (family_english_name_client_validation_blur()) {
+            family_english_name_validator = true;
+        }
         if (document.getElementById("nationality").value == 'NONE' || document.getElementById("nationality").value == '') {
           $("#nationality").attr('class', 'form-control input_form_error');
           $('#nationality').attr('title', 'الجنسية من فضلك');
@@ -675,7 +774,9 @@ $(function() {
           country_validator = true;
         }
 
-        if (isMobileNumberValid() && full_name_validator && full_name_english_validator && nationality_validator
+        if (isMobileNumberValid() && first_arabic_name_validator && middle_arabic_name_validator
+            && family_arabic_name_validator && first_english_name_validator && middle_english_name_validator
+            && family_english_name_validator && nationality_validator
             && country_validator && weight_validator && height_validator && provocation_validator && reason_validator
             && email_validator && facebook_validator && mobile_number_validator && profile_picture_validator
             && weight_image_validator && height_image_validator && overall_checkbox_validator) {
@@ -929,90 +1030,252 @@ $(function() {
 
 });
 
-function full_name_client_validation_blur() {
-  var field = document.getElementById("fullname");
-  if (field.value == '') {
-    $("#fullname").attr('class', 'form-control input_form_error');
-    $('#fullname').attr('title', '	الإسم من فضلك');
-    $('#fullname').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#fullname').tipsy('show');
-    return false;
-  } else {
-    var regex_1 = /^ *[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+ +[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+ +[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+( [\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]*)* *$/;
-    // var regex_2 =/^[A-Za-z][a-z]* [A-Za-z][a-z]* [A-Za-z][a-z]* *$/;
-    if (!regex_1.test(field.value)) // && !regex_2.test(field.value))
-    {
-      $("#fullname").attr('class', 'form-control input_form_error');
-      $('#fullname')
-        .attr('title', 'الإسم ثلاثي و باللغة العربية من فضلك');
-      $('#fullname').tipsy({
-        trigger: 'manual',
-        fade: false,
-        html: true,
-        opacity: 1,
-        gravity: 's'
-      });
-      $('#fullname').tipsy('show');
-      return false;
+function first_arabic_name_client_validation_blur() {
+    var field = document.getElementById("first_name_arabic");
+    if (field.value.trim() == '') {
+        $("#first_name_arabic").attr('class', 'form-control input_form_error');
+        $('#first_name_arabic').attr('title', '	الإسم من فضلك');
+        $('#first_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#first_name_arabic').tipsy('show');
+        return false;
     } else {
-      return true;
+        var regex_1 = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ]*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#first_name_arabic").attr('class', 'form-control input_form_error');
+            $('#first_name_arabic')
+                .attr('title', 'الإسم باللغة العربية من فضلك');
+            $('#first_name_arabic').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#first_name_arabic').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
     }
-  }
 }
 
-function full_name_client_validation_focus() {
-  $("#fullname").attr('class', 'form-control input_form');
-  $('#fullname').tipsy('hide');
+function first_arabic_name_client_validation_focus() {
+    $("#first_name_arabic").attr('class', 'form-control input_form');
+    $('#first_name_arabic').tipsy('hide');
 }
 
-function full_name_english_client_validation_blur() {
-  var field = document.getElementById("fullname_english");
-  if (field.value == '') {
-    $("#fullname_english").attr('class', 'form-control input_form_error');
-    $('#fullname_english').attr('title', '	الإسم من فضلك');
-    $('#fullname_english').tipsy({
-      trigger: 'manual',
-      fade: false,
-      html: true,
-      opacity: 1,
-      gravity: 's'
-    });
-    $('#fullname_english').tipsy('show');
-    return false;
-  } else {
-    //var regex_1 = /^ *[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+ +[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+ +[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF]+ *$/;
-    var regex_1 = /^ *[A-Za-z][a-z]* [A-Za-z][a-z]* [A-Za-z][a-z]*( [A-Za-z][a-z]*)* *$/;
-    if (!regex_1.test(field.value)) // && !regex_2.test(field.value))
-    {
-      $("#fullname_english").attr('class', 'form-control input_form_error');
-      $('#fullname_english')
-        .attr('title', 'الإسم ثلاثي و باللغة الانجليزية  من فضلك');
-      $('#fullname_english').tipsy({
-        trigger: 'manual',
-        fade: false,
-        html: true,
-        opacity: 1,
-        gravity: 's'
-      });
-      $('#fullname_english').tipsy('show');
-      return false;
+function middle_arabic_name_client_validation_blur() {
+    var field = document.getElementById("middle_name_arabic");
+    if (field.value.trim() == '') {
+        $("#middle_name_arabic").attr('class', 'form-control input_form_error');
+        $('#middle_name_arabic').attr('title', '	الإسم من فضلك');
+        $('#middle_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#middle_name_arabic').tipsy('show');
+        return false;
     } else {
-      return true;
+        var regex_1 = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ]*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#middle_name_arabic").attr('class', 'form-control input_form_error');
+            $('#middle_name_arabic')
+                .attr('title', 'الإسم باللغة العربية من فضلك');
+            $('#middle_name_arabic').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#middle_name_arabic').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
     }
-  }
 }
 
-function full_name_english_client_validation_focus() {
-  $("#fullname_english").attr('class', 'form-control input_form');
-  $('#fullname_english').tipsy('hide');
+function middle_arabic_name_client_validation_focus() {
+    $("#middle_name_arabic").attr('class', 'form-control input_form');
+    $('#middle_name_arabic').tipsy('hide');
 }
 
+function family_arabic_name_client_validation_blur() {
+    var field = document.getElementById("family_name_arabic");
+    if (field.value.trim() == '') {
+        $("#family_name_arabic").attr('class', 'form-control input_form_error');
+        $('#family_name_arabic').attr('title', '	الإسم من فضلك');
+        $('#family_name_arabic').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#family_name_arabic').tipsy('show');
+        return false;
+    } else {
+        var regex_1 = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FF ]*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#family_name_arabic").attr('class', 'form-control input_form_error');
+            $('#family_name_arabic')
+                .attr('title', 'الإسم باللغة العربية من فضلك');
+            $('#family_name_arabic').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#family_name_arabic').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+function family_arabic_name_client_validation_focus() {
+    $("#family_name_arabic").attr('class', 'form-control input_form');
+    $('#family_name_arabic').tipsy('hide');
+}
+
+
+function first_english_name_client_validation_blur() {
+    var field = document.getElementById("first_name_english");
+    if (field.value.trim() == '') {
+        $("#first_name_english").attr('class', 'form-control input_form_error');
+        $('#first_name_english').attr('title', '	الإسم من فضلك');
+        $('#first_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#first_name_english').tipsy('show');
+        return false;
+    } else {
+        var regex_1 = /^ *([A-Za-z]+ *)*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#first_name_english").attr('class', 'form-control input_form_error');
+            $('#first_name_english')
+                .attr('title', 'الإسم باللغة الانجليزية  من فضلك');
+            $('#first_name_english').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#first_name_english').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+function first_english_name_client_validation_focus() {
+    $("#first_name_english").attr('class', 'form-control input_form');
+    $('#first_name_english').tipsy('hide');
+}
+
+function middle_english_name_client_validation_blur() {
+    var field = document.getElementById("middle_name_english");
+    if (field.value.trim() == '') {
+        $("#middle_name_english").attr('class', 'form-control input_form_error');
+        $('#middle_name_english').attr('title', '	الإسم من فضلك');
+        $('#middle_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#middle_name_english').tipsy('show');
+        return false;
+    } else {
+        var regex_1 = /^ *([A-Za-z]+ *)*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#middle_name_english").attr('class', 'form-control input_form_error');
+            $('#middle_name_english')
+                .attr('title', 'الإسم باللغة الانجليزية  من فضلك');
+            $('#middle_name_english').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#middle_name_english').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+function middle_english_name_client_validation_focus() {
+    $("#middle_name_english").attr('class', 'form-control input_form');
+    $('#middle_name_english').tipsy('hide');
+}
+
+function family_english_name_client_validation_blur() {
+    var field = document.getElementById("family_name_english");
+    if (field.value.trim() == '') {
+        $("#family_name_english").attr('class', 'form-control input_form_error');
+        $('#family_name_english').attr('title', '	الإسم من فضلك');
+        $('#family_name_english').tipsy({
+            trigger: 'manual',
+            fade: false,
+            html: true,
+            opacity: 1,
+            gravity: 's'
+        });
+        $('#family_name_english').tipsy('show');
+        return false;
+    } else {
+        var regex_1 = /^ *([A-Za-z]+ *)*$/;
+        if (!regex_1.test(field.value))
+        {
+            $("#family_name_english").attr('class', 'form-control input_form_error');
+            $('#family_name_english')
+                .attr('title', 'الإسم باللغة الانجليزية  من فضلك');
+            $('#family_name_english').tipsy({
+                trigger: 'manual',
+                fade: false,
+                html: true,
+                opacity: 1,
+                gravity: 's'
+            });
+            $('#family_name_english').tipsy('show');
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+function family_english_name_client_validation_focus() {
+    $("#family_name_english").attr('class', 'form-control input_form');
+    $('#family_name_english').tipsy('hide');
+}
 
 function weight_client_validation_blur() {
   var field = document.getElementById("weight");

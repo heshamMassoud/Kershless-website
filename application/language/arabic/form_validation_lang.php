@@ -116,5 +116,8 @@ $lang['greater_than']
 $lang['arabic']
     = "باللغة العربية من فضلك";
 
+$lang['valid_english_name']
+    = "باللغة الانجليزية من فضلك";
+
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/arabic/form_validation_lang.php */

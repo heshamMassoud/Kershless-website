@@ -23,8 +23,9 @@ footer {
 * {
   outline: 0px !important;
 }
-.com-info h3, .gen-info h3, .con-info h3, .gen-info .form-group input#fullname,
-.gen-info .name-agreement, .bir-da div, .bir-da select, .sex h4,
+.com-info h3, .gen-info h3, .con-info h3, .gen-info .form-group, input#first_name_arabic, input#middle_name_arabic, input#family_name_arabic,
+input#first_name_english, input#middle_name_english, input#family_name_english,
+.gen-info .name-agreement, .name-presentation div, .name-presentation span, .bir-da div, .bir-da select, .sex h4,
 .sex label span, .marital h4, .marital label span, .jobtype input,
 .nation select, .cnty select, .picture-agreement, .photoboth div,
 .weight input, .reas textarea, .provo textarea, .frecode textarea,
@@ -32,6 +33,18 @@ footer {
 footer .required, .col-md-6.regulations-text p b, .col-md-6.regulations-text li,
 .rules-title h2, .uplpho label.file-size, button#bottom_middle_submit  {
   font-family: "jf" !important;
+}
+
+.middle-name-arabic, .middle-name-english{
+  padding: 0px;
+}
+
+.first-name-arabic, .family-name-english {
+  padding-right: 0px;
+}
+
+.first-name-english, .family-name-arabic {
+  padding-left: 0px;
 }
 
 label.file-size {
@@ -75,7 +88,9 @@ h3 {
   margin-top: 0px;
 }
 
-.full-name input, .bir-da select, .jobtype input, .cnty select, .nation select, .mobno input, .mail input, .fb input, .frecode input, textarea, .weight input {
+.full-name input, .bir-da select, .jobtype input, .cnty select, .nation select,
+.mobno input, .mail input, .fb input, .frecode input, textarea, .weight input,
+.arabic-name input, .english-name input{
   background-color: #eaedf1 !important;
   border: 1px solid #eaedf1 !important;
   -webkit-border-radius: 5px !important;

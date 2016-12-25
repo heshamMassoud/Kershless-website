@@ -60,32 +60,82 @@ $form_submitter = array(
 );
 
 //########## Right Column php Form Helper Input SERVER SIDE ERROR HANDELING ####################
-
-
-if (form_error('fullname') != '') {
-    $fullname_class = "form-control input_form_error";
-    $fullname_hidden_error = array(
-        'id' => 'fullname_hidden_error',
-        'name' => 'fullname_hidden_error',
+if (form_error('first_name_arabic') != '') {
+    $first_name_arabic_class = "form-control input_form_error";
+    $first_name_arabic_hidden_error = array(
+        'id' => 'first_name_arabic_hidden_error',
+        'name' => 'first_name_arabic_hidden_error',
         'type' => 'hidden',
-        'value' => form_error('fullname')
+        'value' => form_error('first_name_arabic')
     );
-    echo form_input($fullname_hidden_error);
+    echo form_input($first_name_arabic_hidden_error);
 } else {
-    $fullname_class = "form-control input_form";
+    $first_name_arabic_class = "form-control input_form";
 }
 
-if (form_error('fullname_english') != '') {
-    $fullname_english_class = "form-control input_form_error";
-    $fullname_english_hidden_error = array(
-        'id' => 'fullname_english_hidden_error',
-        'name' => 'fullname_english_hidden_error',
+if (form_error('middle_name_arabic') != '') {
+    $middle_name_arabic_class = "form-control input_form_error";
+    $middle_name_arabic_hidden_error = array(
+        'id' => 'middle_name_arabic_hidden_error',
+        'name' => 'middle_name_arabic_hidden_error',
         'type' => 'hidden',
-        'value' => form_error('fullname_english')
+        'value' => form_error('middle_name_arabic')
     );
-    echo form_input($fullname_english_hidden_error);
+    echo form_input($middle_name_arabic_hidden_error);
 } else {
-    $fullname_english_class = "form-control input_form";
+    $middle_name_arabic_class = "form-control input_form";
+}
+
+if (form_error('family_name_arabic') != '') {
+    $family_name_arabic_class = "form-control input_form_error";
+    $family_name_arabic_hidden_error = array(
+        'id' => 'family_name_arabic_hidden_error',
+        'name' => 'family_name_arabic_hidden_error',
+        'type' => 'hidden',
+        'value' => form_error('family_name_arabic')
+    );
+    echo form_input($family_name_arabic_hidden_error);
+} else {
+    $family_name_arabic_class = "form-control input_form";
+}
+
+if (form_error('first_name_english') != '') {
+    $first_name_english_class = "form-control input_form_error";
+    $first_name_english_hidden_error = array(
+        'id' => 'first_name_english_hidden_error',
+        'name' => 'first_name_english-hidden_error',
+        'type' => 'hidden',
+        'value' => form_error('first_name_english')
+    );
+    echo form_input($first_name_english_hidden_error);
+} else {
+    $first_name_english_class = "form-control input_form";
+}
+
+if (form_error('middle_name_english') != '') {
+    $middle_name_english_class = "form-control input_form_error";
+    $middle_name_english_hidden_error = array(
+        'id' => 'middle_name_english_hidden_error',
+        'name' => 'middle_name_english_hidden_error',
+        'type' => 'hidden',
+        'value' => form_error('middle_name_english')
+    );
+    echo form_input($middle_name_english_hidden_error);
+} else {
+    $middle_name_english_class = "form-control input_form";
+}
+
+if (form_error('family_name_english') != '') {
+    $family_name_english_class = "form-control input_form_error";
+    $family_name_english_hidden_error = array(
+        'id' => 'family_name_english_hidden_error',
+        'name' => 'family_name_english_hidden_error',
+        'type' => 'hidden',
+        'value' => form_error('family_name_english')
+    );
+    echo form_input($family_name_english_hidden_error);
+} else {
+    $family_name_english_class = "form-control input_form";
 }
 
 if (form_error('nationality') != '') {
@@ -391,24 +441,64 @@ function buildMonthDropdown($name = '', $value = '')
     return form_dropdown($name, $month, $value, $dd_id);
 }
 
-$full_name = array(
-    'name' => 'fullname',
-    'id' => 'fullname',
-    'value' => set_value('fullname'),
-    'class' => $fullname_class,
-    'placeholder' => 'الاسم  (ﺛﻼﺛﻲ ﻋﻠﻰ ﺍﻷﻗﻝ) *',
-    'onBlur' => 'full_name_client_validation_blur();',
-    'onFocus' => 'full_name_client_validation_focus();'
+$first_name_arabic = array(
+    'name' => 'first_name_arabic',
+    'id' => 'first_name_arabic',
+    'value' => set_value('first_name_arabic'),
+    'class' => $first_name_arabic_class,
+    'placeholder' => 'الإسم الاول *',
+    'onBlur' => 'first_arabic_name_client_validation_blur();',
+    'onFocus' => 'first_arabic_name_client_validation_focus();'
 );
 
-$full_name_english = array(
-    'name' => 'fullname_english',
-    'id' => 'fullname_english',
-    'value' => set_value('fullname_english'),
-    'class' => $fullname_english_class,
-    'placeholder' => '* Full name in English',
-    'onBlur' => 'full_name_english_client_validation_blur();',
-    'onFocus' => 'full_name_english_client_validation_focus();'
+$middle_name_arabic = array(
+    'name' => 'middle_name_arabic',
+    'id' => 'middle_name_arabic',
+    'value' => set_value('middle_name_arabic'),
+    'class' => $middle_name_arabic_class,
+    'placeholder' => 'اسم الأب *',
+    'onBlur' => 'middle_arabic_name_client_validation_blur();',
+    'onFocus' => 'middle_arabic_name_client_validation_focus();'
+);
+
+$family_name_arabic = array(
+    'name' => 'family_name_arabic',
+    'id' => 'family_name_arabic',
+    'value' => set_value('family_name_arabic'),
+    'class' => $family_name_arabic_class,
+    'placeholder' => 'اللقب * ',
+    'onBlur' => 'family_arabic_name_client_validation_blur();',
+    'onFocus' => 'family_arabic_name_client_validation_focus();'
+);
+
+$first_name_english = array(
+    'name' => 'first_name_english',
+    'id' => 'first_name_english',
+    'value' => set_value('first_name_english'),
+    'class' => $first_name_english_class,
+    'placeholder' => '* First name',
+    'onBlur' => 'first_english_name_client_validation_blur();',
+    'onFocus' => 'first_english_name_client_validation_focus();'
+);
+
+$middle_name_english = array(
+    'name' => 'middle_name_english',
+    'id' => 'middle_name_english',
+    'value' => set_value('middle_name_english'),
+    'class' => $middle_name_english_class,
+    'placeholder' => '* Middle name',
+    'onBlur' => 'middle_english_name_client_validation_blur();',
+    'onFocus' => 'middle_english_name_client_validation_focus();'
+);
+
+$family_name_english = array(
+    'name' => 'family_name_english',
+    'id' => 'family_name_english',
+    'value' => set_value('family_name_english'),
+    'class' => $family_name_english_class,
+    'placeholder' => '* Family name',
+    'onBlur' => 'family_english_name_client_validation_blur();',
+    'onFocus' => 'family_english_name_client_validation_focus();'
 );
 
 $job = array(
@@ -596,18 +686,45 @@ $overall_agreement = array(
             <div class="col-md-12 gen-info">
               <h3 class="gen-h3">بيانات عامة</h3>
                 <form role="form">
-                    <div class="form-group full-name">
-                        <?php echo form_input($full_name); ?>
+                    <div class="form-group arabic-name">
+                        <div class="col-md-4 form-group first-name-arabic">
+                            <?php echo form_input($first_name_arabic); ?>
+                        </div>
+                        <div class="col-md-4 form-group middle-name-arabic">
+                            <?php echo form_input($middle_name_arabic); ?>
+                        </div>
+                        <div class="col-md-4 form-group family-name-arabic">
+                            <?php echo form_input($family_name_arabic); ?>
+                        </div>
                     </div>
 
-                    <div class="form-group full-name">
-                        <?php echo form_input($full_name_english); ?>
+                    <div class="form-group english-name">
+                        <div class="col-md-4 form-group family-name-english">
+                            <?php echo form_input($family_name_english); ?>
+                        </div>
+                        <div class="col-md-4 form-group middle-name-english">
+                            <?php echo form_input($middle_name_english); ?>
+                        </div>
+                        <div class="col-md-4 form-group first-name-english">
+                            <?php echo form_input($first_name_english); ?>
+                        </div>
                     </div>
+
                     <div class="form-group name-agreement">
                         <?php echo form_checkbox($name_agreement); ?>
                         موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
                     </div>
 
+                    <div class="form-group name-presentation" hidden>
+                        <div> طريقة عرض الإسم</div>
+                        <label class="col-md-6"> <?php
+                            echo form_radio('name-presentation', '1', true, 'id="first-middle"');
+                            ?> <span id="first-middle-span">Firstname Middlename</span>
+                        </label> <label class="col-md-6"> <?php
+                            echo form_radio('name-presentation', '2', false, 'id="first-last"');
+                            ?> <span id="first-last-span">Firstname Lastname</span>
+                        </label>
+                    </div>
 
                     <div class="form-group bir-da">
                         <div>تاريخ الميلاد *</div>
