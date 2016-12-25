@@ -297,7 +297,9 @@ div#height_upload_div.uploaded{
   color: #28b997;
 }
 
-
+.english-name{
+  direction: ltr;
+}
 
 /* Media  */
 
@@ -328,6 +330,7 @@ div#height_upload_div.uploaded{
   {
     padding: 0px;
   }
+
   html, body {
    max-width: 100% !important;
     overflow-x: hidden;

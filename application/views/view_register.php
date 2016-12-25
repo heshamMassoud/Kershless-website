@@ -699,14 +699,14 @@ $overall_agreement = array(
                     </div>
 
                     <div class="form-group english-name">
-                        <div class="col-md-4 form-group family-name-english">
-                            <?php echo form_input($family_name_english); ?>
+                        <div class="col-md-4 form-group first-name-english">
+                            <?php echo form_input($first_name_english); ?>
                         </div>
                         <div class="col-md-4 form-group middle-name-english">
                             <?php echo form_input($middle_name_english); ?>
                         </div>
-                        <div class="col-md-4 form-group first-name-english">
-                            <?php echo form_input($first_name_english); ?>
+                        <div class="col-md-4 form-group family-name-english">
+                            <?php echo form_input($family_name_english); ?>
                         </div>
                     </div>
 
