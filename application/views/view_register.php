@@ -619,7 +619,7 @@ $operations_desc = array(
     'id' => 'operations_desc',
     'class' => 'input_form',
     'value' => set_value('operations_desc'),
-    'placeholder' => '  هل تعرضت لعمليات جراحية ؟ من فضلك أذكر التفاصيل.'
+    'placeholder' => '  هل تعرضت لعمليات جراحية ؟ من فضلك اذكر التفاصيل.'
 );
 
 
@@ -628,7 +628,7 @@ $terminalDiseases_desc = array(
     'id' => 'terminalDiseases_desc',
     'class' => 'input_form',
     'value' => set_value('terminalDiseases_desc'),
-    'placeholder' => 'هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟ من فضلك أذكر التفاصيل.'
+    'placeholder' => 'هل تعاني من اي امراض مزمنة ( سكر - غده - كبد - قولون عصبي ) ؟ من فضلك اذكر التفاصيل.'
 );
 
 $boneFractures_desc = array(
@@ -636,7 +636,7 @@ $boneFractures_desc = array(
     'id' => 'boneFractures_desc',
     'class' => 'input_form',
     'value' => set_value('boneFractures_desc'),
-    'placeholder' => 'هل تعاني من اي مشاكل في العمود الفقري او المفاصل ؟ من فضلك أذكر التفاصيل.'
+    'placeholder' => 'هل تعاني من اي مشاكل في العمود الفقري أو المفاصل ؟ من فضلك اذكر التفاصيل.'
 );
 
 $drugs_desc = array(
@@ -644,7 +644,7 @@ $drugs_desc = array(
     'id' => 'drugs_desc',
     'class' => 'input_form',
     'value' => set_value('drugs_desc'),
-    'placeholder' => 'هل تتناول أدوية ؟ من فضلك أذكر التفاصيل.'
+    'placeholder' => 'هل تتناول أدوية ؟ من فضلك اذكر التفاصيل.'
 );
 
 $allergy_desc = array(
@@ -652,7 +652,7 @@ $allergy_desc = array(
     'id' => 'allergy_desc',
     'class' => 'input_form',
     'value' => set_value('allergy_desc'),
-    'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك أذكر التفاصيل.'
+    'placeholder' => 'هل لديك حساسية من أطعمة معينة ؟ من فضلك اذكر التفاصيل.'
 );
 
 $overall_agreement_checkbox = $this->input->post('overall_agreement', true) == null ? false : true;
@@ -712,7 +712,7 @@ $overall_agreement = array(
 
                     <div class="form-group name-agreement">
                         <?php echo form_checkbox($name_agreement); ?>
-                        موافق علي عرض أسمي في النتائج على وسائل التواصل الاجتماعي
+                        موافق علي عرض اسمي في النتائج على وسائل التواصل الاجتماعي
                     </div>
 
                     <div class="form-group name-presentation" hidden>
