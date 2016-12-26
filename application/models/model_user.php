@@ -80,11 +80,11 @@ class Model_User extends CI_MODEL
     {
         $applicant_record = $this->db
             ->get_where('User', array('id' => $applicant_id))->row();
-        $applicant_fullname = $applicant_record->full_name;
+        $applicant_fullname = $applicant_record->first_name_arabic . ' ' . $applicant_record->middle_name_arabic . ' ' . $applicant_record->family_name_arabic;
         $applicant_email = $applicant_record->email;
         $applicant_friend_code = $applicant_record->friend_code;
 
-        $friend_fullname = $friend_record->full_name;
+        $friend_fullname = $friend_record->first_name_arabic;
         $friend_email = $friend_record->email;
 
         $this->load->library('email');
@@ -222,11 +222,11 @@ class Model_User extends CI_MODEL
                         bgcolor=\"#34495e\">&#13;
 						<!-- // Begin Module: Footer \\ -->&#13;
 						&#13;
-						<a href=\"#\" class=\"button\" style=\"color: white;
+						<a href=\"#\" class=\"button\" style=\"color: white ;
                         font-family: 'Arial', sans-serif; font-size: 11px;
                         font-weight: normal; line-height: 14px; text-align: center;
-                        text-decoration: none;\"> Copyright 2014 - All Rights
-                        Reserved Kershless</a>
+                        text-decoration: none;\">
+                        Copyright ". date("Y") ." - All Rights Reserved Kershless</a>
                         			 &#13;
 						<!-- // End Module: Footer \\ -->&#13;
 						</td>&#13;
