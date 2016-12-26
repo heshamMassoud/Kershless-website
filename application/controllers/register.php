@@ -31,6 +31,7 @@ class Register extends CI_Controller
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->helper('language');
+        $this->load->library('session');
         $this->lang->load('register');
         $this->db->simple_query('SET NAMES \'utf-8\'');
     }
@@ -785,9 +786,8 @@ class Register extends CI_Controller
         if ($this->form_validation->run()) {
             $this->load->model("model_user");
             $this->model_user->addUser();
-            $data = array('name' => $this->input->post('first_name_arabic'));
-            $this->load->view("view_success", $data);
-
+            $this->session->set_flashdata("name", $this->input->post('first_name_arabic'));
+            redirect("success");
         } else {
             $this->load->view("view_register");
         }

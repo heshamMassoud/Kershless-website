@@ -52,7 +52,7 @@
 		<div class="row thanks-text">
 			<p class="col-md-2"></p>
 			<p class="col-md-8">
-                <?php echo $this->lang->line('thanks_word') . $name . $this->lang->line('thanks_message');?>
+                <?php echo $this->lang->line('thanks_word') . $this->session->flashdata("name") . $this->lang->line('thanks_message');?>
             </p>
 			<p class="col-md-2"></p>
 		</div>
