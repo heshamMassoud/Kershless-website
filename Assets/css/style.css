@@ -343,9 +343,8 @@ select {
 }
 
 /*Success page*/
-.thanks-text {
+.thanks-text, .thanks-text p {
   text-align: center;
   font-family: "jf" !important;
   font-size: 20px;
-  margin-top: 40px;
 }

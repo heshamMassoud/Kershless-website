@@ -49,21 +49,29 @@
 			<img  src="<?php echo base_url(); ?>Assets/Images/kersh_thumb.png" class="img-responsive thumbs-up"
 				alt="Kershless">
 		</div>
-		<cla class="row">
+		<div class="row thanks-text">
 			<p class="col-md-2"></p>
-			<p class="col-md-8 thanks-text">
+			<p class="col-md-8">
                 <?php echo $this->lang->line('thanks_word') . $name . $this->lang->line('thanks_message');?>
-                <br>
-                <br>
-                <?php echo $this->lang->line('important_notice');?>
-                <br>
-                <?php echo $this->lang->line('success_message');?>
-                <br><br>
-                <?php echo $this->lang->line('kershless_admin');?>
             </p>
 			<p class="col-md-2"></p>
-
 		</div>
+        <div class="row thanks-text">
+            <p class="col-md-2"></p>
+            <p class="col-md-8" style="color: #d43f3a">
+                <?php echo $this->lang->line('important_notice');?>
+            </p>
+            <p class="col-md-2"></p>
+        </div>
+        <div class="row thanks-text">
+            <p class="col-md-2"></p>
+            <p class="col-md-8">
+            <?php echo $this->lang->line('success_message');?>
+            <br><br>
+            <?php echo $this->lang->line('kershless_admin');?>
+            </p>
+            <p class="col-md-2"></p>
+        </div>
 
 		<footer>
 			<p class="col-md-4"></p>
