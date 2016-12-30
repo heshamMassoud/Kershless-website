@@ -18,7 +18,7 @@
 $config['base_url']	= 'http://www.kershless.com/';
 
 if(ENVIRONMENT == "production") {
-    $config['base_url']	= 'http://www.kershless.com/';
+    $config['base_url']	= 'https://kershless-154120.appspot.com/';
 }
 else {
     $config['base_url']	= 'http://localhost/kershless-website/';
