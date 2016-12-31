@@ -21,7 +21,7 @@
   <link href="<?php echo base_url(); ?>Assets/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap RTL -->
   <link href="<?php echo base_url(); ?>Assets/css/bootstrap-rtl.css" rel="stylesheet">
-  <link href="<?php echo base_url(); ?>Assets/css/custom-bootstrap.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>kershless-opened/Assets/css/custom-bootstrap.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="<?php echo base_url(); ?>Assets/css/freelancer.css" rel="stylesheet">
