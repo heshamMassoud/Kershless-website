@@ -166,10 +166,17 @@ if ($current_lang == 'en') {
     <br>
     <div class="row">
       <div class="text-center register-row">
-          <a role="button" class="btn btn-default register-now" href="register">
-              <?php echo lang('register_now'); ?>
+          <a role="button" class="btn btn-default register-now" onclick="return false;">
+              <?php echo lang('registration_closed'); ?>
         </a>
       </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="text-center">
+            <?php echo lang('registration_openning_date'); ?>
+        </div>
     </div>
 </section>
 

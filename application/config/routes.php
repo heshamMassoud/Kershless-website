@@ -51,12 +51,12 @@ $route['^(ar)$'] = $route['default_controller'];
 //$route['^(ar)/new'] = "main/index2";
 //$route['^(ar)/s'] = "register/test";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $route['^(ar)/register'] = "register/registerValidation";
+  $route['^(ar)/85eb787e9664e9a94f714daa943c52da'] = "register/registerValidation";
 }
 else {
-  $route['^(ar)/register'] = "register";
+  $route['^(ar)/85eb787e9664e9a94f714daa943c52da'] = "register";
 }
-$route['^(ar)/register/rules'] = "register/rules";
+$route['^(ar)/85eb787e9664e9a94f714daa943c52da/rules'] = "register/rules";
 $route['^(ar)/success'] = "success";
 $route['^(ar)/main/contact'] = "main/contact";
 //$route['^(ar)/email'] = "main/viewMyCustomIndexEmail";
