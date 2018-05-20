@@ -35,7 +35,7 @@ $lang['register_now']
 
 $lang['registration_closed'] = "باب التسجيل مغلق";
 
-$lang['registration_openning_date'] = "موعدنا ١/١/٢٠١٧";
+$lang['registration_openning_date'] = "موعدنا 1/7/2018";
 
 $lang['what_is_kershless_1']
     = 'كرشلس هو عالم يجمع كل من يبحث
